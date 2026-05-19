@@ -1,0 +1,178 @@
+2026-05-09T22:28:02.433070Z  INFO neard: version="trunk" build="1.36.1-2831-gd178e1830" commit="d178e1830b062b407c270e8f8045753fd41cd081" latest_protocol=84
+2026-05-09T22:28:02.434029Z  INFO config: validating config, extracted from config.json
+2026-05-09T22:28:02.618119Z  WARN genesis: skipped genesis validation
+2026-05-09T22:28:02.620100Z  INFO config: validating genesis config and records, this could take a few minutes
+2026-05-09T22:28:02.630512Z  INFO config: all validations have passed
+2026-05-09T22:28:02.630683Z ERROR neard::cli: parameter is set to incorrect value, please run `scripts/set_kernel_params.sh` param_name=net.core.rmem_max actual_normalized=212992 expected_normalized=8388608
+2026-05-09T22:28:02.630721Z ERROR neard::cli: parameter is set to incorrect value, please run `scripts/set_kernel_params.sh` param_name=net.core.wmem_max actual_normalized=212992 expected_normalized=8388608
+2026-05-09T22:28:02.630739Z ERROR neard::cli: parameter is set to incorrect value, please run `scripts/set_kernel_params.sh` param_name=net.ipv4.tcp_rmem actual_normalized=4096 131072 6291456 expected_normalized=4096 87380 8388608
+2026-05-09T22:28:02.630756Z ERROR neard::cli: parameter is set to incorrect value, please run `scripts/set_kernel_params.sh` param_name=net.ipv4.tcp_wmem actual_normalized=4096 16384 4194304 expected_normalized=4096 16384 8388608
+2026-05-09T22:28:02.630772Z ERROR neard::cli: parameter is set to incorrect value, please run `scripts/set_kernel_params.sh` param_name=net.ipv4.tcp_slow_start_after_idle actual_normalized=1 expected_normalized=0
+2026-05-09T22:28:02.630787Z ERROR neard::cli: parameter is set to incorrect value, please run `scripts/set_kernel_params.sh` param_name=net.ipv4.tcp_congestion_control actual_normalized=cubic expected_normalized=bbr
+2026-05-09T22:28:02.630804Z ERROR neard::cli: parameter is set to incorrect value, please run `scripts/set_kernel_params.sh` param_name=net.core.default_qdisc actual_normalized=fq_codel expected_normalized=fq
+2026-05-09T22:28:02.630819Z ERROR neard::cli: parameter is set to incorrect value, please run `scripts/set_kernel_params.sh` param_name=net.ipv4.tcp_mtu_probing actual_normalized=0 expected_normalized=1
+2026-05-09T22:28:02.630833Z ERROR neard::cli: parameter is set to incorrect value, please run `scripts/set_kernel_params.sh` param_name=net.ipv4.tcp_max_syn_backlog actual_normalized=4096 expected_normalized=8096
+2026-05-09T22:28:02.631922Z  INFO neard: reset the config because the config file doesn't exist err=Os { code: 2, kind: NotFound, message: "No such file or directory" } path="/home/ubuntu/bench/singlenode/S04/node0/log_config.json"
+2026-05-09T22:28:02.632570Z  INFO config: validating config, extracted from config.json
+2026-05-09T22:28:02.632622Z  INFO neard: hot loading validator key validator_file=/home/ubuntu/bench/singlenode/S04/node0/validator_key.json
+2026-05-09T22:28:02.632661Z  INFO near_o11y::reload: updated the logging layer according to log_config.json
+2026-05-09T22:28:02.632692Z  INFO db_opener: opening node storage path="/home/ubuntu/bench/singlenode/S04/node0/data" cold_path="none"
+2026-05-09T22:28:02.632711Z  INFO db_opener: the database doesn't exist, creating it path=/home/ubuntu/bench/singlenode/S04/node0/data
+2026-05-09T22:28:02.632767Z  INFO db: opened a new rocksdb instance num_instances=1
+2026-05-09T22:28:18.211264Z  INFO db: closed a rocksdb instance num_instances=0
+2026-05-09T22:28:18.211288Z  INFO db: opened a new rocksdb instance num_instances=1
+2026-05-09T22:28:18.711017Z  INFO db_opener: setting the db kind archive=false which="Hot" default_kind=RPC
+2026-05-09T22:28:18.712605Z  INFO db: closed a rocksdb instance num_instances=0
+2026-05-09T22:28:18.712628Z  INFO db: opened a new rocksdb instance num_instances=1
+2026-05-09T22:28:18.714743Z  INFO db: closed a rocksdb instance num_instances=0
+2026-05-09T22:28:18.714771Z  INFO db: opened a new rocksdb instance num_instances=1
+2026-05-09T22:28:19.455076Z ERROR metrics: error when exporting postponed receipts count err=DB Not Found Error: FINAL HEAD
+2026-05-09T22:28:19.479645Z  WARN garbage collection: state not initialized yet, head doesn't exist
+2026-05-09T22:28:19.485616Z  INFO near_store::trie::mem::parallel_loader: loading subtrees in parallel num_subtrees=1000
+2026-05-09T22:28:19.485664Z  INFO near_store::trie::mem::parallel_loader: loading subtrees in parallel num_subtrees=1000
+2026-05-09T22:28:19.535155Z  INFO near_store::trie::mem::parallel_loader: loading subtrees in parallel num_subtrees=1002
+2026-05-09T22:28:19.550123Z  INFO near_store::trie::mem::parallel_loader: loading subtrees in parallel num_subtrees=1000
+2026-05-09T22:28:19.597979Z  INFO config: mutable config field remains the same field_name="expected_shutdown" value=None
+2026-05-09T22:28:19.598005Z  INFO config: mutable config field remains the same field_name="resharding_config" value=ReshardingConfig { batch_size: 500.0 KB, batch_delay: Duration { seconds: 0, nanoseconds: 5000000 }, retry_delay: Duration { seconds: 10, nanoseconds: 0 }, initial_delay: Duration { seconds: 0, nanoseconds: 0 }, max_poll_time: Duration { seconds: 7200, nanoseconds: 0 }, catch_up_blocks: 20 }
+2026-05-09T22:28:19.598034Z  INFO config: mutable config field remains the same field_name="produce_chunk_add_transactions_time_limit" value=Some(Duration { seconds: 2, nanoseconds: 0 })
+2026-05-09T22:28:19.598046Z  INFO config: updated client config
+2026-05-09T22:28:19.598050Z  INFO config: mutable config field remains the same field_name="validator_signer" value=Some(InMemory(InMemoryValidatorSigner { account_id: AccountId("node0"), signer: InMemory(InMemorySigner(account_id: node0, public_key: ed25519:8z4m1L6cMAYLaV7NbdhQ1EmdCziU1WL9t4ioUv44MqHB)) }))
+2026-05-09T22:28:19.598071Z  INFO config: updated validator key
+2026-05-09T22:28:19.619590Z  INFO stats: node_status="#       0 2VLuo4YQvTu3TrdBynos5Bo4UWZPtvFU78mA5uTQVeJd Validator | 4 validators 0 peers ⬇ 0 B/s ⬆ 0 B/s 0.00 bps 0 gas/s CPU: 0%, Mem: 153 MB"
+2026-05-09T22:28:19.673612Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T22:28:19.704671Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T22:28:19.750228Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T22:28:19.769340Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T22:28:19.830071Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T22:28:19.852747Z  INFO near_transactions_generator::choice: Created TxAccountsSelector receivers_from_senders_ratio=0.0
+2026-05-09T22:28:19.856858Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T22:28:19.871220Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T22:28:19.887301Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T22:28:19.932970Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T22:28:19.941633Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T22:28:19.976604Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T22:28:20.010713Z  WARN network: failed to establish connection to TIER1 proxy err=TcpStream::connect()
+
+Caused by:
+    Connection refused (os error 111)
+
+Stack backtrace:
+   0: near_network::tcp::Stream::connect::{{closure}}
+   1: near_network::peer_manager::network_state::tier1::<impl near_network::peer_manager::network_state::NetworkState>::tier1_connect_to_my_proxies::{{closure}}::{{closure}}
+   2: near_network::peer_manager::network_state::tier1::<impl near_network::peer_manager::network_state::NetworkState>::tier1_advertise_proxies::{{closure}}
+   3: <tracing::instrument::Instrumented<T> as core::future::future::Future>::poll
+   4: <near_async::tokio::sender::InstrumentingFuture as core::future::future::Future>::poll
+   5: tokio::runtime::task::raw::poll
+   6: tokio::runtime::scheduler::multi_thread::worker::Context::run_task
+   7: tokio::runtime::task::raw::poll
+   8: std::sys::backtrace::__rust_begin_short_backtrace
+   9: core::ops::function::FnOnce::call_once{{vtable.shim}}
+  10: std::sys::pal::unix::thread::Thread::new::thread_start
+  11: <unknown>
+  12: <unknown> proxy=PeerAddr { addr: 216.47.155.68:24567, peer_id: ed25519:HTFAyf4f3Q7sXWcR7yPVSiuXNh7BAMPSrNwxsuLacd2q }
+2026-05-09T22:28:20.017670Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T22:28:20.034264Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T22:28:20.060042Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T22:28:20.107224Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T22:28:20.124753Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T22:28:20.233633Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T22:28:20.363075Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T22:28:20.438990Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T22:28:20.596832Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T22:28:20.696829Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T22:28:20.712565Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T22:28:20.736458Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T22:28:20.739333Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T22:28:29.600913Z  INFO stats: node_status="#      74 zTaiEgVWdFTmLpdtpZt6YPE2hLWc6QHzBuPpQoEcgTV Validator | 4 validators 3 peers ⬇ 14.8 kB/s ⬆ 16.0 kB/s 7.11 bps 2.86 Tgas/s CPU: 25%, Mem: 151 MB"
+2026-05-09T22:28:39.605644Z  INFO stats: node_status="#     163 GtXMbuuYEDUyDmoqczYw9RmEi4WmGPvdRuyi97Kwyk5U Validator | 4 validators 3 peers ⬇ 65.0 kB/s ⬆ 67.0 kB/s 8.90 bps 1.43 Tgas/s CPU: 25%, Mem: 151 MB"
+2026-05-09T22:28:49.604600Z  INFO stats: node_status="#     246 2m29mFsLC1yfrs87uD9Xhcmjb5GNWKiaSM2Gn7HR2VAh Validator | 4 validators 3 peers ⬇ 114 kB/s ⬆ 115 kB/s 8.20 bps 1.43 Tgas/s CPU: 23%, Mem: 154 MB"
+2026-05-09T22:28:58.390624Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T22:28:58.532956Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T22:28:59.284117Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T22:28:59.610448Z  INFO stats: node_status="#     335 HXDUMTLuSiebH5U1SAfyXtj7cohEbsxcuUM1uty5fYsQ Validator | 4 validators 3 peers ⬇ 159 kB/s ⬆ 163 kB/s 8.90 bps 1.43 Tgas/s CPU: 32%, Mem: 161 MB"
+2026-05-09T22:29:01.451389Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T22:29:06.223665Z  INFO db_opener: opening node storage path="/home/ubuntu/bench/singlenode/S04/node0/data/state_snapshot/9gLMpqLttwLEFHERrpvJ4Uuxh6qS2AVqVQtesULHBnXw/data" cold_path="none"
+2026-05-09T22:29:06.223718Z  INFO db: opened a new rocksdb instance num_instances=2
+2026-05-09T22:29:06.225925Z  INFO db: closed a rocksdb instance num_instances=1
+2026-05-09T22:29:06.225947Z  INFO db_opener: the database exists path=/home/ubuntu/bench/singlenode/S04/node0/data/state_snapshot/9gLMpqLttwLEFHERrpvJ4Uuxh6qS2AVqVQtesULHBnXw/data
+2026-05-09T22:29:06.225956Z  INFO db: opened a new rocksdb instance num_instances=2
+2026-05-09T22:29:09.610513Z  INFO stats: node_status="#     434 8zUpcg8qzgLEERBwC1NomvTUYL2gRNqSrBDW2muzvmcb Validator | 4 validators 3 peers ⬇ 212 kB/s ⬆ 215 kB/s 9.90 bps 2.86 Tgas/s CPU: 32%, Mem: 164 MB"
+2026-05-09T22:29:19.611837Z  INFO stats: node_status="#     526 2cnzq5JK54UtAaEXxxmi3pSVMnxTeSPcZrbjqdNcnJw8 Validator | 4 validators 3 peers ⬇ 266 kB/s ⬆ 268 kB/s 9.20 bps 1.43 Tgas/s CPU: 34%, Mem: 173 MB"
+2026-05-09T22:29:20.236290Z  INFO db: closed a rocksdb instance num_instances=1
+2026-05-09T22:29:20.236316Z  INFO db: opened a new rocksdb instance num_instances=2
+2026-05-09T22:29:20.238555Z  INFO db: closed a rocksdb instance num_instances=1
+2026-05-09T22:29:20.238571Z  INFO db: opened a new rocksdb instance num_instances=2
+2026-05-09T22:29:21.000065Z  INFO db: closed a rocksdb instance num_instances=1
+2026-05-09T22:29:29.612967Z  INFO stats: node_status="#     611 Ddtc3x3XapZ7ervtEtSvxHGTBTJPWMoDfyVRnqzp9D5e Validator | 4 validators 3 peers ⬇ 303 kB/s ⬆ 302 kB/s 8.50 bps 1.43 Tgas/s CPU: 26%, Mem: 171 MB"
+2026-05-09T22:29:39.613413Z  INFO stats: node_status="#     697 6PowhxmRoAuDwoz65dcNZ5fnMyTX9L83gbEkV3XStTG7 Validator | 4 validators 3 peers ⬇ 301 kB/s ⬆ 300 kB/s 8.60 bps 1.43 Tgas/s CPU: 24%, Mem: 170 MB"
+2026-05-09T22:29:49.614270Z  INFO stats: node_status="#     792 VZWZPSUfzupXf6QxdHTeKEp9w4f2st5K4soym7NJdjN Validator | 4 validators 3 peers ⬇ 300 kB/s ⬆ 301 kB/s 9.50 bps 2.86 Tgas/s CPU: 29%, Mem: 174 MB"
+2026-05-09T22:29:58.391439Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T22:29:58.533743Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T22:29:59.284845Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T22:29:59.615439Z  INFO stats: node_status="#     886 DadMFZBe2QFDiyYV5n9B6bMSrphzNkdbTj6f45Wiw8KM Validator | 4 validators 3 peers ⬇ 309 kB/s ⬆ 308 kB/s 9.40 bps 1.43 Tgas/s CPU: 34%, Mem: 174 MB"
+2026-05-09T22:30:01.451945Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T22:30:02.165863Z  INFO db_opener: opening node storage path="/home/ubuntu/bench/singlenode/S04/node0/data/state_snapshot/He5bHw6jPoi59qZGCHk7myo3fFBbCpKE699GWu38z3wD/data" cold_path="none"
+2026-05-09T22:30:02.165915Z  INFO db: opened a new rocksdb instance num_instances=2
+2026-05-09T22:30:02.168141Z  INFO db: closed a rocksdb instance num_instances=1
+2026-05-09T22:30:02.168151Z  INFO db_opener: the database exists path=/home/ubuntu/bench/singlenode/S04/node0/data/state_snapshot/He5bHw6jPoi59qZGCHk7myo3fFBbCpKE699GWu38z3wD/data
+2026-05-09T22:30:02.168160Z  INFO db: opened a new rocksdb instance num_instances=2
+2026-05-09T22:30:09.616553Z  INFO stats: node_status="#     977 CXrKZD4AxR1FYAkh9icFzcwJhXvsW874twVT1BDzFqnN Validator | 4 validators 3 peers ⬇ 310 kB/s ⬆ 310 kB/s 9.10 bps 1.43 Tgas/s CPU: 30%, Mem: 182 MB"
+2026-05-09T22:30:14.574212Z  INFO db: closed a rocksdb instance num_instances=1
+2026-05-09T22:30:14.574239Z  INFO db: opened a new rocksdb instance num_instances=2
+2026-05-09T22:30:14.576371Z  INFO db: closed a rocksdb instance num_instances=1
+2026-05-09T22:30:14.576385Z  INFO db: opened a new rocksdb instance num_instances=2
+2026-05-09T22:30:15.069768Z  WARN chain: flat storage needs too many hops to access a block shard_id=0 flat_head_height=0 cached_deltas=745 num_hops=501
+2026-05-09T22:30:15.150871Z  WARN chain: flat storage needs too many hops to access a block shard_id=1 flat_head_height=0 cached_deltas=745 num_hops=501
+2026-05-09T22:30:15.170964Z  WARN chain: flat storage needs too many hops to access a block shard_id=2 flat_head_height=0 cached_deltas=745 num_hops=501
+2026-05-09T22:30:15.191048Z  WARN chain: flat storage needs too many hops to access a block shard_id=3 flat_head_height=0 cached_deltas=745 num_hops=501
+2026-05-09T22:30:15.207387Z  INFO db: closed a rocksdb instance num_instances=1
+2026-05-09T22:30:19.616924Z  INFO stats: node_status="#    1064 CvSDzLP9fS5qZJno6Y4GQoivnWbxLUpn712LLPhK1Jki Validator | 4 validators 3 peers ⬇ 304 kB/s ⬆ 308 kB/s 8.70 bps 1.43 Tgas/s CPU: 31%, Mem: 190 MB"
+2026-05-09T22:30:28.365343Z  WARN chain: failed to process optimistic block err=TooManyProcessingBlocks prev_block_hash=HB4E3BvamaBFFEJbaGL3zqgGnJ9zmAoNw2oAvmFFnJxs hash=35ima4xGyhCJBzPZ3z9AsaxsZgzGbEW1jfg4jwAoVE81 height=1079
+2026-05-09T22:30:32.442226Z  INFO stats: node_status="#    1075 Downloading blocks 0.00% (3 left; at 1075) 3 peers ⬇ 583 kB/s ⬆ 663 kB/s 0.86 bps 218 Tgas/s CPU: 195%, Mem: 762 MB"
+2026-05-09T22:30:42.443926Z  INFO stats: node_status="#    1076 Downloading blocks 33.33% (2 left; at 1076) 3 peers ⬇ 989 kB/s ⬆ 1.07 MB/s 0.10 bps 54.0 Tgas/s CPU: 191%, Mem: 528 MB"
+2026-05-09T22:30:52.443787Z  INFO stats: node_status="#    1081 CCp6cAzW2BMm99VM59gRv4KgFaJZRvh98rvpcLULerqa Validator | 4 validators 3 peers ⬇ 935 kB/s ⬆ 1.02 MB/s 0.20 bps 54.0 Tgas/s CPU: 191%, Mem: 595 MB"
+2026-05-09T22:30:58.406515Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T22:30:58.549886Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T22:30:59.306935Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T22:31:01.552835Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T22:31:03.005171Z  INFO stats: node_status="#    1085 zFCn58L7sLgj8ggUoN8ibPEtAjbS1cv2vfK3X2VYtMU Validator | 4 validators 3 peers ⬇ 1.15 MB/s ⬆ 1.23 MB/s 0.28 bps 568 Tgas/s CPU: 199%, Mem: 1.08 GB"
+2026-05-09T22:31:13.725348Z  INFO stats: node_status="#    1090 jKWUVBb5t21CacUNu7AqBPoVucuQfJxatgN48SCi7Cx Validator | 4 validators 3 peers ⬇ 1.69 MB/s ⬆ 1.69 MB/s 0.37 bps 643 Tgas/s CPU: 199%, Mem: 1.20 GB"
+2026-05-09T22:31:25.234265Z  INFO stats: node_status="#    1095 9z2g3S8GMqPpkHRCVz7afVD7CvYZMiEscAAkuxLRkHWr Validator | 4 validators 3 peers ⬇ 2.21 MB/s ⬆ 2.32 MB/s 0.17 bps 181 Tgas/s CPU: 194%, Mem: 1.31 GB"
+2026-05-09T22:31:35.232694Z  INFO stats: node_status="#    1098 CoCZmbbDK9FWJyiAKaDXtGdpVvhkBG4UffKkUwkoMgGA Validator | 4 validators 3 peers ⬇ 2.23 MB/s ⬆ 2.20 MB/s 0.40 bps 623 Tgas/s CPU: 197%, Mem: 1.46 GB"
+2026-05-09T22:31:38.745554Z  INFO db_opener: opening node storage path="/home/ubuntu/bench/singlenode/S04/node0/data/state_snapshot/DcMKa5J4wXanHZGhHwZL4vyL32VsbrdiNakZQyJ6X7HJ/data" cold_path="none"
+2026-05-09T22:31:38.745609Z  INFO db: opened a new rocksdb instance num_instances=2
+2026-05-09T22:31:38.757268Z  INFO db: closed a rocksdb instance num_instances=1
+2026-05-09T22:31:38.757278Z  INFO db_opener: the database exists path=/home/ubuntu/bench/singlenode/S04/node0/data/state_snapshot/DcMKa5J4wXanHZGhHwZL4vyL32VsbrdiNakZQyJ6X7HJ/data
+2026-05-09T22:31:38.757287Z  INFO db: opened a new rocksdb instance num_instances=2
+2026-05-09T22:31:46.111783Z  INFO stats: node_status="#    1103 Gd9qBF9D6DeHAhx6KZpqXKqiMRzscsXNgmzgfQPmJ6sU Validator | 4 validators 3 peers ⬇ 2.61 MB/s ⬆ 2.64 MB/s 0.28 bps 378 Tgas/s CPU: 195%, Mem: 1.63 GB"
+2026-05-09T22:31:47.814146Z  WARN client: optimistic block was constructed on different block, discarding it height=1105 prev_hash=Gd9qBF9D6DeHAhx6KZpqXKqiMRzscsXNgmzgfQPmJ6sU optimistic_block_prev_hash=AriDqhmLuRVVjnmCUtPo3AUoKdhkxTNrqUwGBpM3nP6D
+2026-05-09T22:31:57.009785Z  INFO stats: node_status="#    1107 8yL9WJp7kCzNBqo1LEgN9Qi6FXR5Lq75fe2VPHMSwbLd Validator | 4 validators 3 peers ⬇ 2.85 MB/s ⬆ 2.87 MB/s 0.28 bps 452 Tgas/s CPU: 197%, Mem: 1.87 GB"
+2026-05-09T22:31:58.405737Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T22:31:58.557351Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T22:31:59.298340Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T22:32:01.481065Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T22:32:07.009068Z  INFO stats: node_status="#    1109 Downloading blocks 0.00% (2 left; at 1109) 3 peers ⬇ 3.04 MB/s ⬆ 3.21 MB/s 0.20 bps 330 Tgas/s CPU: 199%, Mem: 2.00 GB"
+2026-05-09T22:32:17.010646Z  INFO stats: node_status="#    1114 9QNNcase5pAiNvhSJfTfNmahuGzc6hwuQPNCV1YEokUP Validator | 4 validators 3 peers ⬇ 3.17 MB/s ⬆ 3.12 MB/s 0.30 bps 406 Tgas/s CPU: 194%, Mem: 2.14 GB"
+2026-05-09T22:32:27.012779Z  INFO stats: node_status="#    1116 89CZGBZoLfktPnwhHjVPYGXubSLSqCozduUScxr1NQew Validator | 4 validators 3 peers ⬇ 3.43 MB/s ⬆ 3.49 MB/s 0.20 bps 323 Tgas/s CPU: 199%, Mem: 2.31 GB"
+2026-05-09T22:32:37.115670Z  INFO stats: node_status="#    1119 2sCk6Bh14sSH7bnZzjMjV8ZmwFBwcsNXxp6sb6NssLFx Validator | 4 validators 3 peers ⬇ 3.24 MB/s ⬆ 3.28 MB/s 0.30 bps 479 Tgas/s CPU: 199%, Mem: 2.52 GB"
+2026-05-09T22:32:47.116944Z  INFO stats: node_status="#    1122 FWT87CHdeW2wJ6twuM7NjbZ3SdDpfD4m3VZjbxmtnChs Validator | 4 validators 3 peers ⬇ 3.24 MB/s ⬆ 3.29 MB/s 0.30 bps 404 Tgas/s CPU: 196%, Mem: 2.66 GB"
+2026-05-09T22:32:47.167860Z  INFO db: closed a rocksdb instance num_instances=1
+2026-05-09T22:32:47.168084Z  INFO db: opened a new rocksdb instance num_instances=2
+2026-05-09T22:32:47.202207Z  INFO db: closed a rocksdb instance num_instances=1
+2026-05-09T22:32:47.202237Z  INFO db: opened a new rocksdb instance num_instances=2
+2026-05-09T22:32:48.059566Z  WARN chain: flat storage needs too many hops to access a block shard_id=0 flat_head_height=0 cached_deltas=1075 num_hops=1001
+2026-05-09T22:32:48.547161Z  WARN chain: flat storage needs too many hops to access a block shard_id=1 flat_head_height=0 cached_deltas=1075 num_hops=1001
+2026-05-09T22:32:48.944989Z  WARN chain: flat storage needs too many hops to access a block shard_id=2 flat_head_height=0 cached_deltas=1075 num_hops=1001
+2026-05-09T22:32:49.388329Z  WARN chain: flat storage needs too many hops to access a block shard_id=3 flat_head_height=0 cached_deltas=1075 num_hops=1001
+2026-05-09T22:32:52.116306Z  WARN chain: flat storage needs too many hops to access a block shard_id=0 flat_head_height=0 cached_deltas=1107 num_hops=1061
+2026-05-09T22:32:52.176596Z  WARN chain: flat storage needs too many hops to access a block shard_id=1 flat_head_height=0 cached_deltas=1107 num_hops=1061
+2026-05-09T22:32:52.335630Z  WARN chain: flat storage needs too many hops to access a block shard_id=2 flat_head_height=0 cached_deltas=1107 num_hops=1061
+2026-05-09T22:32:52.397927Z  WARN chain: flat storage needs too many hops to access a block shard_id=3 flat_head_height=0 cached_deltas=1107 num_hops=1061
+2026-05-09T22:32:57.119146Z  INFO stats: node_status="#    1125 AQWB8EqECr2qG8mopDixSgLAZGZTsqCMLbarqMZvqKNA Validator | 4 validators 3 peers ⬇ 3.12 MB/s ⬆ 3.00 MB/s 0.30 bps 361 Tgas/s CPU: 196%, Mem: 2.81 GB"
+2026-05-09T22:32:58.401338Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T22:32:58.546285Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T22:32:59.300849Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T22:33:01.463404Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T22:33:05.531603Z ERROR client: failed to process freshly produced block error=TooManyProcessingBlocks
+2026-05-09T22:33:05.531630Z ERROR client: block production failed height=1132 err=Chain(TooManyProcessingBlocks)
+2026-05-09T22:33:07.120334Z  INFO stats: node_status="#    1126 5BhWTemVDgGe2GkfERNr3ceUYFi2RuaYqjHw3KgEtNuR Validator | 4 validators 3 peers ⬇ 2.86 MB/s ⬆ 2.72 MB/s 0.10 bps 161 Tgas/s CPU: 198%, Mem: 2.96 GB"

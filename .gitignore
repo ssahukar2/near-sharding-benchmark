@@ -11,8 +11,10 @@ __pycache__/
 *$py.class
 .Python
 
-# Logs
+# Logs (allow small committed neard tail logs under results/)
 *.log
+!results/single_node_scaling/**/neard_logs_*/
+!results/single_node_scaling/**/neard_logs_*/*.log
 
 # Rust / neard build (submodule build trees — also ignore if copied outside submodule)
 **/target/

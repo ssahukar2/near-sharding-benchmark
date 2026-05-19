@@ -1,0 +1,134 @@
+2026-05-04T20:30:48.185722Z  INFO neard: version="trunk" build="1.36.1-2831-gd178e1830" commit="d178e1830b062b407c270e8f8045753fd41cd081" latest_protocol=84
+2026-05-04T20:30:48.186687Z  INFO config: validating config, extracted from config.json
+2026-05-04T20:30:49.311715Z  WARN genesis: skipped genesis validation
+2026-05-04T20:30:49.321813Z  INFO config: validating genesis config and records, this could take a few minutes
+2026-05-04T20:30:49.459638Z  INFO config: all validations have passed
+2026-05-04T20:30:49.459889Z ERROR neard::cli: parameter is set to incorrect value, please run `scripts/set_kernel_params.sh` param_name=net.core.rmem_max actual_normalized=212992 expected_normalized=8388608
+2026-05-04T20:30:49.459928Z ERROR neard::cli: parameter is set to incorrect value, please run `scripts/set_kernel_params.sh` param_name=net.core.wmem_max actual_normalized=212992 expected_normalized=8388608
+2026-05-04T20:30:49.459947Z ERROR neard::cli: parameter is set to incorrect value, please run `scripts/set_kernel_params.sh` param_name=net.ipv4.tcp_rmem actual_normalized=4096 131072 6291456 expected_normalized=4096 87380 8388608
+2026-05-04T20:30:49.459963Z ERROR neard::cli: parameter is set to incorrect value, please run `scripts/set_kernel_params.sh` param_name=net.ipv4.tcp_wmem actual_normalized=4096 16384 4194304 expected_normalized=4096 16384 8388608
+2026-05-04T20:30:49.459978Z ERROR neard::cli: parameter is set to incorrect value, please run `scripts/set_kernel_params.sh` param_name=net.ipv4.tcp_slow_start_after_idle actual_normalized=1 expected_normalized=0
+2026-05-04T20:30:49.459994Z ERROR neard::cli: parameter is set to incorrect value, please run `scripts/set_kernel_params.sh` param_name=net.ipv4.tcp_congestion_control actual_normalized=cubic expected_normalized=bbr
+2026-05-04T20:30:49.460009Z ERROR neard::cli: parameter is set to incorrect value, please run `scripts/set_kernel_params.sh` param_name=net.core.default_qdisc actual_normalized=fq_codel expected_normalized=fq
+2026-05-04T20:30:49.460023Z ERROR neard::cli: parameter is set to incorrect value, please run `scripts/set_kernel_params.sh` param_name=net.ipv4.tcp_mtu_probing actual_normalized=0 expected_normalized=1
+2026-05-04T20:30:49.460037Z ERROR neard::cli: parameter is set to incorrect value, please run `scripts/set_kernel_params.sh` param_name=net.ipv4.tcp_max_syn_backlog actual_normalized=4096 expected_normalized=8096
+2026-05-04T20:30:49.461162Z  INFO neard: reset the config because the config file doesn't exist err=Os { code: 2, kind: NotFound, message: "No such file or directory" } path="/home/ubuntu/bench/singlenode/S24/node11/log_config.json"
+2026-05-04T20:30:49.461862Z  INFO config: validating config, extracted from config.json
+2026-05-04T20:30:49.461917Z  INFO neard: hot loading validator key validator_file=/home/ubuntu/bench/singlenode/S24/node11/validator_key.json
+2026-05-04T20:30:49.461954Z  INFO near_o11y::reload: updated the logging layer according to log_config.json
+2026-05-04T20:30:49.461981Z  INFO db_opener: opening node storage path="/home/ubuntu/bench/singlenode/S24/node11/data" cold_path="none"
+2026-05-04T20:30:49.462001Z  INFO db_opener: the database doesn't exist, creating it path=/home/ubuntu/bench/singlenode/S24/node11/data
+2026-05-04T20:30:49.462040Z  INFO db: opened a new rocksdb instance num_instances=1
+2026-05-04T20:31:23.318382Z  INFO db: closed a rocksdb instance num_instances=0
+2026-05-04T20:31:23.318418Z  INFO db: opened a new rocksdb instance num_instances=1
+2026-05-04T20:31:24.497410Z  INFO db_opener: setting the db kind archive=false which="Hot" default_kind=RPC
+2026-05-04T20:31:24.499537Z  INFO db: closed a rocksdb instance num_instances=0
+2026-05-04T20:31:24.499565Z  INFO db: opened a new rocksdb instance num_instances=1
+2026-05-04T20:31:24.502156Z  INFO db: closed a rocksdb instance num_instances=0
+2026-05-04T20:31:24.502187Z  INFO db: opened a new rocksdb instance num_instances=1
+2026-05-04T20:31:28.188072Z ERROR metrics: error when exporting postponed receipts count err=DB Not Found Error: FINAL HEAD
+2026-05-04T20:31:28.231887Z  INFO near_store::trie::mem::parallel_loader: loading subtrees in parallel num_subtrees=1000
+2026-05-04T20:31:28.238740Z  INFO near_store::trie::mem::parallel_loader: loading subtrees in parallel num_subtrees=1000
+2026-05-04T20:31:28.289437Z  INFO near_store::trie::mem::parallel_loader: loading subtrees in parallel num_subtrees=1000
+2026-05-04T20:31:28.297550Z  INFO near_store::trie::mem::parallel_loader: loading subtrees in parallel num_subtrees=1000
+2026-05-04T20:31:28.347064Z  INFO near_store::trie::mem::parallel_loader: loading subtrees in parallel num_subtrees=1000
+2026-05-04T20:31:28.355093Z  INFO near_store::trie::mem::parallel_loader: loading subtrees in parallel num_subtrees=1000
+2026-05-04T20:31:28.404606Z  INFO near_store::trie::mem::parallel_loader: loading subtrees in parallel num_subtrees=1000
+2026-05-04T20:31:28.412871Z  INFO near_store::trie::mem::parallel_loader: loading subtrees in parallel num_subtrees=1000
+2026-05-04T20:31:28.462251Z  INFO near_store::trie::mem::parallel_loader: loading subtrees in parallel num_subtrees=1000
+2026-05-04T20:31:28.470481Z  INFO near_store::trie::mem::parallel_loader: loading subtrees in parallel num_subtrees=1000
+2026-05-04T20:31:28.520008Z  INFO near_store::trie::mem::parallel_loader: loading subtrees in parallel num_subtrees=1000
+2026-05-04T20:31:28.528060Z  INFO near_store::trie::mem::parallel_loader: loading subtrees in parallel num_subtrees=1000
+2026-05-04T20:31:28.577737Z  INFO near_store::trie::mem::parallel_loader: loading subtrees in parallel num_subtrees=1000
+2026-05-04T20:31:28.585802Z  INFO near_store::trie::mem::parallel_loader: loading subtrees in parallel num_subtrees=1000
+2026-05-04T20:31:28.634934Z  INFO near_store::trie::mem::parallel_loader: loading subtrees in parallel num_subtrees=1000
+2026-05-04T20:31:28.643307Z  INFO near_store::trie::mem::parallel_loader: loading subtrees in parallel num_subtrees=1000
+2026-05-04T20:31:28.692263Z  INFO near_store::trie::mem::parallel_loader: loading subtrees in parallel num_subtrees=1000
+2026-05-04T20:31:28.700545Z  INFO near_store::trie::mem::parallel_loader: loading subtrees in parallel num_subtrees=1000
+2026-05-04T20:31:28.749607Z  INFO near_store::trie::mem::parallel_loader: loading subtrees in parallel num_subtrees=1000
+2026-05-04T20:31:28.758026Z  INFO near_store::trie::mem::parallel_loader: loading subtrees in parallel num_subtrees=1000
+2026-05-04T20:31:28.807105Z  INFO near_store::trie::mem::parallel_loader: loading subtrees in parallel num_subtrees=1000
+2026-05-04T20:31:28.815486Z  INFO near_store::trie::mem::parallel_loader: loading subtrees in parallel num_subtrees=1000
+2026-05-04T20:31:28.864719Z  INFO near_store::trie::mem::parallel_loader: loading subtrees in parallel num_subtrees=1000
+2026-05-04T20:31:28.873392Z  INFO near_store::trie::mem::parallel_loader: loading subtrees in parallel num_subtrees=1002
+2026-05-04T20:31:28.926445Z  INFO config: mutable config field remains the same field_name="expected_shutdown" value=None
+2026-05-04T20:31:28.926738Z  INFO config: mutable config field remains the same field_name="resharding_config" value=ReshardingConfig { batch_size: 500.0 KB, batch_delay: Duration { seconds: 0, nanoseconds: 5000000 }, retry_delay: Duration { seconds: 10, nanoseconds: 0 }, initial_delay: Duration { seconds: 0, nanoseconds: 0 }, max_poll_time: Duration { seconds: 7200, nanoseconds: 0 }, catch_up_blocks: 20 }
+2026-05-04T20:31:28.926768Z  INFO config: mutable config field remains the same field_name="produce_chunk_add_transactions_time_limit" value=Some(Duration { seconds: 2, nanoseconds: 0 })
+2026-05-04T20:31:28.926778Z  INFO config: updated client config
+2026-05-04T20:31:28.926782Z  INFO config: mutable config field remains the same field_name="validator_signer" value=Some(InMemory(InMemoryValidatorSigner { account_id: AccountId("node11"), signer: InMemory(InMemorySigner(account_id: node11, public_key: ed25519:JDoiKTjfqDfz437PcvhL8T3gkPQpkzBUafDQiWMgrEKy)) }))
+2026-05-04T20:31:28.926791Z  INFO config: updated validator key
+2026-05-04T20:31:28.933550Z  INFO stats: node_status="#       0 GQTMrja6qQXPBTcXXbC2cxacG9YGd6vpd1UPqSKPanDS Validator | 24 validators 0 peers ⬇ 0 B/s ⬆ 0 B/s 0.00 bps 0 gas/s CPU: 0%, Mem: 396 MB"
+2026-05-04T20:31:29.037624Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-04T20:31:29.055638Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-04T20:31:29.091826Z  WARN network: failed to establish connection to TIER1 proxy err=TcpStream::connect()
+
+Caused by:
+    Connection refused (os error 111)
+
+Stack backtrace:
+   0: near_network::tcp::Stream::connect::{{closure}}
+   1: near_network::peer_manager::network_state::tier1::<impl near_network::peer_manager::network_state::NetworkState>::tier1_connect_to_my_proxies::{{closure}}::{{closure}}
+   2: near_network::peer_manager::network_state::tier1::<impl near_network::peer_manager::network_state::NetworkState>::tier1_advertise_proxies::{{closure}}
+   3: <tracing::instrument::Instrumented<T> as core::future::future::Future>::poll
+   4: <near_async::tokio::sender::InstrumentingFuture as core::future::future::Future>::poll
+   5: tokio::runtime::task::raw::poll
+   6: tokio::runtime::scheduler::multi_thread::worker::Context::run_task
+   7: tokio::runtime::task::raw::poll
+   8: std::sys::backtrace::__rust_begin_short_backtrace
+   9: core::ops::function::FnOnce::call_once{{vtable.shim}}
+  10: std::sys::pal::unix::thread::Thread::new::thread_start
+  11: <unknown>
+  12: <unknown> proxy=PeerAddr { addr: 216.47.155.68:24578, peer_id: ed25519:663MCs77ZDxtgy3BU4F3QGhP1cJ9Bgr1Jj354cMNcoM6 }
+2026-05-04T20:31:29.114607Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-04T20:31:29.137603Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-04T20:31:29.149348Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-04T20:31:29.202243Z  INFO near_transactions_generator::choice: Created TxAccountsSelector receivers_from_senders_ratio=0.0
+2026-05-04T20:31:29.229857Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-04T20:31:29.301843Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-04T20:31:29.413091Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-04T20:31:29.421875Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-04T20:31:29.428750Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-04T20:31:29.492187Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-04T20:31:29.596691Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-04T20:31:29.610998Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-04T20:31:30.492080Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-04T20:31:30.886664Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-04T20:31:31.187288Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-04T20:31:31.205709Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-04T20:31:31.625988Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-04T20:31:32.094584Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-04T20:31:32.194040Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-04T20:31:32.817202Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-04T20:31:32.849576Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-04T20:31:33.236886Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-04T20:31:33.314789Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-04T20:31:34.636015Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-04T20:31:35.057864Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-04T20:31:35.242406Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-04T20:31:35.288295Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-04T20:31:35.857670Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-04T20:31:38.948968Z  INFO stats: node_status="#      13 Downloading blocks 0.00% (2 left; at 13) 23 peers ⬇ 133 kB/s ⬆ 127 kB/s 0.70 bps 8.57 Tgas/s CPU: 80%, Mem: 353 MB"
+2026-05-04T20:31:50.063215Z  INFO stats: node_status="#      25 5hfHVp4MdiFabYryeoHLuiH186riLpT8wjxkdhkLwcCa Validator | 24 validators 23 peers ⬇ 392 kB/s ⬆ 362 kB/s 0.72 bps 11.1 Tgas/s CPU: 60%, Mem: 405 MB"
+2026-05-04T20:32:00.085074Z  INFO stats: node_status="#      32 BXntKg3CKpHV7NFpJXCKiBHevcYdnx4qG96E7U1YMFBR Validator | 24 validators 23 peers ⬇ 668 kB/s ⬆ 643 kB/s 0.70 bps 17.1 Tgas/s CPU: 82%, Mem: 470 MB"
+2026-05-04T20:32:10.084143Z  INFO stats: node_status="#      42 Downloading blocks 0.00% (2 left; at 42) 23 peers ⬇ 949 kB/s ⬆ 944 kB/s 0.90 bps 23.2 Tgas/s CPU: 90%, Mem: 492 MB"
+2026-05-04T20:32:20.099378Z  INFO stats: node_status="#      56 BX7johgdjxDNj1tdZL37egzqH5ik74eJ4hRxwJDhwmgk Validator | 24 validators 23 peers ⬇ 1.24 MB/s ⬆ 1.24 MB/s 1.10 bps 9.11 Tgas/s CPU: 90%, Mem: 542 MB"
+2026-05-04T20:32:30.606485Z  INFO stats: node_status="#      65 AMjM4eoRRKmVyf3tQuYf92Ho7kqjWfpLt4kpHgqgEbcP Validator | 24 validators 23 peers ⬇ 1.46 MB/s ⬆ 1.47 MB/s 0.67 bps 15.0 Tgas/s CPU: 79%, Mem: 564 MB"
+2026-05-04T20:32:40.585021Z  INFO stats: node_status="#      76 5JAHUzw7bSQn1AGD6eFkHTdQXCUKhSWb5pMjoE8rMxWq Validator | 24 validators 23 peers ⬇ 1.55 MB/s ⬆ 1.57 MB/s 0.70 bps 12.0 Tgas/s CPU: 64%, Mem: 549 MB"
+2026-05-04T20:32:50.585073Z  INFO stats: node_status="#      86 2QHfjzCbWNBWCUreyraLK6eoCf22xMZdtQMUytcax2sn Validator | 24 validators 23 peers ⬇ 1.58 MB/s ⬆ 1.62 MB/s 0.80 bps 12.3 Tgas/s CPU: 85%, Mem: 563 MB"
+2026-05-04T20:33:00.734050Z  INFO stats: node_status="#     100 FG4dqfX3V3B22rNbTx5aRdqASDqmBXfgPFbenYqN5xub Validator | 24 validators 23 peers ⬇ 1.61 MB/s ⬆ 1.66 MB/s 1.09 bps 20.1 Tgas/s CPU: 109%, Mem: 584 MB"
+2026-05-04T20:33:01.202518Z  WARN client: optimistic block was constructed on different block, discarding it height=102 prev_hash=FG4dqfX3V3B22rNbTx5aRdqASDqmBXfgPFbenYqN5xub optimistic_block_prev_hash=AEXCSPpNRn2iaP4RpSE89XfBZJcTXGdHhizLuzaP5nQn
+2026-05-04T20:33:11.815611Z  INFO stats: node_status="#     113 5nke1GeUzTj8Acc8Hhaq2kEyP7kmYGiT3sFgeGfeJa7R Validator | 24 validators 23 peers ⬇ 1.63 MB/s ⬆ 1.65 MB/s 0.99 bps 17.1 Tgas/s CPU: 93%, Mem: 605 MB"
+2026-05-04T20:33:21.822960Z  INFO stats: node_status="#     123 5EZcLtaXPL7A1GcLVjS4KrEq5AshoKgmTfjxwmpoZrnG Validator | 24 validators 23 peers ⬇ 1.57 MB/s ⬆ 1.58 MB/s 0.60 bps 8.58 Tgas/s CPU: 78%, Mem: 588 MB"
+2026-05-04T20:33:31.830592Z  INFO stats: node_status="#     135 3rV6PSm34ioCP6Jx5GoiVC9xRWbzkFYBrVJEsDPKn5pd Validator | 24 validators 23 peers ⬇ 1.73 MB/s ⬆ 1.73 MB/s 1.10 bps 16.6 Tgas/s CPU: 141%, Mem: 675 MB"
+2026-05-04T20:33:43.984383Z  INFO stats: node_status="#     136 Downloading blocks 0.00% (7 left; at 136) 23 peers ⬇ 2.93 MB/s ⬆ 2.56 MB/s 0.08 bps 0 gas/s CPU: 200%, Mem: 1.34 GB"
+2026-05-04T20:34:01.082756Z  INFO stats: node_status="#     137 Downloading blocks 12.50% (7 left; at 137) 23 peers ⬇ 2.81 MB/s ⬆ 2.50 MB/s 0.06 bps 0 gas/s CPU: 200%, Mem: 2.02 GB"
+2026-05-04T20:34:31.455371Z  INFO stats: node_status="#     144 Cak9Dz8jXchfLBUuUfhjht47EQxMCwSbhP2e56yvpizn Validator | 24 validators 23 peers ⬇ 2.35 MB/s ⬆ 2.04 MB/s 0.13 bps 0 gas/s CPU: 198%, Mem: 1.66 GB"
+2026-05-04T20:34:41.455315Z  INFO stats: node_status="#     144 Cak9Dz8jXchfLBUuUfhjht47EQxMCwSbhP2e56yvpizn Validator | 24 validators 23 peers ⬇ 96.8 kB/s ⬆ 212 kB/s 0.00 bps 0 gas/s CPU: 187%, Mem: 1.54 GB"
+2026-05-04T20:34:51.865223Z  INFO stats: node_status="#     144 Cak9Dz8jXchfLBUuUfhjht47EQxMCwSbhP2e56yvpizn Validator | 24 validators 23 peers ⬇ 19.8 kB/s ⬆ 82.6 kB/s 0.00 bps 0 gas/s CPU: 187%, Mem: 1.56 GB"
+2026-05-04T20:35:03.642938Z  INFO stats: node_status="#     144 Cak9Dz8jXchfLBUuUfhjht47EQxMCwSbhP2e56yvpizn Validator | 24 validators 23 peers ⬇ 21.9 kB/s ⬆ 109 kB/s 0.00 bps 0 gas/s CPU: 179%, Mem: 1.61 GB"
+2026-05-04T20:35:14.281590Z  INFO stats: node_status="#     150 FcGPMLp4dNLXt3EbRY3d8qG3vsX8xSxqCacsdqPJN9VQ Validator | 24 validators 23 peers ⬇ 34.6 kB/s ⬆ 116 kB/s 0.28 bps 0 gas/s CPU: 187%, Mem: 1.70 GB"
+2026-05-04T20:35:25.725473Z  INFO stats: node_status="#     150 FcGPMLp4dNLXt3EbRY3d8qG3vsX8xSxqCacsdqPJN9VQ Validator | 24 validators 23 peers ⬇ 1.95 MB/s ⬆ 1.59 MB/s 0.00 bps 0 gas/s CPU: 200%, Mem: 2.06 GB"
+2026-05-04T20:35:35.721688Z  INFO stats: node_status="#     150 Downloading blocks 0.00% (8 left; at 150) 23 peers ⬇ 2.48 MB/s ⬆ 2.22 MB/s 0.00 bps 0 gas/s CPU: 195%, Mem: 2.88 GB"
+2026-05-04T20:36:17.491026Z  INFO stats: node_status="#     157 Downloading blocks 77.78% (2 left; at 157) 23 peers ⬇ 2.48 MB/s ⬆ 2.21 MB/s 0.12 bps 0 gas/s CPU: 189%, Mem: 2.48 GB"
+2026-05-04T20:36:27.492080Z  INFO stats: node_status="#     161 Downloading blocks 77.78% (2 left; at 157) 23 peers ⬇ 134 kB/s ⬆ 148 kB/s 0.10 bps 0 gas/s CPU: 186%, Mem: 2.50 GB"
+2026-05-04T20:36:39.099177Z  INFO stats: node_status="#     164 84Rm2FgKsCVuy1BTHt4pQEfym74FdCjpDd91apHy9xxW Validator | 24 validators 23 peers ⬇ 262 kB/s ⬆ 262 kB/s 0.09 bps 0 gas/s CPU: 192%, Mem: 2.72 GB"

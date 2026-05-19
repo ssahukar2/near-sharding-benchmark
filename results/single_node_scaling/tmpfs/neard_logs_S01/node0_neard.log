@@ -1,0 +1,336 @@
+2026-05-09T23:03:04.906941Z  INFO neard: version="trunk" build="1.36.1-2831-gd178e1830" commit="d178e1830b062b407c270e8f8045753fd41cd081" latest_protocol=84
+2026-05-09T23:03:04.907672Z  INFO config: validating config, extracted from config.json
+2026-05-09T23:03:04.950563Z  WARN genesis: skipped genesis validation
+2026-05-09T23:03:04.950643Z  INFO config: validating genesis config and records, this could take a few minutes
+2026-05-09T23:03:04.952824Z  INFO config: all validations have passed
+2026-05-09T23:03:04.952957Z ERROR neard::cli: parameter is set to incorrect value, please run `scripts/set_kernel_params.sh` param_name=net.core.rmem_max actual_normalized=212992 expected_normalized=8388608
+2026-05-09T23:03:04.952988Z ERROR neard::cli: parameter is set to incorrect value, please run `scripts/set_kernel_params.sh` param_name=net.core.wmem_max actual_normalized=212992 expected_normalized=8388608
+2026-05-09T23:03:04.953002Z ERROR neard::cli: parameter is set to incorrect value, please run `scripts/set_kernel_params.sh` param_name=net.ipv4.tcp_rmem actual_normalized=4096 131072 6291456 expected_normalized=4096 87380 8388608
+2026-05-09T23:03:04.953014Z ERROR neard::cli: parameter is set to incorrect value, please run `scripts/set_kernel_params.sh` param_name=net.ipv4.tcp_wmem actual_normalized=4096 16384 4194304 expected_normalized=4096 16384 8388608
+2026-05-09T23:03:04.953027Z ERROR neard::cli: parameter is set to incorrect value, please run `scripts/set_kernel_params.sh` param_name=net.ipv4.tcp_slow_start_after_idle actual_normalized=1 expected_normalized=0
+2026-05-09T23:03:04.953040Z ERROR neard::cli: parameter is set to incorrect value, please run `scripts/set_kernel_params.sh` param_name=net.ipv4.tcp_congestion_control actual_normalized=cubic expected_normalized=bbr
+2026-05-09T23:03:04.953053Z ERROR neard::cli: parameter is set to incorrect value, please run `scripts/set_kernel_params.sh` param_name=net.core.default_qdisc actual_normalized=fq_codel expected_normalized=fq
+2026-05-09T23:03:04.953064Z ERROR neard::cli: parameter is set to incorrect value, please run `scripts/set_kernel_params.sh` param_name=net.ipv4.tcp_mtu_probing actual_normalized=0 expected_normalized=1
+2026-05-09T23:03:04.953076Z ERROR neard::cli: parameter is set to incorrect value, please run `scripts/set_kernel_params.sh` param_name=net.ipv4.tcp_max_syn_backlog actual_normalized=4096 expected_normalized=8096
+2026-05-09T23:03:04.953962Z  INFO neard: reset the config because the config file doesn't exist err=Os { code: 2, kind: NotFound, message: "No such file or directory" } path="/dev/shm/near-bench/S01/node0/log_config.json"
+2026-05-09T23:03:04.954544Z  INFO config: validating config, extracted from config.json
+2026-05-09T23:03:04.954589Z  INFO neard: hot loading validator key validator_file=/dev/shm/near-bench/S01/node0/validator_key.json
+2026-05-09T23:03:04.954624Z  INFO near_o11y::reload: updated the logging layer according to log_config.json
+2026-05-09T23:03:04.954643Z  INFO db_opener: opening node storage path="/dev/shm/near-bench/S01/node0/data" cold_path="none"
+2026-05-09T23:03:04.954657Z  INFO db_opener: the database doesn't exist, creating it path=/dev/shm/near-bench/S01/node0/data
+2026-05-09T23:03:04.954689Z  INFO db: opened a new rocksdb instance num_instances=1
+2026-05-09T23:03:05.831529Z  INFO db: closed a rocksdb instance num_instances=0
+2026-05-09T23:03:05.831547Z  INFO db: opened a new rocksdb instance num_instances=1
+2026-05-09T23:03:05.902767Z  INFO db_opener: setting the db kind archive=false which="Hot" default_kind=RPC
+2026-05-09T23:03:05.904081Z  INFO db: closed a rocksdb instance num_instances=0
+2026-05-09T23:03:05.904099Z  INFO db: opened a new rocksdb instance num_instances=1
+2026-05-09T23:03:05.905933Z  INFO db: closed a rocksdb instance num_instances=0
+2026-05-09T23:03:05.905952Z  INFO db: opened a new rocksdb instance num_instances=1
+2026-05-09T23:03:06.075195Z ERROR metrics: error when exporting postponed receipts count err=DB Not Found Error: FINAL HEAD
+2026-05-09T23:03:06.099854Z  INFO near_store::trie::mem::parallel_loader: loading subtrees in parallel num_subtrees=1002
+2026-05-09T23:03:06.128297Z  INFO config: mutable config field remains the same field_name="expected_shutdown" value=None
+2026-05-09T23:03:06.128336Z  INFO config: mutable config field remains the same field_name="resharding_config" value=ReshardingConfig { batch_size: 500.0 KB, batch_delay: Duration { seconds: 0, nanoseconds: 5000000 }, retry_delay: Duration { seconds: 10, nanoseconds: 0 }, initial_delay: Duration { seconds: 0, nanoseconds: 0 }, max_poll_time: Duration { seconds: 7200, nanoseconds: 0 }, catch_up_blocks: 20 }
+2026-05-09T23:03:06.128506Z  INFO config: mutable config field remains the same field_name="produce_chunk_add_transactions_time_limit" value=Some(Duration { seconds: 2, nanoseconds: 0 })
+2026-05-09T23:03:06.128520Z  INFO config: updated client config
+2026-05-09T23:03:06.128524Z  INFO config: mutable config field remains the same field_name="validator_signer" value=Some(InMemory(InMemoryValidatorSigner { account_id: AccountId("node0"), signer: InMemory(InMemorySigner(account_id: node0, public_key: ed25519:5txf5QLY3sPa6LppocVcz2Q9BSrB3hqLJo2GrNxc7kFj)) }))
+2026-05-09T23:03:06.128618Z  INFO config: updated validator key
+2026-05-09T23:03:06.155571Z  INFO stats: node_status="#       0 CpPiULuG4K77tE1vKxpgxx8G9Ss3kEYGwesyPuRygDeb Validator | 1 validator 0 peers ⬇ 0 B/s ⬆ 0 B/s 0.00 bps 0 gas/s CPU: 0%, Mem: 92.4 MB"
+2026-05-09T23:03:06.379489Z  WARN network: failed to establish connection to TIER1 proxy err=TcpStream::connect()
+
+Caused by:
+    Connection refused (os error 111)
+
+Stack backtrace:
+   0: near_network::tcp::Stream::connect::{{closure}}
+   1: near_network::peer_manager::network_state::tier1::<impl near_network::peer_manager::network_state::NetworkState>::tier1_connect_to_my_proxies::{{closure}}::{{closure}}
+   2: near_network::peer_manager::network_state::tier1::<impl near_network::peer_manager::network_state::NetworkState>::tier1_advertise_proxies::{{closure}}
+   3: <tracing::instrument::Instrumented<T> as core::future::future::Future>::poll
+   4: <near_async::tokio::sender::InstrumentingFuture as core::future::future::Future>::poll
+   5: tokio::runtime::task::raw::poll
+   6: tokio::runtime::scheduler::multi_thread::worker::Context::run_task
+   7: tokio::runtime::task::raw::poll
+   8: std::sys::backtrace::__rust_begin_short_backtrace
+   9: core::ops::function::FnOnce::call_once{{vtable.shim}}
+  10: std::sys::pal::unix::thread::Thread::new::thread_start
+  11: <unknown>
+  12: <unknown> proxy=PeerAddr { addr: 216.47.155.68:24567, peer_id: ed25519:GXHFd6W5xvLDZojfrDQdhZNyHPUkvtjvRUePxmr2TLTA }
+2026-05-09T23:03:06.395922Z  INFO near_transactions_generator::choice: Created TxAccountsSelector receivers_from_senders_ratio=0.0
+2026-05-09T23:03:07.562762Z  INFO db_opener: opening node storage path="/dev/shm/near-bench/S01/node0/data/state_snapshot/3443r9CvMMGjRPi73A2CkThxpTRrCo4ZtTzKzxox1nhT/data" cold_path="none"
+2026-05-09T23:03:07.562825Z  INFO db: opened a new rocksdb instance num_instances=2
+2026-05-09T23:03:07.564900Z  INFO db: closed a rocksdb instance num_instances=1
+2026-05-09T23:03:07.564921Z  INFO db_opener: the database exists path=/dev/shm/near-bench/S01/node0/data/state_snapshot/3443r9CvMMGjRPi73A2CkThxpTRrCo4ZtTzKzxox1nhT/data
+2026-05-09T23:03:07.564932Z  INFO db: opened a new rocksdb instance num_instances=2
+2026-05-09T23:03:08.432166Z  INFO db: closed a rocksdb instance num_instances=1
+2026-05-09T23:03:08.432193Z  INFO db: opened a new rocksdb instance num_instances=2
+2026-05-09T23:03:08.434253Z  INFO db: closed a rocksdb instance num_instances=1
+2026-05-09T23:03:08.434269Z  INFO db: opened a new rocksdb instance num_instances=2
+2026-05-09T23:03:16.133985Z  INFO stats: node_status="#      80 4ts98p4KfLVeyK2u7S2jrs9j89rGNVZPvxrCvDbu8mBu Validator | 1 validator 0 peers ⬇ 0 B/s ⬆ 0 B/s 8.02 bps 716 Ggas/s CPU: 28%, Mem: 119 MB"
+2026-05-09T23:03:26.135041Z  INFO stats: node_status="#     160 5oWpSte3zdaTRfk4WyLCX45iuD35ssWzXZwjTKZMxp8M Validator | 1 validator 0 peers ⬇ 0 B/s ⬆ 0 B/s 8.00 bps 357 Ggas/s CPU: 6%, Mem: 121 MB"
+2026-05-09T23:03:36.135854Z  INFO stats: node_status="#     240 GHMFbFfXGyCdWBskFtAmPyDaKCivb5QDdMfENZz3xsEP Validator | 1 validator 0 peers ⬇ 0 B/s ⬆ 0 B/s 8.00 bps 357 Ggas/s CPU: 6%, Mem: 122 MB"
+2026-05-09T23:03:46.137576Z  INFO stats: node_status="#     320 DL5tdFkQo11Vd5Ncg3kcQEKZQgJhczoY23t3DcDVyFEY Validator | 1 validator 0 peers ⬇ 0 B/s ⬆ 0 B/s 8.00 bps 357 Ggas/s CPU: 5%, Mem: 123 MB"
+2026-05-09T23:03:56.138732Z  INFO stats: node_status="#     400 HhiLepuLKWwZQqKLAWHEgPQVDdJYYi5JohPQYEXjuRK1 Validator | 1 validator 0 peers ⬇ 0 B/s ⬆ 0 B/s 8.00 bps 714 Ggas/s CPU: 6%, Mem: 125 MB"
+2026-05-09T23:03:58.425885Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T23:03:58.572465Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T23:03:59.321902Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T23:04:01.494876Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T23:04:06.139685Z  INFO stats: node_status="#     480 CyxnQ2CihaGcHg5yLeASGUSt3wkdYWdv5SZ1XxjoZSDb Validator | 1 validator 0 peers ⬇ 0 B/s ⬆ 0 B/s 8.00 bps 357 Ggas/s CPU: 5%, Mem: 128 MB"
+2026-05-09T23:04:09.033785Z  INFO db: closed a rocksdb instance num_instances=1
+2026-05-09T23:04:09.950312Z  INFO db_opener: opening node storage path="/dev/shm/near-bench/S01/node0/data/state_snapshot/3LZyUb326tDCpKbiX99ebQ2kYC64Qqk6nMCB7e4k6bx1/data" cold_path="none"
+2026-05-09T23:04:09.950368Z  INFO db: opened a new rocksdb instance num_instances=2
+2026-05-09T23:04:09.952351Z  INFO db: closed a rocksdb instance num_instances=1
+2026-05-09T23:04:09.952362Z  INFO db_opener: the database exists path=/dev/shm/near-bench/S01/node0/data/state_snapshot/3LZyUb326tDCpKbiX99ebQ2kYC64Qqk6nMCB7e4k6bx1/data
+2026-05-09T23:04:09.952370Z  INFO db: opened a new rocksdb instance num_instances=2
+2026-05-09T23:04:10.821652Z  INFO db: closed a rocksdb instance num_instances=1
+2026-05-09T23:04:10.821683Z  INFO db: opened a new rocksdb instance num_instances=2
+2026-05-09T23:04:10.823669Z  INFO db: closed a rocksdb instance num_instances=1
+2026-05-09T23:04:10.823684Z  INFO db: opened a new rocksdb instance num_instances=2
+2026-05-09T23:04:16.140302Z  INFO stats: node_status="#     560 Aku22YEwaq76cxuWe6sZSW9HSg9CsNGDMyFPqrHwE2Wz Validator | 1 validator 0 peers ⬇ 0 B/s ⬆ 0 B/s 8.00 bps 357 Ggas/s CPU: 25%, Mem: 130 MB"
+2026-05-09T23:04:26.143592Z  INFO stats: node_status="#     641 8dpwLmGR2YqnuA6DfvfjkQLjVEBGxR2oZvzEbULHidmN Validator | 1 validator 0 peers ⬇ 0 B/s ⬆ 0 B/s 8.10 bps 357 Ggas/s CPU: 6%, Mem: 127 MB"
+2026-05-09T23:04:36.145068Z  INFO stats: node_status="#     721 7BUewCn14Rz26uRutcS6feGhSCfuVwvwJpcfheqjK559 Validator | 1 validator 0 peers ⬇ 0 B/s ⬆ 0 B/s 8.00 bps 714 Ggas/s CPU: 6%, Mem: 128 MB"
+2026-05-09T23:04:46.145941Z  INFO stats: node_status="#     801 FcqLuJf4MFm9zyaZM68W1kmennX2BX3xu2qcTHwiM2ee Validator | 1 validator 0 peers ⬇ 0 B/s ⬆ 0 B/s 8.00 bps 357 Ggas/s CPU: 6%, Mem: 127 MB"
+2026-05-09T23:04:56.147590Z  INFO stats: node_status="#     881 CHtk5qe2aBW6FkikCZZ6n6NCThGvzNf4ZUcbibpu8dTw Validator | 1 validator 0 peers ⬇ 0 B/s ⬆ 0 B/s 8.00 bps 357 Ggas/s CPU: 6%, Mem: 129 MB"
+2026-05-09T23:04:58.426779Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T23:04:58.573356Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T23:04:59.322916Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T23:05:01.496237Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T23:05:06.147787Z  INFO stats: node_status="#     961 DQMjydcfMrYH1oym5F2pDSrdyERtqRudmkdLzTykJpPb Validator | 1 validator 0 peers ⬇ 0 B/s ⬆ 0 B/s 8.00 bps 357 Ggas/s CPU: 6%, Mem: 131 MB"
+2026-05-09T23:05:06.871086Z  WARN client: optimistic block was constructed on different block, discarding it height=967 prev_hash=7EP9E2mvKFFgPVNJdT4XJrhqk3ikSAASEdFZNCUTjYii optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:07.173613Z  WARN client: optimistic block was constructed on different block, discarding it height=968 prev_hash=AQDGf1Ar6Hh1famjPznuE8Up8vq52iEUsuCRQ88wYiup optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:07.480743Z  WARN client: optimistic block was constructed on different block, discarding it height=969 prev_hash=7pFVMW6fziaYBh7Q2SpFSfdDo3YcZTWJ9eLuD1KPZNvv optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:07.909633Z  WARN client: optimistic block was constructed on different block, discarding it height=970 prev_hash=AZRnv6T4oUu69PsR8eHdXhsFF1wjNLjTeCSzhr5TuHAs optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:08.316765Z  WARN client: optimistic block was constructed on different block, discarding it height=971 prev_hash=5Ycy13a3X2ThyLu9qmrGoGkQ41aDSmG47nSdpSmAXqbR optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:08.805633Z  WARN client: optimistic block was constructed on different block, discarding it height=972 prev_hash=5v6yT9QDzyYk2YeHXpans3yv93aaWa3vgkQciQxXYTVP optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:09.219794Z  WARN client: optimistic block was constructed on different block, discarding it height=973 prev_hash=2APaxanVr7AqGMeuoe23Ba8paooSjfLUq9Y2XJU3mkX4 optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:09.685626Z  WARN client: optimistic block was constructed on different block, discarding it height=974 prev_hash=H5GA1uQuDKQ6fMDpvfkiuBdLuZvKVu3i5zActheZkZ8i optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:10.201630Z  WARN client: optimistic block was constructed on different block, discarding it height=975 prev_hash=Eo31FVUU2pZ75xpw4uG3EgsHx3Kvcb4dn4eRAvjHErVG optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:10.757643Z  WARN client: optimistic block was constructed on different block, discarding it height=976 prev_hash=Dr2BvRHkw33LFjU4DNoYgPEkoz33ke4txz9enasFCR6e optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:11.385643Z  WARN client: optimistic block was constructed on different block, discarding it height=977 prev_hash=5svaSdpszbPgQB9pnVSWRNrmNRTbqU7CHbMCTiH44TPd optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:11.969656Z  WARN client: optimistic block was constructed on different block, discarding it height=978 prev_hash=3yyDQwavdgzEKyivYH8krrrQ99FDUVASdD3hBN4jAiJ6 optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:12.533461Z  WARN client: optimistic block was constructed on different block, discarding it height=979 prev_hash=A6kXSeU4P2QEk6fjqYwbzCfGEPxgohQjZaZX94YpEoUi optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:13.082037Z  WARN client: optimistic block was constructed on different block, discarding it height=980 prev_hash=5331sGiKdzbkdaGq2xc8rGHVGFYPZjyLhDcACZfEvMgh optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:13.607193Z  WARN client: optimistic block was constructed on different block, discarding it height=981 prev_hash=BchC5U7pXcRGUTQLnQzVQ4X3tJoeTbeeVEaDmsFuX94e optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:14.225610Z  WARN client: optimistic block was constructed on different block, discarding it height=982 prev_hash=GgjQCmXrC8Dxc9SDbwvD9taHt4AE7dEe6DY9aY8uDyGV optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:14.632729Z  WARN client: optimistic block was constructed on different block, discarding it height=983 prev_hash=GgjQCmXrC8Dxc9SDbwvD9taHt4AE7dEe6DY9aY8uDyGV optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:15.614304Z  WARN client: optimistic block was constructed on different block, discarding it height=984 prev_hash=6Qy8hnyUUfX7GL8AMURodxfYDcYz3yZgzJh7aDBaB5Zz optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:15.933637Z  WARN client: optimistic block was constructed on different block, discarding it height=985 prev_hash=6Qy8hnyUUfX7GL8AMURodxfYDcYz3yZgzJh7aDBaB5Zz optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:16.348000Z  INFO stats: node_status="#     984 GxQ4cBocjP3hSa2yoh97UFWNr9mN8uPUqegezejsPRRV Validator | 1 validator 0 peers ⬇ 0 B/s ⬆ 0 B/s 2.26 bps 430 Tgas/s CPU: 189%, Mem: 397 MB"
+2026-05-09T23:05:16.826954Z  WARN client: optimistic block was constructed on different block, discarding it height=986 prev_hash=CA4ztvCVYnprPmtQiwDeUSGGsBS3o267STsL4XFDLyTZ optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:17.469060Z  WARN client: optimistic block was constructed on different block, discarding it height=987 prev_hash=DHaZsVCiqr5ynopE6ZULtvWPvoTxui8Lhuo11e7qkmaW optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:18.148852Z  WARN client: optimistic block was constructed on different block, discarding it height=988 prev_hash=4JjWjDY7domMr7gv1PMGC6pUPNbmSWAxmUnLu8Hz4S8V optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:18.737292Z  WARN client: optimistic block was constructed on different block, discarding it height=989 prev_hash=FuXkEEPb6mjQ2NtPuKwy2DXayZSX2VhD7tBJDumZnrrB optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:19.297632Z  WARN client: optimistic block was constructed on different block, discarding it height=990 prev_hash=AYsBoBJYTQSdvS5R9tnerrLDzg77RWTmtPw67obaEp6N optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:19.897634Z  WARN client: optimistic block was constructed on different block, discarding it height=991 prev_hash=8Pri9kLMsmH7WpiyLSGmiFoCNYuLrN75bZndGMz7VJEu optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:20.545634Z  WARN client: optimistic block was constructed on different block, discarding it height=992 prev_hash=2HkvuC5dCbCbjPDse7qhRx57rx8FgN1psPpbGGLCAr55 optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:20.980558Z  WARN client: optimistic block was constructed on different block, discarding it height=993 prev_hash=2HkvuC5dCbCbjPDse7qhRx57rx8FgN1psPpbGGLCAr55 optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:21.925601Z  WARN client: optimistic block was constructed on different block, discarding it height=994 prev_hash=5i6CToxg9f3gt4tUXremJLb1EMoLHLYr8p4ei5pWX69Q optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:22.276659Z  WARN client: optimistic block was constructed on different block, discarding it height=995 prev_hash=5i6CToxg9f3gt4tUXremJLb1EMoLHLYr8p4ei5pWX69Q optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:23.229650Z  WARN client: optimistic block was constructed on different block, discarding it height=996 prev_hash=4XCEg6ewxfMDZnMG8Lgf68s2GWXt1Sxqtw8ikfi1ejE2 optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:23.734682Z  WARN client: optimistic block was constructed on different block, discarding it height=997 prev_hash=4XCEg6ewxfMDZnMG8Lgf68s2GWXt1Sxqtw8ikfi1ejE2 optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:24.719123Z  WARN client: optimistic block was constructed on different block, discarding it height=998 prev_hash=8hbh7cCWDkfnLYC9Q6viNLA51Laprw4MygA44p9G56bz optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:25.337656Z  WARN client: optimistic block was constructed on different block, discarding it height=999 prev_hash=JBnHsgBDRJJRLoJfsrbYQDyA4PCnKsbXcvEHAnM47MRh optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:26.033949Z  WARN client: optimistic block was constructed on different block, discarding it height=1000 prev_hash=5hsEnN6pvtjfdK74tFR2hTY7vV8gWxVdNHRFzNMVUw7a optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:26.349161Z  INFO stats: node_status="#     999 5hsEnN6pvtjfdK74tFR2hTY7vV8gWxVdNHRFzNMVUw7a Validator | 1 validator 0 peers ⬇ 0 B/s ⬆ 0 B/s 1.50 bps 342 Tgas/s CPU: 197%, Mem: 549 MB"
+2026-05-09T23:05:26.476540Z  WARN client: optimistic block was constructed on different block, discarding it height=1001 prev_hash=5hsEnN6pvtjfdK74tFR2hTY7vV8gWxVdNHRFzNMVUw7a optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:27.354496Z  WARN client: optimistic block was constructed on different block, discarding it height=1002 prev_hash=6Tjkgy5MK2XEADnXibdBq4EFB2bk8jVodutRxedjuskH optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:27.734594Z  WARN client: optimistic block was constructed on different block, discarding it height=1003 prev_hash=6Tjkgy5MK2XEADnXibdBq4EFB2bk8jVodutRxedjuskH optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:28.657620Z  WARN client: optimistic block was constructed on different block, discarding it height=1004 prev_hash=3R3kDztightTHstxbUrR5C1SqmkxTGhBcZC4D2pVqu5B optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:29.362654Z  WARN client: optimistic block was constructed on different block, discarding it height=1005 prev_hash=GxxPtuQTWWNFqyLD8K6E86fdGWNwhFKZsxGBEPcgncqb optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:30.061282Z  WARN client: optimistic block was constructed on different block, discarding it height=1006 prev_hash=2iqjnpujrdSSKBskBgEEvxiTgp1zpaUFi9bVRxD4aVdQ optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:30.522856Z  WARN client: optimistic block was constructed on different block, discarding it height=1007 prev_hash=2iqjnpujrdSSKBskBgEEvxiTgp1zpaUFi9bVRxD4aVdQ optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:31.633595Z  WARN client: optimistic block was constructed on different block, discarding it height=1008 prev_hash=AiU9jn8AxPnbSzzeUtBbZfwFWnuQgjnUsWCgppjbnGwz optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:31.958975Z  WARN client: optimistic block was constructed on different block, discarding it height=1009 prev_hash=AiU9jn8AxPnbSzzeUtBbZfwFWnuQgjnUsWCgppjbnGwz optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:33.066639Z  WARN client: optimistic block was constructed on different block, discarding it height=1010 prev_hash=HLgijPyRbRsNhXMk9jwQeth9qGrFpqgzLBDJb8Z1vGEb optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:33.549723Z  WARN client: optimistic block was constructed on different block, discarding it height=1011 prev_hash=HLgijPyRbRsNhXMk9jwQeth9qGrFpqgzLBDJb8Z1vGEb optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:34.617621Z  WARN client: optimistic block was constructed on different block, discarding it height=1012 prev_hash=2E79nNh5AvxoYFzEt84zPBSJU4mdDuhjqPRrYk3Zpwqy optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:34.651933Z  INFO db: closed a rocksdb instance num_instances=1
+2026-05-09T23:05:35.200743Z  WARN client: optimistic block was constructed on different block, discarding it height=1013 prev_hash=2E79nNh5AvxoYFzEt84zPBSJU4mdDuhjqPRrYk3Zpwqy optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:36.656715Z  WARN client: optimistic block was constructed on different block, discarding it height=1014 prev_hash=78pD4VsEAF7QKWrziPUFNqu9Bx1xKebi6N4zVXqq4FXM optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:36.731827Z  INFO stats: node_status="#    1013 78pD4VsEAF7QKWrziPUFNqu9Bx1xKebi6N4zVXqq4FXM Validator | 1 validator 0 peers ⬇ 0 B/s ⬆ 0 B/s 1.35 bps 293 Tgas/s CPU: 199%, Mem: 649 MB"
+2026-05-09T23:05:37.217720Z  WARN client: optimistic block was constructed on different block, discarding it height=1015 prev_hash=78pD4VsEAF7QKWrziPUFNqu9Bx1xKebi6N4zVXqq4FXM optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:38.249595Z  WARN client: optimistic block was constructed on different block, discarding it height=1016 prev_hash=3tjbSzykwRrER5KZyyzVd2dfsyw2yaayCWJYZXd4QpTu optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:38.957496Z  WARN client: optimistic block was constructed on different block, discarding it height=1017 prev_hash=3tjbSzykwRrER5KZyyzVd2dfsyw2yaayCWJYZXd4QpTu optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:40.529670Z  WARN client: optimistic block was constructed on different block, discarding it height=1018 prev_hash=Eh29f6yqUhVspX5dnAYvJk2qkxjVZP8JdUqo7XchLDKQ optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:41.238888Z  INFO db_opener: opening node storage path="/dev/shm/near-bench/S01/node0/data/state_snapshot/HLgijPyRbRsNhXMk9jwQeth9qGrFpqgzLBDJb8Z1vGEb/data" cold_path="none"
+2026-05-09T23:05:41.238994Z  INFO db: opened a new rocksdb instance num_instances=2
+2026-05-09T23:05:41.267301Z  INFO db: closed a rocksdb instance num_instances=1
+2026-05-09T23:05:41.267316Z  INFO db_opener: the database exists path=/dev/shm/near-bench/S01/node0/data/state_snapshot/HLgijPyRbRsNhXMk9jwQeth9qGrFpqgzLBDJb8Z1vGEb/data
+2026-05-09T23:05:41.267325Z  INFO db: opened a new rocksdb instance num_instances=2
+2026-05-09T23:05:41.566873Z  WARN client: optimistic block was constructed on different block, discarding it height=1019 prev_hash=HZyyUTmEPKva64sQKHBKNtzYoTMLM98tqLGitGJLQG2C optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:42.525412Z  WARN client: optimistic block was constructed on different block, discarding it height=1020 prev_hash=HZyyUTmEPKva64sQKHBKNtzYoTMLM98tqLGitGJLQG2C optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:43.444758Z  WARN client: optimistic block was constructed on different block, discarding it height=1021 prev_hash=ESi1zmDJnu3uMzGTNrLeKHMivyxw91YtNDMnWneJtpH7 optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:43.885224Z  INFO db: closed a rocksdb instance num_instances=1
+2026-05-09T23:05:43.891033Z  INFO db: opened a new rocksdb instance num_instances=2
+2026-05-09T23:05:43.925872Z  INFO db: closed a rocksdb instance num_instances=1
+2026-05-09T23:05:43.925892Z  INFO db: opened a new rocksdb instance num_instances=2
+2026-05-09T23:05:44.469878Z  INFO db: closed a rocksdb instance num_instances=1
+2026-05-09T23:05:44.821618Z  WARN client: optimistic block was constructed on different block, discarding it height=1022 prev_hash=J6cjBZfM8CFQvSNpNxeWriaPDQs88o768TVQbNXsSLbd optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:45.066217Z  WARN client: optimistic block was constructed on different block, discarding it height=1023 prev_hash=J6cjBZfM8CFQvSNpNxeWriaPDQs88o768TVQbNXsSLbd optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:46.910566Z  WARN client: optimistic block was constructed on different block, discarding it height=1024 prev_hash=4i7cgPPbnTb3H9PvmngRcyex5EJKMDUHcUdPzjQvVxeJ optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:46.954299Z  INFO stats: node_status="#    1023 4i7cgPPbnTb3H9PvmngRcyex5EJKMDUHcUdPzjQvVxeJ Validator | 1 validator 0 peers ⬇ 0 B/s ⬆ 0 B/s 0.98 bps 212 Tgas/s CPU: 200%, Mem: 471 MB"
+2026-05-09T23:05:47.136089Z  WARN client: optimistic block was constructed on different block, discarding it height=1025 prev_hash=4i7cgPPbnTb3H9PvmngRcyex5EJKMDUHcUdPzjQvVxeJ optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:47.936916Z  WARN client: optimistic block was constructed on different block, discarding it height=1026 prev_hash=4i7cgPPbnTb3H9PvmngRcyex5EJKMDUHcUdPzjQvVxeJ optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:48.779186Z  INFO db_opener: opening node storage path="/dev/shm/near-bench/S01/node0/data/state_snapshot/HLgijPyRbRsNhXMk9jwQeth9qGrFpqgzLBDJb8Z1vGEb/data" cold_path="none"
+2026-05-09T23:05:48.793384Z  INFO db: opened a new rocksdb instance num_instances=2
+2026-05-09T23:05:48.842052Z  INFO db: closed a rocksdb instance num_instances=1
+2026-05-09T23:05:48.842072Z  INFO db_opener: the database exists path=/dev/shm/near-bench/S01/node0/data/state_snapshot/HLgijPyRbRsNhXMk9jwQeth9qGrFpqgzLBDJb8Z1vGEb/data
+2026-05-09T23:05:48.842083Z  INFO db: opened a new rocksdb instance num_instances=2
+2026-05-09T23:05:49.849332Z  WARN client: optimistic block was constructed on different block, discarding it height=1027 prev_hash=4ipeh7cTKXCfhWDdeyTP5EpyoE8FpwHWoPZZD9nBhCWa optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:50.382968Z  WARN client: optimistic block was constructed on different block, discarding it height=1028 prev_hash=4ipeh7cTKXCfhWDdeyTP5EpyoE8FpwHWoPZZD9nBhCWa optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:51.801380Z  INFO db: closed a rocksdb instance num_instances=1
+2026-05-09T23:05:51.801454Z  INFO db: opened a new rocksdb instance num_instances=2
+2026-05-09T23:05:51.827955Z  INFO db: closed a rocksdb instance num_instances=1
+2026-05-09T23:05:51.827974Z  INFO db: opened a new rocksdb instance num_instances=2
+2026-05-09T23:05:52.017829Z  WARN client: optimistic block was constructed on different block, discarding it height=1029 prev_hash=JDQv3uUsJJXkrWtoVQvik4pzRjiDbW38iSHNCt7qTQTG optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:52.449353Z  WARN store: state snapshot being marked as taken without a corresponding pending request set block_hash=HLgijPyRbRsNhXMk9jwQeth9qGrFpqgzLBDJb8Z1vGEb
+2026-05-09T23:05:52.897999Z  WARN client: optimistic block was constructed on different block, discarding it height=1030 prev_hash=Jt87TqQMoT4CJNDK9JdPxAgCfRDCFuQ6Y3s7UjzPoz5 optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:53.793819Z  WARN client: optimistic block was constructed on different block, discarding it height=1031 prev_hash=7DScmyJ1tpqDCdrdzK3wYRvxEi7mDbAKrvTpdisLhf9K optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:54.247193Z  WARN client: optimistic block was constructed on different block, discarding it height=1032 prev_hash=7DScmyJ1tpqDCdrdzK3wYRvxEi7mDbAKrvTpdisLhf9K optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:55.507140Z  WARN client: optimistic block was constructed on different block, discarding it height=1033 prev_hash=HUyYMCJ7i7d9m9dY76EkpWaQRtt4xcaMCnKoZUWNpAmj optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:55.933569Z  WARN client: optimistic block was constructed on different block, discarding it height=1034 prev_hash=HUyYMCJ7i7d9m9dY76EkpWaQRtt4xcaMCnKoZUWNpAmj optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:57.208206Z  WARN client: optimistic block was constructed on different block, discarding it height=1035 prev_hash=8ES79Aa1bNm984SZT3MKRNdJRnRCYMZWtU936MNwuqZh optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:57.272062Z  INFO stats: node_status="#    1034 8ES79Aa1bNm984SZT3MKRNdJRnRCYMZWtU936MNwuqZh Validator | 1 validator 0 peers ⬇ 0 B/s ⬆ 0 B/s 1.07 bps 231 Tgas/s CPU: 199%, Mem: 550 MB"
+2026-05-09T23:05:57.697397Z  WARN client: optimistic block was constructed on different block, discarding it height=1036 prev_hash=8ES79Aa1bNm984SZT3MKRNdJRnRCYMZWtU936MNwuqZh optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:58.438110Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T23:05:58.584163Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T23:05:58.853622Z  WARN client: optimistic block was constructed on different block, discarding it height=1037 prev_hash=24NnbA3UmR6XNjhYJhs3JVsg5WpFfeB5UP5VMMbCnMHX optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:05:59.337921Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T23:05:59.438915Z  WARN client: optimistic block was constructed on different block, discarding it height=1038 prev_hash=24NnbA3UmR6XNjhYJhs3JVsg5WpFfeB5UP5VMMbCnMHX optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:00.537643Z  WARN client: optimistic block was constructed on different block, discarding it height=1039 prev_hash=3qF4f3zjaeP5T9caBmPM67PSngTsyf5qY5zoFqJLe3uV optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:01.378780Z  WARN client: optimistic block was constructed on different block, discarding it height=1040 prev_hash=84UHC1riKHBhpLGDRc7ZxuUjqTQwBZjrpiCj5R9r3KDJ optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:01.503287Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T23:06:02.486736Z  WARN client: optimistic block was constructed on different block, discarding it height=1041 prev_hash=5QWc5MmZivWMGjaE6QX7mvnFs7yRdumzJBJfrJpzKqc5 optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:02.922724Z  WARN client: optimistic block was constructed on different block, discarding it height=1042 prev_hash=5QWc5MmZivWMGjaE6QX7mvnFs7yRdumzJBJfrJpzKqc5 optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:03.785567Z  WARN client: optimistic block was constructed on different block, discarding it height=1043 prev_hash=FjFuiLAsb7E7o6PV7ZvTipvTfPkuMVauN5tAEm2svusL optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:04.589164Z  WARN client: optimistic block was constructed on different block, discarding it height=1044 prev_hash=2bofwSoCE6GndqJ9KVZy3hGwyDN3bFVfNhSyv1nVz9cT optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:05.384119Z  WARN client: optimistic block was constructed on different block, discarding it height=1045 prev_hash=7rAnq6B6JYiuFyHidZ35qb4kzinywxR1Ff7zjXykZKKP optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:06.440720Z  WARN client: optimistic block was constructed on different block, discarding it height=1046 prev_hash=DzRRKyZ7F3JfhxmF5RVNquZsE7ReMT82RT5QXAHss779 optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:07.426395Z  INFO stats: node_status="#    1045 DZr24fuKmoT9arGKg35LAK59F6hkJhKbaqNwvPph9W72 Validator | 1 validator 0 peers ⬇ 0 B/s ⬆ 0 B/s 1.08 bps 234 Tgas/s CPU: 198%, Mem: 667 MB"
+2026-05-09T23:06:07.576608Z  WARN client: optimistic block was constructed on different block, discarding it height=1047 prev_hash=DZr24fuKmoT9arGKg35LAK59F6hkJhKbaqNwvPph9W72 optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:08.579006Z  WARN client: optimistic block was constructed on different block, discarding it height=1048 prev_hash=7bZYwVz6ZukEMkm6KiZJRYkDHwGc2nYxnS4CPEPeCHoE optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:10.641692Z  WARN client: optimistic block was constructed on different block, discarding it height=1049 prev_hash=CsxmbB7K7RgZoi1Tncp6jiMRoYi45pJ8cTh9fzdu82Ek optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:10.932214Z  WARN client: optimistic block was constructed on different block, discarding it height=1050 prev_hash=CsxmbB7K7RgZoi1Tncp6jiMRoYi45pJ8cTh9fzdu82Ek optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:12.457596Z  WARN client: optimistic block was constructed on different block, discarding it height=1051 prev_hash=6A3uxUJS2Gt8WtTtwCfMebPoV6goTJsBuy1uCjDEBhEn optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:13.359819Z  WARN client: optimistic block was constructed on different block, discarding it height=1052 prev_hash=8D2ud5JBWJidQwaWKiHTtqQW3W8ToikStdX1ALn6X4uz optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:14.333792Z  WARN client: optimistic block was constructed on different block, discarding it height=1053 prev_hash=9ATGKPDDGcXEhTWeEMaEHwnHGjpWZDcw2sSLv4xDCV29 optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:14.771951Z  WARN client: optimistic block was constructed on different block, discarding it height=1054 prev_hash=9ATGKPDDGcXEhTWeEMaEHwnHGjpWZDcw2sSLv4xDCV29 optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:15.370106Z  WARN client: optimistic block was constructed on different block, discarding it height=1055 prev_hash=9ATGKPDDGcXEhTWeEMaEHwnHGjpWZDcw2sSLv4xDCV29 optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:16.413584Z  WARN client: optimistic block was constructed on different block, discarding it height=1056 prev_hash=HzrpobsCWHbqiYC6XFWCHnsd7si8x8FuiH7ZDZyH5Roo optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:17.515185Z  INFO stats: node_status="#    1055 9bggLPo2igoshAEjWW3HuxUzunrWnDBiZFYJZCpLJ3zx Validator | 1 validator 0 peers ⬇ 0 B/s ⬆ 0 B/s 0.99 bps 213 Tgas/s CPU: 198%, Mem: 775 MB"
+2026-05-09T23:06:17.883456Z  WARN client: optimistic block was constructed on different block, discarding it height=1057 prev_hash=6fmKj8ixBpLbVNfhPPGrxi7BkbbGCWbEC1By8L9ECU4p optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:18.368417Z  WARN client: optimistic block was constructed on different block, discarding it height=1058 prev_hash=6fmKj8ixBpLbVNfhPPGrxi7BkbbGCWbEC1By8L9ECU4p optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:19.787999Z  WARN client: optimistic block was constructed on different block, discarding it height=1059 prev_hash=CATRree47Tuc7N4sa6cLvEUYQN8597M8bEW12xgpe424 optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:20.386510Z  WARN client: optimistic block was constructed on different block, discarding it height=1060 prev_hash=CATRree47Tuc7N4sa6cLvEUYQN8597M8bEW12xgpe424 optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:21.573420Z  WARN client: optimistic block was constructed on different block, discarding it height=1061 prev_hash=6TkegVCY16kXHa2HEf86uuSYMyhLFnWoerGfx7m6cL2s optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:22.263346Z  WARN client: optimistic block was constructed on different block, discarding it height=1062 prev_hash=6TkegVCY16kXHa2HEf86uuSYMyhLFnWoerGfx7m6cL2s optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:23.785625Z  WARN client: optimistic block was constructed on different block, discarding it height=1063 prev_hash=4XjSdFgUA6fpNbAKXGcBWXgyvDTzF597AkDsockmUKAb optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:24.552702Z  WARN client: optimistic block was constructed on different block, discarding it height=1064 prev_hash=4XjSdFgUA6fpNbAKXGcBWXgyvDTzF597AkDsockmUKAb optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:25.973609Z  WARN client: optimistic block was constructed on different block, discarding it height=1065 prev_hash=8opsVi9scov8Kk3KJsgDFTr7kYPx48tTPaZ5cF4LpATe optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:26.789016Z  WARN client: optimistic block was constructed on different block, discarding it height=1066 prev_hash=8opsVi9scov8Kk3KJsgDFTr7kYPx48tTPaZ5cF4LpATe optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:27.516554Z  INFO stats: node_status="#    1065 7U26UrsaZS6jC9emKJaxkZZzwfP6MHEJ4CKoiAZR6KiV Validator | 1 validator 0 peers ⬇ 0 B/s ⬆ 0 B/s 1.00 bps 215 Tgas/s CPU: 198%, Mem: 883 MB"
+2026-05-09T23:06:28.077176Z  WARN client: optimistic block was constructed on different block, discarding it height=1067 prev_hash=HiJpBXSdqAgSpod3SgSXx9ai4RwraJsLJg8pVKq8CDRK optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:29.025633Z  WARN client: optimistic block was constructed on different block, discarding it height=1068 prev_hash=8on1Lx3t2PQgeYavoMyMvAUaZw7iiW1hK65nUcWG4EET optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:30.062784Z  WARN client: optimistic block was constructed on different block, discarding it height=1069 prev_hash=Bzu7DXdeBuWtY9dA7q6CAHpwFqbsycMkcK9J55G1WMtz optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:30.500173Z  WARN client: optimistic block was constructed on different block, discarding it height=1070 prev_hash=Bzu7DXdeBuWtY9dA7q6CAHpwFqbsycMkcK9J55G1WMtz optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:31.098315Z  WARN client: optimistic block was constructed on different block, discarding it height=1071 prev_hash=Bzu7DXdeBuWtY9dA7q6CAHpwFqbsycMkcK9J55G1WMtz optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:32.869435Z  WARN client: optimistic block was constructed on different block, discarding it height=1072 prev_hash=4AxhvM15v6yKj5d5Q1mGsq3MWG6RKCBLUNLXbZSSToYC optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:33.281237Z  WARN client: optimistic block was constructed on different block, discarding it height=1073 prev_hash=4AxhvM15v6yKj5d5Q1mGsq3MWG6RKCBLUNLXbZSSToYC optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:34.857642Z  WARN client: optimistic block was constructed on different block, discarding it height=1074 prev_hash=DcaX8aTiaf3xGqknwyLhWHh1znQVvMyF9iVdKWfB5FgK optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:35.421062Z  WARN client: optimistic block was constructed on different block, discarding it height=1075 prev_hash=DcaX8aTiaf3xGqknwyLhWHh1znQVvMyF9iVdKWfB5FgK optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:37.132776Z  WARN client: optimistic block was constructed on different block, discarding it height=1076 prev_hash=6GvJoQ8NcAdRmyUST8oVm3Uadk2H2E24CN5wWrE3PeVh optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:37.517822Z  INFO stats: node_status="#    1075 6GvJoQ8NcAdRmyUST8oVm3Uadk2H2E24CN5wWrE3PeVh Validator | 1 validator 0 peers ⬇ 0 B/s ⬆ 0 B/s 1.00 bps 215 Tgas/s CPU: 198%, Mem: 1.00 GB"
+2026-05-09T23:06:37.781027Z  WARN client: optimistic block was constructed on different block, discarding it height=1077 prev_hash=6GvJoQ8NcAdRmyUST8oVm3Uadk2H2E24CN5wWrE3PeVh optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:39.413638Z  WARN client: optimistic block was constructed on different block, discarding it height=1078 prev_hash=5gm7u5C4B2xtU61P7ejquBqbLxGxAtpvPtNsAJKfmjxT optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:40.102579Z  WARN client: optimistic block was constructed on different block, discarding it height=1079 prev_hash=5gm7u5C4B2xtU61P7ejquBqbLxGxAtpvPtNsAJKfmjxT optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:41.502541Z  WARN client: optimistic block was constructed on different block, discarding it height=1080 prev_hash=HZA9F1uP66vQnyzKkYWLTM7gdy8kFX2w3moTv5uFN8Ki optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:42.300697Z  WARN client: optimistic block was constructed on different block, discarding it height=1081 prev_hash=HZA9F1uP66vQnyzKkYWLTM7gdy8kFX2w3moTv5uFN8Ki optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:43.825631Z  WARN client: optimistic block was constructed on different block, discarding it height=1082 prev_hash=J5ahfM7xXJmErE2AqzYPEFSiRwQRjF8hu9jgaVBb965u optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:44.777451Z  WARN client: optimistic block was constructed on different block, discarding it height=1083 prev_hash=J5ahfM7xXJmErE2AqzYPEFSiRwQRjF8hu9jgaVBb965u optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:46.161600Z  WARN client: optimistic block was constructed on different block, discarding it height=1084 prev_hash=8WvB9m5ohBnUqJryZUHXC2ZfBfoCPgP71c6436kRiKab optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:47.205633Z  WARN client: optimistic block was constructed on different block, discarding it height=1085 prev_hash=FwQGtYv5v9a7ZTGhNmZyQ4onaWJmudtzFCgKE9VML7UJ optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:47.519133Z  INFO stats: node_status="#    1084 FwQGtYv5v9a7ZTGhNmZyQ4onaWJmudtzFCgKE9VML7UJ Validator | 1 validator 0 peers ⬇ 0 B/s ⬆ 0 B/s 0.90 bps 194 Tgas/s CPU: 199%, Mem: 1.10 GB"
+2026-05-09T23:06:48.525619Z  WARN client: optimistic block was constructed on different block, discarding it height=1086 prev_hash=Ec3AV7Gu3Ei3FoybyNtHqcKje1NLBVmnH9JTBxdzAzst optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:48.946573Z  WARN client: optimistic block was constructed on different block, discarding it height=1087 prev_hash=Ec3AV7Gu3Ei3FoybyNtHqcKje1NLBVmnH9JTBxdzAzst optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:49.544873Z  WARN client: optimistic block was constructed on different block, discarding it height=1088 prev_hash=Ec3AV7Gu3Ei3FoybyNtHqcKje1NLBVmnH9JTBxdzAzst optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:51.581216Z  WARN client: optimistic block was constructed on different block, discarding it height=1089 prev_hash=DBBgUD4JzPD6H8QykJRAR4s6ECkyfx1WRNbAA1UJD2cD optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:51.997364Z  WARN client: optimistic block was constructed on different block, discarding it height=1090 prev_hash=DBBgUD4JzPD6H8QykJRAR4s6ECkyfx1WRNbAA1UJD2cD optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:52.747980Z  WARN client: optimistic block was constructed on different block, discarding it height=1091 prev_hash=DBBgUD4JzPD6H8QykJRAR4s6ECkyfx1WRNbAA1UJD2cD optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:54.593623Z  WARN client: optimistic block was constructed on different block, discarding it height=1092 prev_hash=8KJkPwCvW6VwmTeroJ2Up9s3m4LEuJ1ZSFSkeGxr3znL optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:55.204405Z  WARN client: optimistic block was constructed on different block, discarding it height=1093 prev_hash=8KJkPwCvW6VwmTeroJ2Up9s3m4LEuJ1ZSFSkeGxr3znL optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:56.761479Z  WARN client: optimistic block was constructed on different block, discarding it height=1094 prev_hash=FPy2BxVZdfA8CiLxhUhjZnaWLfLWGarF4bcxRDLmyxT optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:57.461826Z  WARN client: optimistic block was constructed on different block, discarding it height=1095 prev_hash=FPy2BxVZdfA8CiLxhUhjZnaWLfLWGarF4bcxRDLmyxT optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:57.520500Z  INFO stats: node_status="#    1093 FPy2BxVZdfA8CiLxhUhjZnaWLfLWGarF4bcxRDLmyxT Validator | 1 validator 0 peers ⬇ 0 B/s ⬆ 0 B/s 0.90 bps 196 Tgas/s CPU: 199%, Mem: 1.24 GB"
+2026-05-09T23:06:58.441480Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T23:06:58.588476Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T23:06:59.037596Z  WARN client: optimistic block was constructed on different block, discarding it height=1096 prev_hash=2oJfEQArjVVHuzoMhf5YTweGPvCr3Jt425wMWEfRAJH5 optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:06:59.335840Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T23:06:59.741573Z  WARN client: optimistic block was constructed on different block, discarding it height=1097 prev_hash=2oJfEQArjVVHuzoMhf5YTweGPvCr3Jt425wMWEfRAJH5 optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:07:01.410357Z  WARN client: optimistic block was constructed on different block, discarding it height=1098 prev_hash=5vJJGzELG1Bnv9V9shrGnnz4uFdy5T4cZGoC75G67R6P optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:07:01.522156Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T23:07:02.291477Z  WARN client: optimistic block was constructed on different block, discarding it height=1099 prev_hash=5vJJGzELG1Bnv9V9shrGnnz4uFdy5T4cZGoC75G67R6P optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:07:03.845607Z  WARN client: optimistic block was constructed on different block, discarding it height=1100 prev_hash=ArifmzF4ZatjQxeAxeKAvKzM8nxyZ7AkUveL7FLgAsyN optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:07:04.889651Z  WARN client: optimistic block was constructed on different block, discarding it height=1101 prev_hash=51yW5SoPz5NsqGqpczHGpK6hXyH5gRxepw5eMKFfBzZr optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:07:06.093841Z  WARN client: optimistic block was constructed on different block, discarding it height=1102 prev_hash=CNyGUsDWCPbUpabaLnrAJo6bmJJQMHng7MDSrguE2pLa optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:07:06.537907Z  WARN client: optimistic block was constructed on different block, discarding it height=1103 prev_hash=CNyGUsDWCPbUpabaLnrAJo6bmJJQMHng7MDSrguE2pLa optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:07:07.143200Z  WARN client: optimistic block was constructed on different block, discarding it height=1104 prev_hash=CNyGUsDWCPbUpabaLnrAJo6bmJJQMHng7MDSrguE2pLa optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:07:07.522547Z  INFO stats: node_status="#    1101 CNyGUsDWCPbUpabaLnrAJo6bmJJQMHng7MDSrguE2pLa Validator | 1 validator 0 peers ⬇ 0 B/s ⬆ 0 B/s 0.80 bps 172 Tgas/s CPU: 198%, Mem: 1.31 GB"
+2026-05-09T23:07:09.249272Z  WARN client: optimistic block was constructed on different block, discarding it height=1105 prev_hash=HbwzVB2b3LvsqYehs6oSH8FqVtKchQi9UpY8pgA8JRcn optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:07:09.676349Z  WARN client: optimistic block was constructed on different block, discarding it height=1106 prev_hash=HbwzVB2b3LvsqYehs6oSH8FqVtKchQi9UpY8pgA8JRcn optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:07:10.427337Z  WARN client: optimistic block was constructed on different block, discarding it height=1107 prev_hash=HbwzVB2b3LvsqYehs6oSH8FqVtKchQi9UpY8pgA8JRcn optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:07:12.449076Z  WARN client: optimistic block was constructed on different block, discarding it height=1108 prev_hash=7MXVwLuiKkFya1iFMg9PnputiYrgLnSUzRAvzdXjz4cw optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:07:13.049495Z  WARN client: optimistic block was constructed on different block, discarding it height=1109 prev_hash=7MXVwLuiKkFya1iFMg9PnputiYrgLnSUzRAvzdXjz4cw optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:07:14.820143Z  WARN client: optimistic block was constructed on different block, discarding it height=1110 prev_hash=Fzbo8YEipm12EhvztFigeHBJff47X9UBNF788jAXddtv optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:07:15.472660Z  WARN client: optimistic block was constructed on different block, discarding it height=1111 prev_hash=Fzbo8YEipm12EhvztFigeHBJff47X9UBNF788jAXddtv optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:07:17.157735Z  WARN client: optimistic block was constructed on different block, discarding it height=1112 prev_hash=BiPB2LGszCZGjNbbVpQA5iDyG3sipjrfs9utAjwGtjYe optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:07:17.523862Z  INFO stats: node_status="#    1111 BiPB2LGszCZGjNbbVpQA5iDyG3sipjrfs9utAjwGtjYe Validator | 1 validator 0 peers ⬇ 0 B/s ⬆ 0 B/s 1.00 bps 216 Tgas/s CPU: 199%, Mem: 1.39 GB"
+2026-05-09T23:07:17.918179Z  WARN client: optimistic block was constructed on different block, discarding it height=1113 prev_hash=BiPB2LGszCZGjNbbVpQA5iDyG3sipjrfs9utAjwGtjYe optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:07:19.493632Z  WARN client: optimistic block was constructed on different block, discarding it height=1114 prev_hash=E894gaTneU6LDfui5DwAFUvbCSmEtmLqusGjpntsB6oi optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:07:20.370737Z  WARN client: optimistic block was constructed on different block, discarding it height=1115 prev_hash=E894gaTneU6LDfui5DwAFUvbCSmEtmLqusGjpntsB6oi optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:07:22.021643Z  WARN client: optimistic block was constructed on different block, discarding it height=1116 prev_hash=EeEE2CfAJuZ6n1oXuhMkJmFfa76VpZoW6LTS6yjVgRiT optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:07:23.161634Z  WARN client: optimistic block was constructed on different block, discarding it height=1117 prev_hash=6K4i4SnFbGEnF7H187Wy1t4jVgoo1LxKgAwFY5MrRous optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:07:24.478388Z  WARN client: optimistic block was constructed on different block, discarding it height=1118 prev_hash=2w9v586ixc6E98BF7AVygpTPyray4MEyfwJUQW7a9fJJ optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:07:24.905412Z  WARN client: optimistic block was constructed on different block, discarding it height=1119 prev_hash=2w9v586ixc6E98BF7AVygpTPyray4MEyfwJUQW7a9fJJ optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:07:25.502648Z  WARN client: optimistic block was constructed on different block, discarding it height=1120 prev_hash=2w9v586ixc6E98BF7AVygpTPyray4MEyfwJUQW7a9fJJ optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:07:26.155082Z  WARN client: optimistic block was constructed on different block, discarding it height=1121 prev_hash=2w9v586ixc6E98BF7AVygpTPyray4MEyfwJUQW7a9fJJ optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:07:28.347695Z  INFO stats: node_status="#    1120 7K2MHZkeHz1wtbtK62kZYSZXcvfr49LuzduLFf5cGszh Validator | 1 validator 0 peers ⬇ 0 B/s ⬆ 0 B/s 0.83 bps 181 Tgas/s CPU: 198%, Mem: 1.53 GB"
+2026-05-09T23:07:28.682177Z  WARN client: optimistic block was constructed on different block, discarding it height=1122 prev_hash=BWuLDgtj6HHwUCQh7a2xxGhyo1WdnGEf6B1rZshL9SyY optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:07:29.213000Z  WARN client: optimistic block was constructed on different block, discarding it height=1123 prev_hash=BWuLDgtj6HHwUCQh7a2xxGhyo1WdnGEf6B1rZshL9SyY optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:07:30.007410Z  WARN client: optimistic block was constructed on different block, discarding it height=1124 prev_hash=BWuLDgtj6HHwUCQh7a2xxGhyo1WdnGEf6B1rZshL9SyY optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:07:31.569237Z  WARN client: optimistic block was constructed on different block, discarding it height=1125 prev_hash=GcuhKcc5dWy2QTuimnpzLP2XwfPKQwFBa44oYzgR8jpH optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:07:32.965706Z  WARN client: optimistic block was constructed on different block, discarding it height=1126 prev_hash=12YLUm2PuqG5nqW39sNzmeTEyBvgbDq4RbQiM4s7ApTp optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:07:34.247449Z  WARN client: optimistic block was constructed on different block, discarding it height=1127 prev_hash=AoxQKF9LYyxUs4VDPCootVaT1LYRxsdtTpU6VsfjZ3MG optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:07:35.606862Z  WARN client: optimistic block was constructed on different block, discarding it height=1128 prev_hash=H69MeYbmAXqiaYesA6BnhSsffQKPvR1WkAYHbRTgCikT optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:07:36.926237Z  WARN client: optimistic block was constructed on different block, discarding it height=1129 prev_hash=3m4ojH7w4N48dyPcdrmWxZu7i9pSyz4XZ7QwFo1ZP6iM optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:07:38.345264Z  INFO stats: node_status="#    1128 GQd4SP7ZVU9RHRGyH6YNyNR5tNg7JJV8rGYQvU9oTip7 Validator | 1 validator 0 peers ⬇ 0 B/s ⬆ 0 B/s 0.80 bps 171 Tgas/s CPU: 199%, Mem: 1.60 GB"
+2026-05-09T23:07:38.465710Z  WARN client: optimistic block was constructed on different block, discarding it height=1130 prev_hash=GQd4SP7ZVU9RHRGyH6YNyNR5tNg7JJV8rGYQvU9oTip7 optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:07:40.008779Z  WARN client: optimistic block was constructed on different block, discarding it height=1131 prev_hash=GE6La5xHgRwH6CXzm58zHQJEgsxUmeoAXvC85fnQsyDf optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:07:41.486693Z  WARN client: optimistic block was constructed on different block, discarding it height=1132 prev_hash=5KcvXaPVFDd7G4tTZm1JGfQGqvoQy3Afo5mvcoPFZzNC optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:07:43.160328Z  WARN client: optimistic block was constructed on different block, discarding it height=1133 prev_hash=6yqzJ6KLZJP5dY3E8qJkcCeA1kCCRvNwCEa7wiS9qvKs optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:07:44.958440Z  WARN client: optimistic block was constructed on different block, discarding it height=1134 prev_hash=njTscvFVY7Jry7A3V7yr5XyntGe5tXBSzEXM2VikMuD optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:07:46.561711Z  WARN client: optimistic block was constructed on different block, discarding it height=1135 prev_hash=Ea6hPZkQH6fwWqqdekvMmGHjwvk9wZnd3C6uHKvpQbXK optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:07:48.613644Z  WARN client: optimistic block was constructed on different block, discarding it height=1136 prev_hash=59W5RBVYjysR5atRhogctP8pHBbpfBVcLJyoGPRNs9Vd optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:07:48.691860Z  INFO stats: node_status="#    1134 59W5RBVYjysR5atRhogctP8pHBbpfBVcLJyoGPRNs9Vd Validator | 1 validator 0 peers ⬇ 0 B/s ⬆ 0 B/s 0.58 bps 126 Tgas/s CPU: 199%, Mem: 1.68 GB"
+2026-05-09T23:07:51.821629Z  WARN client: optimistic block was constructed on different block, discarding it height=1137 prev_hash=CS8y67NRJ2ima19LoMj52WQZbKW5HJ9QJpQGfLpLNzi7 optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:07:52.200674Z  WARN client: optimistic block was constructed on different block, discarding it height=1138 prev_hash=CS8y67NRJ2ima19LoMj52WQZbKW5HJ9QJpQGfLpLNzi7 optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:07:54.222635Z  WARN client: optimistic block was constructed on different block, discarding it height=1139 prev_hash=91ZFCsdQ3ReETYpSDEXCQw7WhmMfSJwHG5mKFEghuwLD optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:07:55.449859Z  WARN client: optimistic block was constructed on different block, discarding it height=1140 prev_hash=fiFnFCCK2L49LvzZQ2xbWnrXAWZVGmgE3vhPWEGRoh8 optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:07:57.038880Z  WARN client: optimistic block was constructed on different block, discarding it height=1141 prev_hash=4PNDrxwTcogfVApfMK8jRqzvKFqruebPhTkv3wrc4i1E optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:07:57.457723Z  WARN client: optimistic block was constructed on different block, discarding it height=1142 prev_hash=4PNDrxwTcogfVApfMK8jRqzvKFqruebPhTkv3wrc4i1E optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:07:58.066977Z  WARN client: optimistic block was constructed on different block, discarding it height=1143 prev_hash=4PNDrxwTcogfVApfMK8jRqzvKFqruebPhTkv3wrc4i1E optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:07:58.440250Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T23:07:58.597778Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T23:07:58.655169Z  INFO stats: node_status="#    1140 4PNDrxwTcogfVApfMK8jRqzvKFqruebPhTkv3wrc4i1E Validator | 1 validator 0 peers ⬇ 0 B/s ⬆ 0 B/s 0.60 bps 129 Tgas/s CPU: 198%, Mem: 1.72 GB"
+2026-05-09T23:07:59.339844Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T23:08:00.678519Z  WARN client: optimistic block was constructed on different block, discarding it height=1144 prev_hash=CEsjcCXW1kTbbYxXNdgHH7VgSDztCdMeUGjnEmbKXjBd optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:08:01.148133Z  WARN client: optimistic block was constructed on different block, discarding it height=1145 prev_hash=CEsjcCXW1kTbbYxXNdgHH7VgSDztCdMeUGjnEmbKXjBd optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:08:01.509799Z  WARN network: unexpected message during handshake msg=Disconnect
+2026-05-09T23:08:01.893423Z  WARN client: optimistic block was constructed on different block, discarding it height=1146 prev_hash=CEsjcCXW1kTbbYxXNdgHH7VgSDztCdMeUGjnEmbKXjBd optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:08:04.302143Z  WARN client: optimistic block was constructed on different block, discarding it height=1147 prev_hash=nAsGytAAa6a9FWyMajAaQKJgzaB5f28E5zbkySRH76a optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:08:04.880893Z  WARN client: optimistic block was constructed on different block, discarding it height=1148 prev_hash=nAsGytAAa6a9FWyMajAaQKJgzaB5f28E5zbkySRH76a optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:08:06.825482Z  WARN client: optimistic block was constructed on different block, discarding it height=1149 prev_hash=EPcG8RsFmB9Bc3iHxycYHaGvBACQXiNsLXUCthYV4ovR optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:08:07.450916Z  WARN client: optimistic block was constructed on different block, discarding it height=1150 prev_hash=EPcG8RsFmB9Bc3iHxycYHaGvBACQXiNsLXUCthYV4ovR optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:08:08.448668Z  WARN client: optimistic block was constructed on different block, discarding it height=1151 prev_hash=EPcG8RsFmB9Bc3iHxycYHaGvBACQXiNsLXUCthYV4ovR optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:08:08.656680Z  INFO stats: node_status="#    1148 EPcG8RsFmB9Bc3iHxycYHaGvBACQXiNsLXUCthYV4ovR Validator | 1 validator 0 peers ⬇ 0 B/s ⬆ 0 B/s 0.80 bps 170 Tgas/s CPU: 199%, Mem: 1.80 GB"
+2026-05-09T23:08:10.559357Z  WARN client: optimistic block was constructed on different block, discarding it height=1152 prev_hash=CjsKxvBRjnX1ZCubTHczCkEWr8jcuwo1XPeYKvzEJCzA optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:08:11.408981Z  WARN client: optimistic block was constructed on different block, discarding it height=1153 prev_hash=CjsKxvBRjnX1ZCubTHczCkEWr8jcuwo1XPeYKvzEJCzA optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:08:13.241639Z  WARN client: optimistic block was constructed on different block, discarding it height=1154 prev_hash=DtmaLbqCjE1ytU5xwzqyqTJkUF2ueNbdzhtXLKxq5Ee4 optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
+2026-05-09T23:08:14.193196Z  WARN client: optimistic block was constructed on different block, discarding it height=1155 prev_hash=DtmaLbqCjE1ytU5xwzqyqTJkUF2ueNbdzhtXLKxq5Ee4 optimistic_block_prev_hash=8DZmdYhCR43J65kYd74MkEY9e9pAsHMeZvRjQwHSKfgZ
