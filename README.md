@@ -245,22 +245,6 @@ production to the witness gossip pipeline.
 
 ---
 
-## Pushing to GitHub
-
-GitHub requires **HTTPS + Personal Access Token** (or SSH keys). Example:
-
-```bash
-git branch -M main
-git remote add origin https://github.com/ssahukar2/near-sharding-benchmark.git
-git push -u origin main
-```
-
-When prompted for password, paste a **PAT** with `repo` scope.  
-This README does **not** run `git config --global` on your machine — configure
-credentials per your site policy.
-
----
-
 ## Layout
 
 ```
