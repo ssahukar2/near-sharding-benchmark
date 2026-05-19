@@ -1,0 +1,8 @@
+netem_ms,RPS,approx_tps,sum_shard_tps,total_received,wall_seconds,errors
+1,3000,12061.61,12159.29,200000,33,native-transfers_exit_2
+1,5000,17155.09,17313.36,200000,27,native-transfers_exit_1
+1,7500,17286.77,17533.2,200000,26,native-transfers_exit_2
+1,15000,19097.28,19456.42,200000,26,native-transfers_exit_1
+1,25000,17739.92,17871.61,200000,25,native-transfers_exit_2
+2,5000,17471.18,17753.11,200000,26,native-transfers_exit_2
+2,7500,16536.08,16652.66,200000,27,native-transfers_exit_2

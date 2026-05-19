@@ -1,0 +1,33 @@
+Observer scaling summary (16 validators, 8 observers, 16 shards)
+Timestamp: 2026-05-07T17:48:37+00:00
+readiness_time_s: 70.0
+measurement_elapsed_s: 181.5
+wall_clock_s_total: 741.0
+
+Per-validator (per-shard) TPS:
+  node0: 0.00
+  node1: 0.00
+  node2: 0.00
+  node3: 0.00
+  node4: 0.00
+  node5: 0.00
+  node6: 0.00
+  node7: 0.00
+  node8: 0.00
+  node9: 0.00
+  node10: 0.00
+  node11: 0.00
+  node12: 0.00
+  node13: 0.00
+  node14: 0.00
+  node15: 0.00
+
+Aggregate TPS: 0.00
+Avg TPS per shard: 0.00
+Avg block time (ms): 382.91
+Finality lag blocks: 4.43
+Finality lag ms: 1695.7
+Execution rate avg: 1.000
+
+Warnings:
+  - BALANCE WARNING: shards [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15] produced ZERO chunks during measurement window. These validators may be misassigned or stalled. Their TPS=0 will drag down averages.

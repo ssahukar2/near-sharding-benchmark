@@ -1,0 +1,6 @@
+# Python deps for scripts/run_benchmark.py, scripts/monitor.py,
+# scripts/external_tx_submitter.py, scripts/observer_scaling.py,
+# scripts/genesis_bake.py
+requests>=2.28.0
+cryptography>=41.0.0
+PyNaCl>=1.5.0

@@ -1,0 +1,7 @@
+# One host per line.
+# Example:
+# 10.56.1.11  # validator shard 0
+# 10.56.1.12  # validator shard 1
+# 10.56.1.13  # validator shard 2
+# 10.56.1.14  # validator shard 3
+# 10.56.1.15  # rpc / traffic node

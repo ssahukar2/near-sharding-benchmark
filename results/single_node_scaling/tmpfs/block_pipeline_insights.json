@@ -1,0 +1,197 @@
+{
+  "8": {
+    "n": 8,
+    "ns": 8,
+    "window_s": 143.25324869155884,
+    "steady_samples": 14,
+    "near_produce_chunk_time": {
+      "mean": 230.4107709020877,
+      "min": 186.2681227333333,
+      "max": 280.44728886666667,
+      "cv": 0.12239733403817353
+    },
+    "near_produce_and_distribute_chunk_time": {
+      "mean": 54.560416799955675,
+      "min": 48.40360380833334,
+      "max": 59.844242824999974,
+      "cv": 0.06566311254677915
+    },
+    "near_chunk_state_witness_encode_time": {
+      "mean": 69.69634605708596,
+      "min": 63.718069399999955,
+      "max": 78.19734849999999,
+      "cv": 0.06272618582016559
+    },
+    "near_chunk_state_witness_decode_time": {
+      "mean": 100.74776512419545,
+      "min": 92.1043217090909,
+      "max": 111.96882974766353,
+      "cv": 0.061230631235239856
+    },
+    "near_apply_chunk_delay_seconds": {
+      "mean": 599.5957272404357,
+      "min": 549.6452759912286,
+      "max": 636.2180904793393,
+      "cv": 0.04056445306068164
+    },
+    "near_applying_chunks_time": {
+      "mean": 605.1587348663755,
+      "min": 554.9325020482456,
+      "max": 641.7445911983469,
+      "cv": 0.0404349721686397
+    },
+    "near_apply_all_chunks_time": {
+      "mean": 4238.031582305229,
+      "min": 3938.336722344831,
+      "max": 4759.252303333333,
+      "cv": 0.06832926225957023
+    },
+    "near_block_processing_time": {
+      "mean": 5372.476561808805,
+      "min": 4993.635114642854,
+      "max": 6004.824838758621,
+      "cv": 0.0535144764144359
+    },
+    "chunks_per_s": 8.935224936894738,
+    "produced_per_s": 0.8516386267977797,
+    "skipped_per_s": 3.574089974757895,
+    "endorse_per_s": 26.18439745179075,
+    "block_per_s": 0.18149675653067437,
+    "limited_per_s": 9.298218449956087,
+    "tx_per_s": 1583.3497813956753,
+    "delayed_growth": 1171154.0,
+    "delayed_first": 118078.0,
+    "delayed_last": 1289232.0,
+    "witness_raw_bytes": {
+      "mean": 1775113.2298012956,
+      "min": 1740386.8235294118,
+      "max": 1799094.2857142857,
+      "cv": 0.012256371944434002
+    },
+    "witness_total_bytes": {
+      "mean": 948116.0089154412,
+      "min": 927716.0588235294,
+      "max": 963692.3571428572,
+      "cv": 0.013227577486820321
+    },
+    "witness_bytes_per_s": 807018.2914240058,
+    "inc_receipt_compute": {
+      "mean": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "cv": 0.0
+    },
+    "local_receipt_compute": {
+      "mean": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "cv": 0.0
+    },
+    "delayed_receipt_compute": {
+      "mean": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "cv": 0.0
+    },
+    "chunk_compute_ms": null,
+    "tx_compute": {
+      "mean": 421.8488629807734,
+      "min": 420.77260034860245,
+      "max": 424.3835128386873,
+      "cv": 0.0027133872736040316
+    },
+    "inc_receipt_tgas": {
+      "mean": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "cv": 0.0
+    },
+    "local_receipt_tgas": {
+      "mean": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "cv": 0.0
+    },
+    "delayed_receipt_tgas": {
+      "mean": 0.0,
+      "min": 0.0,
+      "max": 0.0,
+      "cv": 0.0
+    },
+    "tx_tgas": {
+      "mean": 421.8488629807734,
+      "min": 420.77260034860245,
+      "max": 424.3835128386873,
+      "cv": 0.0027133872736040316
+    },
+    "chunk_tgas": {
+      "mean": 421.84886298077333,
+      "min": 420.77260034860257,
+      "max": 424.3835128386873,
+      "cv": 0.0027133872736040156
+    },
+    "recorded_size_bytes": {
+      "mean": 660031.0282520227,
+      "min": 654945.5363128491,
+      "max": 662268.2670807453,
+      "cv": 0.0034417025201346966
+    },
+    "near_validate_chunk_with_encoded_merkle_root_time": {
+      "mean": 118.70666743178198,
+      "min": 108.35936778260869,
+      "max": 129.28240918811883,
+      "cv": 0.06744190760237655
+    },
+    "near_chunk_state_witness_network_roundtrip_time": {
+      "mean": 466.3782630189526,
+      "min": 410.30710312380995,
+      "max": 543.054542552381,
+      "cv": 0.08079722132768424
+    },
+    "near_async_message_dequeue_time": {
+      "mean": 2.6397938356568855,
+      "min": 2.214570214691219,
+      "max": 2.945846350676862,
+      "cv": 0.09946426645355656
+    },
+    "near_async_message_processing_time": {
+      "mean": 0.5070914688425365,
+      "min": 0.4731423318797185,
+      "max": 0.5373267499070543,
+      "cv": 0.0466977553387828
+    },
+    "near_partial_witness_encode_time": {
+      "mean": 438.17320325908616,
+      "min": 86.19833646666667,
+      "max": 709.511461875,
+      "cv": 0.453069491149959
+    },
+    "near_partial_chunk_time_to_last_part_seconds": {
+      "mean": 173.17114820625724,
+      "min": 16.33860202520992,
+      "max": 631.4385248712872,
+      "cv": 1.0686171022753352
+    },
+    "near_partial_chunk_time_to_last_receipt_part_seconds": {
+      "mean": 103.99868426302082,
+      "min": 61.5451342857143,
+      "max": 199.4991822142856,
+      "cv": 0.3881478878445664
+    },
+    "near_partial_chunk_time_to_reconstruct_seconds": {
+      "mean": 838.2136786272904,
+      "min": 668.752171457627,
+      "max": 1153.425820247423,
+      "cv": 0.1851765082849854
+    },
+    "near_partial_witness_time_to_last_part": {
+      "mean": 122.08826197335551,
+      "min": 109.69162322641509,
+      "max": 130.68377840186915,
+      "cv": 0.05002812655680957
+    },
+    "orphan_witness_growth": 107.0,
+    "orphan_witness_first": 5562.0,
+    "orphan_witness_last": 5669.0
+  }
+}

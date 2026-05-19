@@ -1,0 +1,380 @@
+diff --git a/scripts/mocknet/sharded_bm.py b/scripts/mocknet/sharded_bm.py
+index b52dce0..0d71b3c 100644
+--- a/scripts/mocknet/sharded_bm.py
++++ b/scripts/mocknet/sharded_bm.py
+@@ -2,13 +2,14 @@
+ This script is used to run a sharded benchmark on a forknet.
+ """
+ 
+-from argparse import ArgumentParser
++from argparse import ArgumentParser, SUPPRESS
+ from collections import defaultdict
+ import os
+ import sys
+ import json
+ import copy
+ import pathlib
++import shutil
+ import requests
+ import subprocess
+ import time
+@@ -17,6 +18,7 @@ from tqdm import tqdm
+ from rc import pmap
+ 
+ from types import SimpleNamespace
++import local_test_node
+ from mirror import CommandContext, get_nodes_status, init_cmd, new_test_cmd, \
+     reset_cmd, run_env_cmd, run_remote_cmd, run_remote_download_file, run_remote_upload_file, \
+     start_nodes_cmd, stop_nodes_cmd, update_binaries_cmd
+@@ -35,6 +37,7 @@ PROJECT = os.getenv('MOCKNET_PROJECT', 'nearone-mocknet')
+ 
+ # TODO: consider moving source directory to pytest.
+ SOURCE_BENCHNET_DIR = os.getenv("NEAR_BENCHMARK_CASES_DIR", "../")
++MOCKNET_SCRIPT_DIR = pathlib.Path(__file__).resolve().parent
+ 
+ REMOTE_HOME = "/home/ubuntu"
+ BENCHNET_DIR = f"{REMOTE_HOME}/bench"
+@@ -89,6 +92,64 @@ def fetch_forknet_details(forknet_name, bm_params):
+     }
+ 
+ 
++def forknet_details_local(bm_params: dict) -> dict:
++    """Stub forknet metadata for --local-test (single host, neard_runner homes)."""
++    n = int(bm_params["chunk_producers"])
++    return {
++        "cp_instance_names": [f"node{i}" for i in range(n)],
++        "tracing_server_internal_ip": None,
++        "tracing_server_external_ip": None,
++    }
++
++
++def _upload_json_patches_local(args):
++    bench = pathlib.Path(BENCHNET_DIR).expanduser()
++    bench.mkdir(parents=True, exist_ok=True)
++    src_cases = pathlib.Path(SOURCE_BENCHNET_DIR).expanduser().resolve() / "cases"
++    dst_cases = bench / "cases"
++    if dst_cases.is_dir():
++        shutil.rmtree(dst_cases)
++    shutil.copytree(src_cases, dst_cases)
++    src_helpers = MOCKNET_SCRIPT_DIR / "helpers"
++    dst_helpers = bench / "helpers"
++    if dst_helpers.is_dir():
++        shutil.rmtree(dst_helpers)
++    shutil.copytree(src_helpers, dst_helpers)
++    logger.info(f"local-test: copied cases and helpers to {bench}")
++
++
++def _apply_json_patches_local(args):
++    """Apply genesis/config/log patches per neard home under ~/.near/local-mocknet/."""
++    lm = local_test_node.DEFAULT_LOCAL_MOCKNET_DIR.resolve()
++    bench = pathlib.Path(BENCHNET_DIR).expanduser().resolve()
++    case_dir = bench / args.case
++    base_genesis = (case_dir / args.bm_params["base_genesis_patch"]).resolve()
++    base_config = (case_dir / args.bm_params["base_config_patch"]).resolve()
++    config_patch = (case_dir / "config_patch.json").resolve()
++    log_patch = (bench / "cases" / "log_patch.json").resolve()
++    json_updater = bench / "helpers" / "json_updater.py"
++    for name in args.forknet_details["cp_instance_names"]:
++        near_home = lm / name / ".near"
++        genesis = near_home / "genesis.json"
++        config = near_home / "config.json"
++        log_config = near_home / "log_config.json"
++        cmd = (
++            f"python3 {json_updater} {genesis} {base_genesis} && "
++            f"python3 {json_updater} {config} {base_config} {config_patch} && "
++            f"touch {log_config} && "
++            f"python3 {json_updater} {log_config} {log_patch}"
++        )
++        if args.forknet_details.get("tracing_server_internal_ip") is None:
++            cmd += (
++                f" && jq '.opentelemetry = null' {log_config} >tmp.$$.json && "
++                f"mv tmp.$$.json {log_config} || rm tmp.$$.json"
++            )
++        run_cmd_args = copy.deepcopy(args)
++        run_cmd_args.host_filter = name
++        run_cmd_args.cmd = cmd
++        run_remote_cmd(CommandContext(run_cmd_args))
++
++
+ def upload_local_neard(args):
+     """ 
+     uploads the local `neard` binary to every node to the ${BENCHNET_DIR}. 
+@@ -105,13 +166,17 @@ def upload_local_neard(args):
+ 
+ def upload_json_patches(args):
+     """Upload the json patches to the benchmark directory."""
++    if getattr(args, "local_test", False):
++        _upload_json_patches_local(args)
++        return
+     upload_file_args = copy.deepcopy(args)
+-    upload_file_args.src = f"{SOURCE_BENCHNET_DIR}/cases"
++    upload_file_args.src = str(
++        pathlib.Path(SOURCE_BENCHNET_DIR).expanduser() / "cases")
+     upload_file_args.dst = BENCHNET_DIR
+     run_remote_upload_file(CommandContext(upload_file_args))
+ 
+     upload_file_args = copy.deepcopy(args)
+-    upload_file_args.src = "scripts/mocknet/helpers"
++    upload_file_args.src = str(MOCKNET_SCRIPT_DIR / "helpers")
+     upload_file_args.dst = BENCHNET_DIR
+     run_remote_upload_file(CommandContext(upload_file_args))
+ 
+@@ -120,7 +185,7 @@ def handle_init(args):
+     """Handle the init command - initialize the benchmark before running it."""
+ 
+     run_cmd_args = copy.deepcopy(args)
+-    run_cmd_args.cmd = f"mkdir -p {BENCHNET_DIR}"
++    run_cmd_args.cmd = f"mkdir -p {pathlib.Path(BENCHNET_DIR).expanduser()}"
+     run_remote_cmd(CommandContext(run_cmd_args))
+ 
+     if args.neard_binary_url is not None:
+@@ -136,9 +201,19 @@ def handle_init(args):
+         )
+         sys.exit(1)
+ 
++    args.neard_binary_url = os.path.expanduser(args.neard_binary_url)
++
+     # if neard_binary_url is a local path - upload the file to each node
+     is_local_neard = os.path.isfile(args.neard_binary_url)
+-    if is_local_neard:
++    if getattr(args, "local_test", False) and is_local_neard:
++        bench = pathlib.Path(BENCHNET_DIR).expanduser()
++        bench.mkdir(parents=True, exist_ok=True)
++        dst = bench / "neard"
++        logger.info(f"local-test: copying neard to {dst}")
++        shutil.copy2(args.neard_binary_url, dst)
++        os.chmod(dst, 0o755)
++        args.neard_binary_url = str(dst)
++    elif is_local_neard:
+         logger.info(f"handling local `neard` at {args.neard_binary_url}")
+         local_path_on_remote = upload_local_neard(args)
+         args.neard_binary_url = local_path_on_remote
+@@ -215,10 +290,21 @@ def handle_init(args):
+     # Force save_untracked_partial_chunks_parts=true for the initialization run.
+     # This ensures that chunks produced during init are persisted to disk and
+     # survive the node restart that happens when the benchmark actually starts.
+-    run_cmd_args = copy.deepcopy(args)
+-    run_cmd_args.host_filter = f"({'|'.join(args.forknet_details['cp_instance_names'])})"
+-    run_cmd_args.cmd = f"jq '.save_untracked_partial_chunks_parts = true' {CONFIG_PATH} > tmp.json && mv tmp.json {CONFIG_PATH}"
+-    run_remote_cmd(CommandContext(run_cmd_args))
++    if getattr(args, "local_test", False):
++        lm = local_test_node.DEFAULT_LOCAL_MOCKNET_DIR.resolve()
++        for name in args.forknet_details["cp_instance_names"]:
++            cfg = lm / name / ".near" / "config.json"
++            run_cmd_args = copy.deepcopy(args)
++            run_cmd_args.host_filter = name
++            run_cmd_args.cmd = (
++                f"jq '.save_untracked_partial_chunks_parts = true' {cfg} > tmp.json && "
++                f"mv tmp.json {cfg}")
++            run_remote_cmd(CommandContext(run_cmd_args))
++    else:
++        run_cmd_args = copy.deepcopy(args)
++        run_cmd_args.host_filter = f"({'|'.join(args.forknet_details['cp_instance_names'])})"
++        run_cmd_args.cmd = f"jq '.save_untracked_partial_chunks_parts = true' {CONFIG_PATH} > tmp.json && mv tmp.json {CONFIG_PATH}"
++        run_remote_cmd(CommandContext(run_cmd_args))
+ 
+     start_nodes(args)
+ 
+@@ -234,21 +320,28 @@ def handle_init(args):
+         ctx = CommandContext(run_cmd_args)
+         cp_nodes.append(ctx.get_targeted()[0])
+ 
+-    # Query all CPs in parallel to get their tracked shards
+-    query_cmd = f"python3 {BENCHNET_DIR}/helpers/get_tracked_shard.py"
+-    results = pmap(
+-        lambda node: (node, node.run_cmd(query_cmd, return_on_fail=True)),
+-        cp_nodes)
+-
+     # Build mapping: shard_id -> list of CP names tracking that shard
+     shard_to_cps = defaultdict(list)
+-    for node, result in results:
+-        shard = result.stdout.strip()
+-        if not shard.isdigit():
+-            logger.error(
+-                f"Failed to get shard for {node.name()}: {result.stdout}")
+-            sys.exit(1)
+-        shard_to_cps[shard].append(node.name())
++    if getattr(args, "local_test", False):
++        # Same host: metrics script cannot disambiguate by port; assume 1:1
++        # node{i} -> shard i (matches typical 4-CP / 4-shard local layout).
++        for i, cp in enumerate(cp_names):
++            shard_to_cps[str(i)].append(cp)
++        logger.info(f"local-test: shard assignment (fixed): {dict(shard_to_cps)}")
++    else:
++        # Query all CPs in parallel to get their tracked shards
++        query_cmd = f"python3 {BENCHNET_DIR}/helpers/get_tracked_shard.py"
++        results = pmap(
++            lambda node: (node, node.run_cmd(query_cmd, return_on_fail=True)),
++            cp_nodes)
++
++        for node, result in results:
++            shard = result.stdout.strip()
++            if not shard.isdigit():
++                logger.error(
++                    f"Failed to get shard for {node.name()}: {result.stdout}")
++                sys.exit(1)
++            shard_to_cps[shard].append(node.name())
+ 
+     # For each shard, copy account files to all CPs tracking that shard
+     logger.info(
+@@ -263,7 +356,23 @@ def handle_init(args):
+         source_accounts_path = f"{BENCHNET_DIR}/user-data/accounts.json"
+         source_accounts_dir = os.path.dirname(source_accounts_path)
+         receiver_accounts_dir = f"{BENCHNET_DIR}/user-data/receiver-accounts/"
+-        run_cmd_args.cmd = f"""
++        if getattr(args, "local_test", False):
++            lm = local_test_node.DEFAULT_LOCAL_MOCKNET_DIR.resolve()
++            for cp in cps_in_shard:
++                slot = cp_names_csv.split(",").index(cp)
++                run_cmd_args = copy.deepcopy(args)
++                run_cmd_args.host_filter = cp
++                run_cmd_args.cmd = f"""
++            rm -rf {pathlib.Path(BENCHNET_DIR).expanduser()}/user-data
++            mkdir -p {source_accounts_dir}
++            mkdir -p {receiver_accounts_dir}
++            cp {lm}/{cp}/.near/user-data/shard_{shard}_cp_{slot}.json {source_accounts_path}
++            cp {lm}/{cp}/.near/user-data/shard_*.json {receiver_accounts_dir}
++            echo "CP {cp} assigned shard {shard}, slot {slot}"
++        """
++                run_remote_cmd(CommandContext(run_cmd_args))
++        else:
++            run_cmd_args.cmd = f"""
+             my_hostname=$(hostname)
+             slot=$(python3 -c "print('{cp_names_csv}'.split(',').index('$my_hostname'))")
+             rm -rf {BENCHNET_DIR}/user-data
+@@ -273,7 +382,7 @@ def handle_init(args):
+             cp {NEAR_HOME}/user-data/shard_*.json {receiver_accounts_dir}
+             echo "CP $my_hostname assigned shard {shard}, slot $slot"
+         """
+-        run_remote_cmd(CommandContext(run_cmd_args))
++            run_remote_cmd(CommandContext(run_cmd_args))
+ 
+     stop_nodes(args)
+ 
+@@ -284,6 +393,9 @@ def handle_init(args):
+ 
+ def apply_json_patches(args):
+     """Apply the json patches to the genesis, config and log_config."""
++    if getattr(args, "local_test", False):
++        _apply_json_patches_local(args)
++        return
+     genesis = f"{NEAR_HOME}/genesis.json"
+     base_genesis_patch = f"{BENCHNET_DIR}/{args.case}/{args.bm_params['base_genesis_patch']}"
+ 
+@@ -426,7 +538,7 @@ def apply_network_config(args):
+ def handle_get_traces(args):
+     """Handle the get-traces command - fetch traces from the tracing server.
+     """
+-    if args.forknet_details['tracing_server_external_ip'] is None:
++    if args.forknet_details.get('tracing_server_external_ip') is None:
+         logger.error("Error: Tracing server external IP is not set")
+         return
+ 
+@@ -546,6 +658,11 @@ def handle_start(args):
+ def main():
+     parser = ArgumentParser(
+         description='Forknet cluster parameters to launch a sharded benchmark')
++    parser.add_argument(
++        '--local-test',
++        action='store_true',
++        help='Run neard_runner + neard on this machine under ~/.near/local-mocknet (no GCP)',
++    )
+     parser.add_argument(
+         '--unique-id',
+         help='Forknet unique ID (FORKNET_NAME)',
+@@ -577,8 +694,9 @@ def main():
+     unique_id = early_args.unique_id
+     mocknet_id = early_args.mocknet_id
+     case = early_args.case
++    local_test = early_args.local_test
+ 
+-    if unique_id is None and mocknet_id is None:
++    if not local_test and unique_id is None and mocknet_id is None:
+         logger.error(
+             f"Error: Either --unique-id or --mocknet-id must be provided")
+         sys.exit(1)
+@@ -587,24 +705,29 @@ def main():
+         sys.exit(1)
+ 
+     try:
+-        bm_params_path = f"{SOURCE_BENCHNET_DIR}/{case}/params.json"
++        bm_params_path = pathlib.Path(SOURCE_BENCHNET_DIR).expanduser(
++        ) / case / "params.json"
+         with open(bm_params_path) as f:
+             bm_params = json.load(f)
+-    except (json.JSONDecodeError, KeyError) as e:
+-        logger.error(f"Error reading binary_url from {bm_params_path}: {e}")
++    except (json.JSONDecodeError, KeyError, OSError) as e:
++        logger.error(f"Error reading params from {bm_params_path}: {e}")
+         sys.exit(1)
+ 
+-    forknet_details = fetch_forknet_details(unique_id or mocknet_id, bm_params)
++    if local_test:
++        forknet_details = forknet_details_local(bm_params)
++    else:
++        forknet_details = fetch_forknet_details(unique_id or mocknet_id,
++                                                bm_params)
+     logger.info(forknet_details)
+ 
+     parser.set_defaults(
+-        chain_id=CHAIN_ID,
+-        start_height=START_HEIGHT,
++        chain_id=None if local_test else CHAIN_ID,
++        start_height=None if local_test else START_HEIGHT,
+         unique_id=unique_id,
+         case=case,
+         bm_params=bm_params,
+         forknet_details=forknet_details,
+-        local_test=False,
++        local_test=local_test,
+         host_filter=None,
+         host_type="nodes",
+         select_partition=None,
+@@ -622,7 +745,7 @@ def main():
+         help='URL of the neard binary to use',
+     )
+ 
+-    subparsers.add_parser(
++    tweak_parser = subparsers.add_parser(
+         'tweak-config',
+         help='Reupload and apply the patches to genesis, config and log_config',
+     )
+@@ -648,7 +771,7 @@ def main():
+         help='Disable the tx generator',
+     )
+ 
+-    subparsers.add_parser('reset', help='Reset the benchmark state')
++    reset_parser = subparsers.add_parser('reset', help='Reset the benchmark state')
+ 
+     get_traces_parser = subparsers.add_parser(
+         'get-traces', help='Fetch traces from the tracing server')
+@@ -694,7 +817,29 @@ def main():
+                                  default=None,
+                                  help='Filter to select specific hosts')
+ 
++    _local_test_subparsers = (
++        init_parser,
++        tweak_parser,
++        start_parser,
++        stop_parser,
++        reset_parser,
++        get_traces_parser,
++        get_profiles_parser,
++        get_logs_parser,
++    )
++    for _sp in _local_test_subparsers:
++        _sp.add_argument(
++            '--local-test',
++            action='store_true',
++            default=False,
++            help=SUPPRESS,
++        )
++
+     args = parser.parse_args(my_args)
++    args.local_test = bool(getattr(args, 'local_test', False) or local_test)
++    if args.local_test and args.unique_id is None:
++        args.unique_id = args.mocknet_id or os.environ.get(
++            'FORKNET_NAME', 'local-mocknet')
+ 
+     # Route to appropriate handler based on command
+     if args.command == 'init':

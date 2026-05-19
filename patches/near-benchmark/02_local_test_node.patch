@@ -1,0 +1,188 @@
+diff --git a/scripts/mocknet/local_test_node.py b/scripts/mocknet/local_test_node.py
+index 172c37c..aa7d5bb 100644
+--- a/scripts/mocknet/local_test_node.py
++++ b/scripts/mocknet/local_test_node.py
+@@ -8,6 +8,7 @@ import json
+ import os
+ import pathlib
+ import psutil
++import shutil
+ import re
+ import requests
+ import shutil
+@@ -16,12 +17,15 @@ import subprocess
+ import sys
+ import threading
+ import time
++from types import SimpleNamespace
+ 
+ sys.path.append(str(pathlib.Path(__file__).resolve() / 'lib'))
+ 
+ from lib.configured_logger import logger
+ from node_handle import NodeHandle
+ 
++_HELPERS_DIR = pathlib.Path(__file__).resolve().parent / 'helpers'
++
+ 
+ # return the process with pid listed in `pid_path`, if it's running
+ def get_process(pid_path):
+@@ -73,6 +77,10 @@ class LocalTestNeardRunner:
+         return self._name
+ 
+     def get_label(self, label_name: str) -> str:
++        if label_name == 'role':
++            if self._name == 'traffic-generator':
++                return 'traffic'
++            return 'validator'
+         return 'local-test-node'
+ 
+     def ip_addr(self):
+@@ -85,36 +93,91 @@ class LocalTestNeardRunner:
+         return
+ 
+     def mk_neard_runner_home(self, remove_home_dir):
+-        # handled by local_test_setup_cmd()
+-        return
++        pathlib.Path(self.home).mkdir(parents=True, exist_ok=True)
++        nr = pathlib.Path(self.home) / 'neard-runner'
++        nh = pathlib.Path(self.home) / '.near'
++        if remove_home_dir:
++            shutil.rmtree(nr, ignore_errors=True)
++            shutil.rmtree(nh, ignore_errors=True)
++        nr.mkdir(parents=True, exist_ok=True)
++        nh.mkdir(parents=True, exist_ok=True)
+ 
+     def upload_neard_runner(self):
+-        return
++        dest = pathlib.Path(self.home) / 'neard-runner'
++        dest.mkdir(parents=True, exist_ok=True)
++        for fname in [
++                'neard_runner.py', 'requirements.txt', 'setup-near-cli.sh',
++                'send-stake-proposal.sh'
++        ]:
++            src = _HELPERS_DIR / fname
++            if not src.is_file():
++                raise FileNotFoundError(f'Cannot find the source file: {src}')
++            shutil.copy2(src, dest / fname)
+ 
+     def upload_neard_runner_config(self, config):
+-        # handled by local_test_setup_cmd()
+-        return
++        write_config(pathlib.Path(self.home), config)
+ 
+     def run_cmd(self,
+                 _schedule_ctx,
+                 cmd,
+                 raise_on_fail=False,
+                 return_on_fail=False):
+-        logger.error(
+-            "Does not make sense to run command on local host. The behavior may not be the desired one."
++        if _schedule_ctx is not None:
++            logger.error('Scheduling is not supported for local test node')
++            sys.exit(1)
++        r = subprocess.run(cmd,
++                           shell=True,
++                           capture_output=True,
++                           text=True)
++        # Match cmd_utils / remote machine.run shape
++        out = SimpleNamespace(
++            stdout=r.stdout or '',
++            stderr=r.stderr or '',
++            exitcode=r.returncode,
+         )
++        if r.returncode != 0:
++            msg = (
++                f'failed running `{cmd}` on {self.name()}:\nstdout: {r.stdout}\nstderr: {r.stderr}'
++            )
++            if return_on_fail:
++                return out
++            if raise_on_fail:
++                raise RuntimeError(msg)
++            sys.exit(msg)
++        return out
+ 
+     def upload_file(self, src, dst):
+-        logger.error("Does not make sense to upload a file on local host.")
++        src_p = pathlib.Path(src)
++        dst_p = pathlib.Path(dst)
++        if dst_p.is_dir() or str(dst).endswith(os.sep):
++            dst_p = dst_p / src_p.name
++        dst_p.parent.mkdir(parents=True, exist_ok=True)
++        shutil.copy2(src_p, dst_p)
+ 
+     def download_file(self, src, dst):
+-        logger.error("Does not make sense to download a file on local host.")
++        shutil.copy2(pathlib.Path(src), pathlib.Path(dst))
+ 
+     def init_python(self):
+-        return
++        nr = pathlib.Path(self.home) / 'neard-runner'
++        venv_py = nr / 'venv' / 'bin' / 'python3'
++        if not venv_py.is_file():
++            subprocess.run(
++                [sys.executable, '-m', 'venv', str(nr / 'venv')],
++                check=True,
++            )
++        subprocess.run([
++            str(nr / 'venv' / 'bin' / 'pip'), 'install', '-r',
++            str(nr / 'requirements.txt')
++        ],
++                       check=True)
+ 
+     def update_python(self):
+-        return
++        nr = pathlib.Path(self.home) / 'neard-runner'
++        subprocess.run([
++            str(nr / 'venv' / 'bin' / 'pip'), 'install', '-r',
++            str(nr / 'requirements.txt')
++        ],
++                       check=True)
+ 
+     def _pid_path(self):
+         return self.home / 'pid.txt'
+@@ -126,20 +189,36 @@ class LocalTestNeardRunner:
+         if get_process(self._pid_path()) is not None:
+             return
+ 
++        pathlib.Path(self.home).mkdir(parents=True, exist_ok=True)
++        nr = pathlib.Path(self.home) / 'neard-runner'
++        venv_python = nr / 'venv' / 'bin' / 'python3'
++        runner_script = nr / 'neard_runner.py'
++        if not venv_python.is_file() or not runner_script.is_file():
++            raise FileNotFoundError(
++                f'missing venv or neard_runner.py under {nr}; run init first')
++        neard_logs = pathlib.Path(self.home) / 'neard-logs'
++        neard_logs.mkdir(parents=True, exist_ok=True)
+         with open(self.home / 'stdout', 'ab') as stdout, \
+             open(self.home / 'stderr', 'ab') as stderr:
+             args = [
+-                sys.executable, 'tests/mocknet/helpers/neard_runner.py',
+-                '--home', self.home / 'neard-runner', '--neard-home',
+-                self.home / '.near', '--neard-logs', self.home / 'neard-logs',
++                str(venv_python),
++                str(runner_script),
++                '--home',
++                str(nr),
++                '--neard-home',
++                str(self.home / '.near'),
++                '--neard-logs-dir',
++                str(neard_logs),
+                 '--port',
+-                str(self.port)
++                str(self.port),
+             ]
+-            process = subprocess.Popen(args,
+-                                       stdin=subprocess.DEVNULL,
+-                                       stdout=stdout,
+-                                       stderr=stderr,
+-                                       process_group=0)
++            process = subprocess.Popen(
++                args,
++                stdin=subprocess.DEVNULL,
++                stdout=stdout,
++                stderr=stderr,
++                start_new_session=True,
++            )
+         with open(self._pid_path(), 'w') as f:
+             f.write(f'{process.pid}\n')
+         logger.info(

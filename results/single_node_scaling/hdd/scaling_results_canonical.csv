@@ -1,0 +1,7 @@
+n_shards,storage_mode,aggregate_tps,avg_tps_per_shard,active_shards,avg_block_time_ms,finality_lag_blocks,finality_lag_ms,execution_rate_avg
+1,hdd,1123.1,1123.1,1,1077.5,7.71,8312.5,1.0
+2,hdd,1237.9,619.0,2,1368.3,16.71,22870.6,1.0
+4,hdd,1409.1,352.3,4,1273.1,36.86,46922.1,1.0
+8,hdd,1323.2,165.4,8,2366.0,29.86,70641.4,1.0
+16,hdd,1234.7,77.2,16,2436.3,22.71,55337.9,1.0
+24,hdd,1110.1,46.3,24,2605.4,19.29,50248.0,1.0

@@ -1,0 +1,45 @@
+# Secrets / local env
+.env
+.env.*
+*.pem
+venv/
+.venv/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+
+# Logs
+*.log
+
+# Rust / neard build (submodule build trees — also ignore if copied outside submodule)
+**/target/
+**/target/**
+
+# IDE
+.idea/
+.vscode/
+*.swp
+.DS_Store
+
+# RocksDB / node data (never commit experimental DBs)
+**/data/
+node_data/
+*.sst
+LOCK
+IDENTITY
+CURRENT
+MANIFEST-*
+OPTIONS-*
+LOG
+*.db
+
+# Local NEAR bench state under $HOME (not part of this repo, but ignore if mirrored)
+bench/singlenode/
+bench/neard*.log
+
+# Archives / OS
+*.tmp
+*.tar.gz

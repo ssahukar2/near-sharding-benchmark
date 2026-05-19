@@ -1,0 +1,131 @@
+diff --git a/benchmarks/sharded-bm/bench.sh b/benchmarks/sharded-bm/bench.sh
+index 1b352a93d..c6cb5ade1 100755
+--- a/benchmarks/sharded-bm/bench.sh
++++ b/benchmarks/sharded-bm/bench.sh
+@@ -46,7 +46,15 @@ LOG_DIR="${LOG_DIR:-logs}"
+ BENCHNET_DIR="${BENCHNET_DIR:-/home/ubuntu/bench}"
+ SCHEDULE_FILE=${BENCHNET_DIR}/${CASE}/load-schedule.json
+ 
+-RPC_ADDR="127.0.0.1:4040"
++# Auto-detect RPC host:port when callers did not set RPC_ADDR (3030 = chameleon / multi-node, 4040 = local sharded-bm).
++if [ -z "${RPC_ADDR}" ]; then
++    if curl -s http://localhost:3030/status &>/dev/null; then
++        RPC_ADDR="127.0.0.1:3030"
++    else
++        RPC_ADDR="127.0.0.1:4040"
++    fi
++    echo "Auto-detected RPC_ADDR=${RPC_ADDR}"
++fi
+ SYNTH_BM_PATH="../synth-bm/Cargo.toml"
+ if [ -n "${SYNTH_BM_BIN}" ]; then
+     SYNTH_BM_BASENAME="${SYNTH_BM_BASENAME:-$(basename ${SYNTH_BM_BIN})}"
+@@ -131,10 +139,27 @@ start_nodes_local() {
+         sudo systemctl start neard
+     else
+         mkdir -p ${LOG_DIR}
++        # Optional CPU affinity: space-separated taskset -c masks for node0..nodeN-1
++        # Example: NEARD_TASKSET_MASKS="0-11 12-23 24-35 36-43 44-47"
++        local -a ts_masks=()
++        if [ -n "${NEARD_TASKSET_MASKS:-}" ]; then
++            read -r -a ts_masks <<< "${NEARD_TASKSET_MASKS}"
++            if [ "${#ts_masks[@]}" -ne "${NUM_NODES}" ]; then
++                echo "Error: NEARD_TASKSET_MASKS must list ${NUM_NODES} CPU ranges (space-separated); got ${#ts_masks[@]}"
++                exit 1
++            fi
++        fi
++        local idx=0
+         for node in "${NEAR_HOMES[@]}"; do
+             log="${LOG_DIR}/$(basename ${node})"
+             echo "Starting node: ${node}, log: ${log}"
+-            nohup ${NEARD} --home ${node} run &>${log} &
++            if [ "${#ts_masks[@]}" -gt 0 ]; then
++                echo "  taskset -c ${ts_masks[$idx]}"
++                nohup taskset -c "${ts_masks[$idx]}" ${NEARD} --home ${node} run &>${log} &
++            else
++                nohup ${NEARD} --home ${node} run &>${log} &
++            fi
++            idx=$((idx + 1))
+         done
+     fi
+ }
+@@ -500,6 +525,32 @@ tweak_config() {
+     echo "===> Done"
+ }
+ 
++create_accounts_genesis() {
++    local bm_root
++    bm_root="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
++    local py_script="${bm_root}/genesis_create_accounts.py"
++    if [[ ! -f "${py_script}" ]]; then
++        echo "Error: genesis_create_accounts.py not found at ${py_script}"
++        exit 1
++    fi
++
++    local udd="${USERS_DATA_DIR}"
++    if [[ "${udd}" != /* ]]; then
++        udd="${bm_root}/${udd}"
++    fi
++
++    local num_accounts
++    num_accounts=$(jq '.num_accounts' "${BM_PARAMS}")
++    echo "=> Creating accounts via genesis (Python): ${num_accounts} per shard, ${NUM_SHARDS} shards"
++    echo "    bench-dir: ${BENCHNET_DIR} user-data: ${udd}"
++
++    python3 "${py_script}" \
++        --num-accounts "${num_accounts}" \
++        --num-shards "${NUM_SHARDS}" \
++        --bench-dir "${BENCHNET_DIR}" \
++        --users-data-dir "${udd}"
++}
++
+ create_accounts_forknet() {
+     fetch_forknet_details
+     cd ${PYTEST_PATH}
+@@ -518,6 +569,8 @@ create_accounts_forknet() {
+ set_create_accounts_vars() {
+     if [ "${RUN_ON_FORKNET}" = true ]; then
+         cmd="./${SYNTH_BM_BASENAME}"
++    elif [ -n "${SYNTH_BM_BIN}" ]; then
++        cmd="${SYNTH_BM_BIN}"
+     else
+         cmd="cargo run --manifest-path ${SYNTH_BM_PATH} --release --"
+     fi
+@@ -581,7 +634,7 @@ create_accounts() {
+     if [ "${RUN_ON_FORKNET}" = true ]; then
+         create_accounts_forknet
+     else
+-        create_accounts_local ${RPC_URL}
++        create_accounts_genesis
+     fi
+     echo "=> Done"
+ }
+@@ -599,6 +652,8 @@ native_transfers_local() {
+     local cmd
+     if [ "${RUN_ON_FORKNET}" = true ]; then
+         cmd="./${SYNTH_BM_BASENAME}"
++    elif [ -n "${SYNTH_BM_BIN}" ]; then
++        cmd="${SYNTH_BM_BIN}"
+     else
+         cmd="cargo run --manifest-path ${SYNTH_BM_PATH} --release --"
+     fi
+@@ -608,14 +663,18 @@ native_transfers_local() {
+     echo "RPC: ${url}"
+     local num_transfers=$(jq '.num_transfers' ${BM_PARAMS})
+     local buffer_size=$(jq '.channel_buffer_size' ${BM_PARAMS})
++    # requests_per_second is per shard (each synth-bm process); total load scales with NUM_SHARDS.
+     local rps=$(jq '.requests_per_second' ${BM_PARAMS})
+-    local rps=$(bc <<<"scale=0;${rps}/${NUM_SHARDS}")
+-    echo "Config: num_transfers: ${num_transfers}, buffer_size: ${buffer_size}, RPS: ${rps}"
++    echo "Config: num_transfers: ${num_transfers}, buffer_size: ${buffer_size}, RPS (per shard): ${rps}"
+     mkdir -p ${LOG_DIR}
+     trap 'kill $(jobs -p) 2>/dev/null' EXIT
+     for i in $(seq 0 $((NUM_SHARDS - 1))); do
+         local log="${LOG_DIR}/gen_shard${i}"
++        # Multi-node / external bench homes use BENCHNET_DIR (e.g. ~/bench/user-data on RPC host).
+         local data_dir="${USERS_DATA_DIR}/shard${i}"
++        if [ "${NUM_NODES}" -gt 1 ]; then
++            data_dir="${BENCHNET_DIR}/${USERS_DATA_DIR}/shard${i}"
++        fi
+         echo "Running benchmark for shard: ${i}, log file: ${log}, data dir: ${data_dir}"
+         RUST_LOG=info ${cmd} benchmark-native-transfers \
+             --rpc-url ${url} \

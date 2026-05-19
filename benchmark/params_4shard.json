@@ -1,0 +1,11 @@
+{
+  "chunk_producers": 4,
+  "rpcs": 1,
+  "base_config_patch": "../../base_config_patch.json",
+  "base_genesis_patch": "../../forknet/4-shards/genesis_patch.json",
+  "num_accounts": 12500,
+  "account_rps": 10,
+  "channel_buffer_size": 1000,
+  "requests_per_second": 7500,
+  "num_transfers": 50000
+}

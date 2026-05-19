@@ -1,0 +1,42 @@
+diff --git a/scripts/mocknet/mirror.py b/scripts/mocknet/mirror.py
+index 0aaf41d..94d69af 100755
+--- a/scripts/mocknet/mirror.py
++++ b/scripts/mocknet/mirror.py
+@@ -130,12 +130,11 @@ class CommandContext:
+         """
+         Get nodes in the local infrastructure.
+         """
+-        if (self.args.chain_id is not None or
+-                self.args.start_height is not None or
+-                self.args.unique_id is not None or
+-                self.args.mocknet_id is not None):
++        # Forknet/GCP identifiers must not be mixed with local test; --unique-id
++        # is still allowed to name the chain (new_chain_id) for new_test.
++        if self.args.chain_id is not None or self.args.start_height is not None:
+             sys.exit(
+-                f'cannot give --chain-id, --start-height, --unique-id or --mocknet-id along with --local-test'
++                'cannot give --chain-id or --start-height along with --local-test'
+             )
+ 
+         traffic_generator, nodes = local_test_node.get_nodes()
+@@ -144,6 +143,10 @@ class CommandContext:
+         self.nodes = nodes
+ 
+     def get_mocknet_id(self):
++        if getattr(self.args, 'local_test', False):
++            mid = getattr(self.args, 'unique_id',
++                          None) or getattr(self.args, 'mocknet_id', None)
++            return mid or 'local-mocknet'
+         mocknet_id = None
+         if (self.args.chain_id is not None and
+                 self.args.start_height is not None and
+@@ -226,7 +229,8 @@ def init_neard_runners(ctx: CommandContext, remove_home_dir=False):
+     else:
+         neard_upgrade_binary_url = None
+ 
+-    run_id = datetime.datetime.now(datetime.UTC).strftime("%Y-%m-%dT%H-%M-%SZ")
++    run_id = datetime.datetime.now(
++        tz=datetime.timezone.utc).strftime("%Y-%m-%dT%H-%M-%SZ")
+     all_nodes = []
+     all_configs = []
+ 

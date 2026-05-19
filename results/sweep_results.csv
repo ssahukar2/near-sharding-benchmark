@@ -1,0 +1,12 @@
+RPS,approx_tps,sum_shard_tps,total_received,wall_seconds,errors
+1000,4005.27,4007.52,200000,64,native-transfers_exit_1
+2000,8020.43,8043.98,200000,68,native-transfers_exit_1
+3000,12058.62,12200.91,200000,39,native-transfers_exit_2
+5000,18569.13,18631.07,200000,26,native-transfers_exit_1
+7500,19521.04,19828.6,200000,26,native-transfers_exit_2
+9000,18930.05,19011.79,200000,25,native-transfers_exit_1
+12000,19666.22,19808.16,200000,26,native-transfers_exit_1
+15000,21345.75,21575.36,200000,23,native-transfers_exit_1
+20000,19140.41,19188.18,200000,26,native-transfers_exit_1
+25000,21812.26,22368.09,200000,23,native-transfers_exit_2
+30000,18529.24,18707.05,200000,25,native-transfers_exit_1

@@ -1,0 +1,18 @@
+diff --git a/scripts/mocknet/node_handle.py b/scripts/mocknet/node_handle.py
+index 95f2528..ab20845 100644
+--- a/scripts/mocknet/node_handle.py
++++ b/scripts/mocknet/node_handle.py
+@@ -6,7 +6,12 @@ import pathlib
+ import requests
+ import sys
+ import time
+-from typing import Optional, Self
++from typing import Optional
++
++try:
++    from typing import Self
++except ImportError:  # Python < 3.11
++    from typing_extensions import Self
+ 
+ sys.path.append(str(pathlib.Path(__file__).resolve() / 'lib'))
+ 

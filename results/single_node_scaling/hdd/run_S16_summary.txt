@@ -1,0 +1,66 @@
+Single-node shard scaling summary (N=16)
+Timestamp: 2026-05-06T20:19:30+00:00
+storage_mode: hdd
+
+Run parameters:
+  n_shards: 16
+  storage_mode: hdd
+  readiness_time_s: 69.1
+  measurement_elapsed_s: 186.2
+  wall_clock_s_total: 348.1
+
+Per-shard TPS:
+  shard0: 55.45
+  shard1: 96.57
+  shard2: 68.04
+  shard3: 109.12
+  shard4: 42.68
+  shard5: 107.01
+  shard6: 57.15
+  shard7: 70.78
+  shard8: 89.66
+  shard9: 93.13
+  shard10: 66.44
+  shard11: 50.61
+  shard12: 75.73
+  shard13: 66.35
+  shard14: 82.02
+  shard15: 73.26
+
+Aggregate TPS: 1204.00
+Avg TPS per shard: 75.25
+Avg block time (ms): 2284.30
+  note: transactions sit in mempool at most 1 block time
+   before inclusion and execution. Block time is therefore
+   the practical upper bound on time-to-execution.
+
+Finality latency (BFT finality):
+  avg lag blocks: 28.00
+  avg lag ms: 63960.4ms
+  note: near_largest_final_height advances in bursts
+   (not smoothly per block). This is full BFT finality —
+   mathematically irreversible. Different from time-to-execution
+   which equals approximately 1 block time.
+
+Execution rate avg: 1.000
+
+Execution rate note: successful_delta / total_delta from near_transaction_processed_* 
+counters on each validator's /metrics (chunk inclusion vs apply-time processing).
+
+Execution rate per shard:
+  shard0: 1.0000
+  shard1: 1.0000
+  shard2: 1.0000
+  shard3: 1.0000
+  shard4: 1.0000
+  shard5: 1.0000
+  shard6: 1.0000
+  shard7: 1.0000
+  shard8: 1.0000
+  shard9: 1.0000
+  shard10: 1.0000
+  shard11: 1.0000
+  shard12: 1.0000
+  shard13: 1.0000
+  shard14: 1.0000
+  shard15: 1.0000

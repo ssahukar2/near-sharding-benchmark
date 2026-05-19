@@ -1,0 +1,6 @@
+[submodule "nearcore"]
+	path = nearcore
+	url = https://github.com/near/nearcore.git
+[submodule "near-benchmark"]
+	path = near-benchmark
+	url = https://github.com/near/one-million-tps.git

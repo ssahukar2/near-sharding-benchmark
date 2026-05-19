@@ -1,0 +1,2658 @@
+[
+  {
+    "n_shards": 1,
+    "storage_mode": "tmpfs",
+    "timestamp": "2026-04-28T01:05:28+00:00",
+    "tps_per_shard": {
+      "0": 727.4008504801848
+    },
+    "aggregate_tps": 727.4008504801848,
+    "avg_tps_per_shard": 727.4008504801848,
+    "counts_start": {
+      "0": 130466
+    },
+    "counts_end": {
+      "0": 261751
+    },
+    "elapsed_s": 180.4850790500641,
+    "chunk_production_balance": {
+      "active_shards": 1,
+      "zero_shards": [],
+      "per_shard_deltas": {
+        "0": 131285
+      },
+      "coefficient_of_variation": null
+    },
+    "block_heights_start": {
+      "0": 97
+    },
+    "block_heights_end": {
+      "0": 203
+    },
+    "block_time_ms_per_shard": {
+      "0": 1702.6894250006046
+    },
+    "avg_block_time_ms": 1702.6894250006046,
+    "disk_util_avg_pct": 0.7889655172413793,
+    "disk_util_max_pct": 5.0,
+    "nonce_verification": {
+      "0": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 1809,
+        "verified_tps": 10.022989210638338,
+        "execution_rate": 0.6889591347069353,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      }
+    },
+    "readiness_time_s": 78.53780460357666,
+    "warnings": [
+      "WARNING: shard0 execution_rate=0.689 (<0.8); chunk inclusion may exceed executed txs"
+    ]
+  },
+  {
+    "n_shards": 2,
+    "storage_mode": "tmpfs",
+    "timestamp": "2026-04-28T01:11:06+00:00",
+    "tps_per_shard": {
+      "0": 39.928055673960735,
+      "1": 39.371202094415025
+    },
+    "aggregate_tps": 79.29925776837575,
+    "avg_tps_per_shard": 39.64962888418788,
+    "counts_start": {
+      "0": 57692,
+      "1": 55532
+    },
+    "counts_end": {
+      "0": 64934,
+      "1": 62673
+    },
+    "elapsed_s": 181.37622475624084,
+    "chunk_production_balance": {
+      "active_shards": 2,
+      "zero_shards": [],
+      "per_shard_deltas": {
+        "0": 7242,
+        "1": 7141
+      },
+      "coefficient_of_variation": 0.007022178961273716
+    },
+    "block_heights_start": {
+      "0": 51,
+      "1": 51
+    },
+    "block_heights_end": {
+      "0": 61,
+      "1": 61
+    },
+    "block_time_ms_per_shard": {
+      "0": 18137.622475624084,
+      "1": 18137.622475624084
+    },
+    "avg_block_time_ms": 18137.622475624084,
+    "disk_util_avg_pct": 0.7751724137931034,
+    "disk_util_max_pct": 4.2,
+    "nonce_verification": {
+      "0": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 242,
+        "verified_tps": 1.3342432301986327,
+        "execution_rate": 1.6708091687379176,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "1": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 298,
+        "verified_tps": 1.6429937297487296,
+        "execution_rate": 2.086542501050273,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      }
+    },
+    "readiness_time_s": 78.36192917823792,
+    "warnings": []
+  },
+  {
+    "n_shards": 4,
+    "storage_mode": "tmpfs",
+    "timestamp": "2026-04-28T01:16:51+00:00",
+    "tps_per_shard": {
+      "0": 0.0,
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0
+    },
+    "aggregate_tps": 0.0,
+    "avg_tps_per_shard": 0.0,
+    "counts_start": {
+      "0": 18690,
+      "1": 17928,
+      "2": 18767,
+      "3": 17903
+    },
+    "counts_end": {
+      "0": 18690,
+      "1": 17928,
+      "2": 18767,
+      "3": 17903
+    },
+    "elapsed_s": 181.35244154930115,
+    "chunk_production_balance": {
+      "active_shards": 0,
+      "zero_shards": [
+        0,
+        1,
+        2,
+        3
+      ],
+      "per_shard_deltas": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0
+      },
+      "coefficient_of_variation": null
+    },
+    "block_heights_start": {
+      "0": 15,
+      "1": 16,
+      "2": 15,
+      "3": 16
+    },
+    "block_heights_end": {
+      "0": 15,
+      "1": 16,
+      "2": 15,
+      "3": 16
+    },
+    "block_time_ms_per_shard": {
+      "0": null,
+      "1": null,
+      "2": null,
+      "3": null
+    },
+    "avg_block_time_ms": 0.0,
+    "disk_util_avg_pct": 0.8108843537414966,
+    "disk_util_max_pct": 6.8,
+    "nonce_verification": {
+      "0": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 0,
+        "verified_tps": 0.0,
+        "execution_rate": 0.0,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "1": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 0,
+        "verified_tps": 0.0,
+        "execution_rate": 0.0,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "2": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 0,
+        "verified_tps": 0.0,
+        "execution_rate": 0.0,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "3": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 0,
+        "verified_tps": 0.0,
+        "execution_rate": 0.0,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      }
+    },
+    "readiness_time_s": 82.29778051376343,
+    "warnings": [
+      "BALANCE WARNING: shards [0, 1, 2, 3] produced ZERO chunks during measurement window. These validators may be misassigned or stalled. Their TPS=0 will drag down averages.",
+      "WARNING: shard0 execution_rate=0.000 (<0.8); chunk inclusion may exceed executed txs",
+      "WARNING: shard1 execution_rate=0.000 (<0.8); chunk inclusion may exceed executed txs",
+      "WARNING: shard2 execution_rate=0.000 (<0.8); chunk inclusion may exceed executed txs",
+      "WARNING: shard3 execution_rate=0.000 (<0.8); chunk inclusion may exceed executed txs"
+    ]
+  },
+  {
+    "n_shards": 8,
+    "storage_mode": "tmpfs",
+    "timestamp": "2026-04-28T01:23:06+00:00",
+    "tps_per_shard": {
+      "0": 175.34386668476893,
+      "1": 125.67415713782177,
+      "2": 126.10935642873066,
+      "3": 116.46761975752291,
+      "4": 126.57046043933651,
+      "5": 116.415810318129,
+      "6": 126.34249890600329,
+      "7": 155.68736537871723
+    },
+    "aggregate_tps": 1068.6111350510305,
+    "avg_tps_per_shard": 133.5763918813788,
+    "counts_start": {
+      "0": 21382,
+      "1": 18490,
+      "2": 17276,
+      "3": 19399,
+      "4": 21348,
+      "5": 19442,
+      "6": 16651,
+      "7": 17594
+    },
+    "counts_end": {
+      "0": 55226,
+      "1": 42747,
+      "2": 41617,
+      "3": 41879,
+      "4": 45778,
+      "5": 41912,
+      "6": 41037,
+      "7": 47644
+    },
+    "elapsed_s": 193.0150203704834,
+    "chunk_production_balance": {
+      "active_shards": 8,
+      "zero_shards": [],
+      "per_shard_deltas": {
+        "0": 33844,
+        "1": 24257,
+        "2": 24341,
+        "3": 22480,
+        "4": 24430,
+        "5": 22470,
+        "6": 24386,
+        "7": 30050
+      },
+      "coefficient_of_variation": 0.14594133045001237
+    },
+    "block_heights_start": {
+      "0": 35,
+      "1": 36,
+      "2": 36,
+      "3": 36,
+      "4": 36,
+      "5": 36,
+      "6": 36,
+      "7": 36
+    },
+    "block_heights_end": {
+      "0": 70,
+      "1": 70,
+      "2": 70,
+      "3": 70,
+      "4": 70,
+      "5": 70,
+      "6": 70,
+      "7": 70
+    },
+    "block_time_ms_per_shard": {
+      "0": 5514.7148677280975,
+      "1": 5676.912363837747,
+      "2": 5676.912363837747,
+      "3": 5676.912363837747,
+      "4": 5676.912363837747,
+      "5": 5676.912363837747,
+      "6": 5676.912363837747,
+      "7": 5676.912363837747
+    },
+    "avg_block_time_ms": 5656.637676824041,
+    "disk_util_avg_pct": 0.9175,
+    "disk_util_max_pct": 6.0,
+    "nonce_verification": {
+      "0": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 382,
+        "verified_tps": 1.9791205848475868,
+        "execution_rate": 0.5643540952606074,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "1": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 273,
+        "verified_tps": 1.4143976954539037,
+        "execution_rate": 0.5627241620975388,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "2": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 199,
+        "verified_tps": 1.031007843938926,
+        "execution_rate": 0.40877531736576145,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "3": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 245,
+        "verified_tps": 1.2693312651509392,
+        "execution_rate": 0.5449288256227758,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "4": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 265,
+        "verified_tps": 1.372950143938771,
+        "execution_rate": 0.5423659435120753,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "5": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 227,
+        "verified_tps": 1.1760742742418906,
+        "execution_rate": 0.5051179350244771,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "6": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 223,
+        "verified_tps": 1.1553504984843244,
+        "execution_rate": 0.4572295579430821,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "7": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 270,
+        "verified_tps": 1.398854863635729,
+        "execution_rate": 0.44925124792013316,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      }
+    },
+    "readiness_time_s": 76.27256107330322,
+    "warnings": [
+      "WARNING: shard0 execution_rate=0.564 (<0.8); chunk inclusion may exceed executed txs",
+      "WARNING: shard1 execution_rate=0.563 (<0.8); chunk inclusion may exceed executed txs",
+      "WARNING: shard2 execution_rate=0.409 (<0.8); chunk inclusion may exceed executed txs",
+      "WARNING: shard3 execution_rate=0.545 (<0.8); chunk inclusion may exceed executed txs",
+      "WARNING: shard4 execution_rate=0.542 (<0.8); chunk inclusion may exceed executed txs",
+      "WARNING: shard5 execution_rate=0.505 (<0.8); chunk inclusion may exceed executed txs",
+      "WARNING: shard6 execution_rate=0.457 (<0.8); chunk inclusion may exceed executed txs",
+      "WARNING: shard7 execution_rate=0.449 (<0.8); chunk inclusion may exceed executed txs"
+    ]
+  },
+  {
+    "n_shards": 16,
+    "storage_mode": "tmpfs",
+    "timestamp": "2026-04-28T01:28:30+00:00",
+    "status": "failed",
+    "error": "[Errno 32] Broken pipe",
+    "warnings": [],
+    "wall_clock_s_total": 263.3931260108948
+  },
+  {
+    "n_shards": 4,
+    "storage_mode": "tmpfs",
+    "timestamp": "2026-04-28T01:47:00+00:00",
+    "status": "failed",
+    "error": "[Errno 16] Device or resource busy: '/home/ubuntu/bench/singlenode/S04/node0/data'",
+    "warnings": [],
+    "wall_clock_s_total": 13.728997230529785
+  },
+  {
+    "n_shards": 4,
+    "storage_mode": "tmpfs",
+    "timestamp": "2026-04-28T01:57:01+00:00",
+    "tps_per_shard": {
+      "0": 286.7016919328397,
+      "1": 275.037251724095,
+      "2": 254.50188627393368,
+      "3": 256.667273615472
+    },
+    "aggregate_tps": 1072.9081035463405,
+    "avg_tps_per_shard": 268.2270258865851,
+    "counts_start": {
+      "0": 54559,
+      "1": 42241,
+      "2": 45935,
+      "3": 47767
+    },
+    "counts_end": {
+      "0": 106593,
+      "1": 92158,
+      "2": 92125,
+      "3": 94350
+    },
+    "elapsed_s": 181.49177861213684,
+    "chunk_production_balance": {
+      "active_shards": 4,
+      "zero_shards": [],
+      "per_shard_deltas": {
+        "0": 52034,
+        "1": 49917,
+        "2": 46190,
+        "3": 46583
+      },
+      "coefficient_of_variation": 0.049659782029683935
+    },
+    "block_heights_start": {
+      "0": 43,
+      "1": 43,
+      "2": 43,
+      "3": 43
+    },
+    "block_heights_end": {
+      "0": 82,
+      "1": 82,
+      "2": 82,
+      "3": 82
+    },
+    "block_time_ms_per_shard": {
+      "0": 4653.635349029149,
+      "1": 4653.635349029149,
+      "2": 4653.635349029149,
+      "3": 4653.635349029149
+    },
+    "avg_block_time_ms": 4653.635349029149,
+    "disk_util_avg_pct": 0.926523178807947,
+    "disk_util_max_pct": 10.4,
+    "nonce_verification": {
+      "0": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 1027,
+        "verified_tps": 5.658658523562024,
+        "execution_rate": 0.9868547488180804,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "1": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 783,
+        "verified_tps": 4.314245008713793,
+        "execution_rate": 0.7843019412224294,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "2": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 1049,
+        "verified_tps": 5.7798761355565365,
+        "execution_rate": 1.1355271703832,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "3": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 948,
+        "verified_tps": 5.223377098672637,
+        "execution_rate": 1.01753858703819,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      }
+    },
+    "readiness_time_s": 87.58078241348267,
+    "warnings": [
+      "WARNING: shard1 execution_rate=0.784 (<0.8); chunk inclusion may exceed executed txs"
+    ]
+  },
+  {
+    "n_shards": 16,
+    "storage_mode": "tmpfs",
+    "timestamp": "2026-04-28T02:09:33+00:00",
+    "status": "failed",
+    "error": "Readiness timeout reached (600s)",
+    "warnings": [],
+    "wall_clock_s_total": 751.8435525894165
+  },
+  {
+    "n_shards": 16,
+    "storage_mode": "tmpfs",
+    "timestamp": "2026-04-28T02:45:42+00:00",
+    "status": "failed",
+    "error": "Readiness timeout reached (1800s)",
+    "warnings": [],
+    "wall_clock_s_total": 1988.5740525722504
+  },
+  {
+    "n_shards": 2,
+    "storage_mode": "tmpfs",
+    "timestamp": "2026-04-28T02:52:01+00:00",
+    "tps_per_shard": {
+      "0": 0.0,
+      "1": 0.0
+    },
+    "aggregate_tps": 0.0,
+    "avg_tps_per_shard": 0.0,
+    "counts_start": {
+      "0": 45027,
+      "1": 44629
+    },
+    "counts_end": {
+      "0": 45027,
+      "1": 44629
+    },
+    "elapsed_s": 180.72173523902893,
+    "chunk_production_balance": {
+      "active_shards": 0,
+      "zero_shards": [
+        0,
+        1
+      ],
+      "per_shard_deltas": {
+        "0": 0,
+        "1": 0
+      },
+      "coefficient_of_variation": null
+    },
+    "block_heights_start": {
+      "0": 49,
+      "1": 49
+    },
+    "block_heights_end": {
+      "0": 49,
+      "1": 49
+    },
+    "block_time_ms_per_shard": {
+      "0": null,
+      "1": null
+    },
+    "avg_block_time_ms": 0.0,
+    "disk_util_avg_pct": 0.7035172413793104,
+    "disk_util_max_pct": 4.6,
+    "nonce_verification": {
+      "0": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 0,
+        "verified_tps": 0.0,
+        "execution_rate": 0.0,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "1": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 0,
+        "verified_tps": 0.0,
+        "execution_rate": 0.0,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      }
+    },
+    "readiness_time_s": 78.81813454627991,
+    "warnings": [
+      "BALANCE WARNING: shards [0, 1] produced ZERO chunks during measurement window. These validators may be misassigned or stalled. Their TPS=0 will drag down averages.",
+      "WARNING: shard0 execution_rate=0.000 (<0.8); chunk inclusion may exceed executed txs",
+      "WARNING: shard1 execution_rate=0.000 (<0.8); chunk inclusion may exceed executed txs"
+    ]
+  },
+  {
+    "n_shards": 2,
+    "storage_mode": "tmpfs",
+    "timestamp": "2026-04-28T03:38:42+00:00",
+    "tps_per_shard": {
+      "0": 173.73997256620962,
+      "1": 192.60803733819665
+    },
+    "aggregate_tps": 366.34800990440624,
+    "avg_tps_per_shard": 183.17400495220312,
+    "counts_start": {
+      "0": 53630,
+      "1": 61948
+    },
+    "counts_end": {
+      "0": 85039,
+      "1": 96768
+    },
+    "elapsed_s": 180.7816562652588,
+    "chunk_production_balance": {
+      "active_shards": 2,
+      "zero_shards": [],
+      "per_shard_deltas": {
+        "0": 31409,
+        "1": 34820
+      },
+      "coefficient_of_variation": 0.051503117969469554
+    },
+    "block_heights_start": {
+      "0": 59,
+      "1": 61
+    },
+    "block_heights_end": {
+      "0": 96,
+      "1": 96
+    },
+    "block_time_ms_per_shard": {
+      "0": 4885.9907098718595,
+      "1": 5165.190179007394
+    },
+    "avg_block_time_ms": 5025.590444439627,
+    "disk_util_avg_pct": 0.725,
+    "disk_util_max_pct": 6.0,
+    "nonce_verification": {
+      "0": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 670,
+        "verified_tps": 3.7061282313782815,
+        "execution_rate": 1.066573275175905,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "1": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 557,
+        "verified_tps": 3.0810648132503027,
+        "execution_rate": 0.7998276852383688,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      }
+    },
+    "readiness_time_s": 76.23122429847717,
+    "warnings": [
+      "WARNING: shard1 execution_rate=0.800 (<0.8); chunk inclusion may exceed executed txs"
+    ]
+  },
+  {
+    "n_shards": 16,
+    "storage_mode": "tmpfs",
+    "timestamp": "2026-04-28T04:00:08+00:00",
+    "tps_per_shard": {
+      "0": 0.0,
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0,
+      "4": 0.0,
+      "5": 0.0,
+      "6": 0.0,
+      "7": 0.0,
+      "8": 0.0,
+      "9": 0.0,
+      "10": 0.0,
+      "11": 0.0,
+      "12": 0.0,
+      "13": 0.0,
+      "14": 0.0,
+      "15": 0.0
+    },
+    "aggregate_tps": 0.0,
+    "avg_tps_per_shard": 0.0,
+    "counts_start": {
+      "0": 18238,
+      "1": 27442,
+      "2": 26276,
+      "3": 13081,
+      "4": 19803,
+      "5": 18519,
+      "6": 24710,
+      "7": 21646,
+      "8": 21562,
+      "9": 25395,
+      "10": 29284,
+      "11": 19821,
+      "12": 19462,
+      "13": 30010,
+      "14": 22896,
+      "15": 20933
+    },
+    "counts_end": {
+      "0": 18238,
+      "1": 27442,
+      "2": 26276,
+      "3": 13081,
+      "4": 19803,
+      "5": 18519,
+      "6": 24710,
+      "7": 21646,
+      "8": 21562,
+      "9": 25395,
+      "10": 29284,
+      "11": 19821,
+      "12": 19462,
+      "13": 30010,
+      "14": 22896,
+      "15": 20933
+    },
+    "elapsed_s": 185.5140998363495,
+    "chunk_production_balance": {
+      "active_shards": 0,
+      "zero_shards": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "per_shard_deltas": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0,
+        "10": 0,
+        "11": 0,
+        "12": 0,
+        "13": 0,
+        "14": 0,
+        "15": 0
+      },
+      "coefficient_of_variation": null
+    },
+    "block_heights_start": {
+      "0": 104,
+      "1": 103,
+      "2": 103,
+      "3": 104,
+      "4": 103,
+      "5": 104,
+      "6": 103,
+      "7": 103,
+      "8": 103,
+      "9": 103,
+      "10": 103,
+      "11": 103,
+      "12": 103,
+      "13": 103,
+      "14": 104,
+      "15": 103
+    },
+    "block_heights_end": {
+      "0": 104,
+      "1": 103,
+      "2": 103,
+      "3": 104,
+      "4": 103,
+      "5": 104,
+      "6": 103,
+      "7": 103,
+      "8": 103,
+      "9": 103,
+      "10": 103,
+      "11": 103,
+      "12": 103,
+      "13": 103,
+      "14": 104,
+      "15": 103
+    },
+    "block_time_ms_per_shard": {
+      "0": null,
+      "1": null,
+      "2": null,
+      "3": null,
+      "4": null,
+      "5": null,
+      "6": null,
+      "7": null,
+      "8": null,
+      "9": null,
+      "10": null,
+      "11": null,
+      "12": null,
+      "13": null,
+      "14": null,
+      "15": null
+    },
+    "avg_block_time_ms": 0.0,
+    "disk_util_avg_pct": 0.8627831715210356,
+    "disk_util_max_pct": 5.4,
+    "nonce_verification": {
+      "0": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 0,
+        "verified_tps": 0.0,
+        "execution_rate": 0.0,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "1": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 0,
+        "verified_tps": 0.0,
+        "execution_rate": 0.0,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "2": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 0,
+        "verified_tps": 0.0,
+        "execution_rate": 0.0,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "3": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 0,
+        "verified_tps": 0.0,
+        "execution_rate": 0.0,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "4": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 0,
+        "verified_tps": 0.0,
+        "execution_rate": 0.0,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "5": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 0,
+        "verified_tps": 0.0,
+        "execution_rate": 0.0,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "6": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 0,
+        "verified_tps": 0.0,
+        "execution_rate": 0.0,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "7": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 0,
+        "verified_tps": 0.0,
+        "execution_rate": 0.0,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "8": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 0,
+        "verified_tps": 0.0,
+        "execution_rate": 0.0,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "9": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 0,
+        "verified_tps": 0.0,
+        "execution_rate": 0.0,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "10": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 0,
+        "verified_tps": 0.0,
+        "execution_rate": 0.0,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "11": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 0,
+        "verified_tps": 0.0,
+        "execution_rate": 0.0,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "12": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 0,
+        "verified_tps": 0.0,
+        "execution_rate": 0.0,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "13": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 0,
+        "verified_tps": 0.0,
+        "execution_rate": 0.0,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "14": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 0,
+        "verified_tps": 0.0,
+        "execution_rate": 0.0,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "15": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 0,
+        "verified_tps": 0.0,
+        "execution_rate": 0.0,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      }
+    },
+    "readiness_time_s": 212.79826378822327,
+    "warnings": [
+      "BALANCE WARNING: shards [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15] produced ZERO chunks during measurement window. These validators may be misassigned or stalled. Their TPS=0 will drag down averages.",
+      "WARNING: shard0 execution_rate=0.000 (<0.8); chunk inclusion may exceed executed txs",
+      "WARNING: shard1 execution_rate=0.000 (<0.8); chunk inclusion may exceed executed txs",
+      "WARNING: shard2 execution_rate=0.000 (<0.8); chunk inclusion may exceed executed txs",
+      "WARNING: shard3 execution_rate=0.000 (<0.8); chunk inclusion may exceed executed txs",
+      "WARNING: shard4 execution_rate=0.000 (<0.8); chunk inclusion may exceed executed txs",
+      "WARNING: shard5 execution_rate=0.000 (<0.8); chunk inclusion may exceed executed txs",
+      "WARNING: shard6 execution_rate=0.000 (<0.8); chunk inclusion may exceed executed txs",
+      "WARNING: shard7 execution_rate=0.000 (<0.8); chunk inclusion may exceed executed txs",
+      "WARNING: shard8 execution_rate=0.000 (<0.8); chunk inclusion may exceed executed txs",
+      "WARNING: shard9 execution_rate=0.000 (<0.8); chunk inclusion may exceed executed txs",
+      "WARNING: shard10 execution_rate=0.000 (<0.8); chunk inclusion may exceed executed txs",
+      "WARNING: shard11 execution_rate=0.000 (<0.8); chunk inclusion may exceed executed txs",
+      "WARNING: shard12 execution_rate=0.000 (<0.8); chunk inclusion may exceed executed txs",
+      "WARNING: shard13 execution_rate=0.000 (<0.8); chunk inclusion may exceed executed txs",
+      "WARNING: shard14 execution_rate=0.000 (<0.8); chunk inclusion may exceed executed txs",
+      "WARNING: shard15 execution_rate=0.000 (<0.8); chunk inclusion may exceed executed txs"
+    ]
+  },
+  {
+    "n_shards": 1,
+    "storage_mode": "tmpfs",
+    "timestamp": "2026-04-29T20:38:06+00:00",
+    "tps_per_shard": {
+      "0": 714.3918224095281
+    },
+    "aggregate_tps": 714.3918224095281,
+    "avg_tps_per_shard": 714.3918224095281,
+    "counts_start": {
+      "0": 154787
+    },
+    "counts_end": {
+      "0": 284460
+    },
+    "elapsed_s": 181.51523566246033,
+    "chunk_production_balance": {
+      "active_shards": 1,
+      "zero_shards": [],
+      "per_shard_deltas": {
+        "0": 129673
+      },
+      "coefficient_of_variation": null
+    },
+    "block_heights_start": {
+      "0": 106
+    },
+    "block_heights_end": {
+      "0": 206
+    },
+    "block_time_ms_per_shard": {
+      "0": 1815.1523566246033
+    },
+    "avg_block_time_ms": 1815.1523566246033,
+    "finality_lag_blocks_avg": 22.285714285714285,
+    "finality_lag_ms_avg": 40451.96680477687,
+    "finality_lag_sample_count": 7,
+    "disk_util_avg_pct": 0.7309803921568627,
+    "disk_util_max_pct": 8.2,
+    "nonce_verification": {
+      "0": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 1841,
+        "verified_tps": 10.142399304835557,
+        "execution_rate": 0.709862500289189,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      }
+    },
+    "readiness_time_s": 78.17607951164246,
+    "warnings": [
+      "WARNING: shard0 execution_rate=0.710 (<0.8); chunk inclusion may exceed executed txs"
+    ]
+  },
+  {
+    "n_shards": 2,
+    "storage_mode": "tmpfs",
+    "timestamp": "2026-04-29T20:51:01+00:00",
+    "tps_per_shard": {
+      "0": 0.0,
+      "1": 0.0
+    },
+    "aggregate_tps": 0.0,
+    "avg_tps_per_shard": 0.0,
+    "counts_start": {
+      "0": 48409,
+      "1": 50267
+    },
+    "counts_end": {
+      "0": 48409,
+      "1": 50267
+    },
+    "elapsed_s": 180.93651032447815,
+    "chunk_production_balance": {
+      "active_shards": 0,
+      "zero_shards": [
+        0,
+        1
+      ],
+      "per_shard_deltas": {
+        "0": 0,
+        "1": 0
+      },
+      "coefficient_of_variation": null
+    },
+    "block_heights_start": {
+      "0": 49,
+      "1": 49
+    },
+    "block_heights_end": {
+      "0": 49,
+      "1": 49
+    },
+    "block_time_ms_per_shard": {
+      "0": null,
+      "1": null
+    },
+    "avg_block_time_ms": 0.0,
+    "finality_lag_blocks_avg": 7.0,
+    "finality_lag_ms_avg": null,
+    "finality_lag_sample_count": 7,
+    "disk_util_avg_pct": 0.7429395604395604,
+    "disk_util_max_pct": 6.0,
+    "nonce_verification": {
+      "0": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 0,
+        "verified_tps": 0.0,
+        "execution_rate": 0.0,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "1": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 0,
+        "verified_tps": 0.0,
+        "execution_rate": 0.0,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      }
+    },
+    "readiness_time_s": 79.33951091766357,
+    "warnings": [
+      "BALANCE WARNING: shards [0, 1] produced ZERO chunks during measurement window. These validators may be misassigned or stalled. Their TPS=0 will drag down averages.",
+      "WARNING: shard0 execution_rate=0.000 (<0.8); chunk inclusion may exceed executed txs",
+      "WARNING: shard1 execution_rate=0.000 (<0.8); chunk inclusion may exceed executed txs"
+    ]
+  },
+  {
+    "n_shards": 4,
+    "storage_mode": "tmpfs",
+    "timestamp": "2026-04-29T20:57:07+00:00",
+    "tps_per_shard": {
+      "0": 211.9796792359354,
+      "1": 283.63609068497243,
+      "2": 283.26991117409716,
+      "3": 242.72236205195503
+    },
+    "aggregate_tps": 1021.60804314696,
+    "avg_tps_per_shard": 255.40201078674,
+    "counts_start": {
+      "0": 50828,
+      "1": 44817,
+      "2": 54189,
+      "3": 56793
+    },
+    "counts_end": {
+      "0": 89614,
+      "1": 96714,
+      "2": 106019,
+      "3": 101204
+    },
+    "elapsed_s": 182.97036838531494,
+    "chunk_production_balance": {
+      "active_shards": 4,
+      "zero_shards": [],
+      "per_shard_deltas": {
+        "0": 38786,
+        "1": 51897,
+        "2": 51830,
+        "3": 44411
+      },
+      "coefficient_of_variation": 0.1177886128120747
+    },
+    "block_heights_start": {
+      "0": 48,
+      "1": 48,
+      "2": 48,
+      "3": 48
+    },
+    "block_heights_end": {
+      "0": 85,
+      "1": 85,
+      "2": 85,
+      "3": 85
+    },
+    "block_time_ms_per_shard": {
+      "0": 4945.145091494998,
+      "1": 4945.145091494998,
+      "2": 4945.145091494998,
+      "3": 4945.145091494998
+    },
+    "avg_block_time_ms": 4945.145091494998,
+    "finality_lag_blocks_avg": 67.85714285714286,
+    "finality_lag_ms_avg": 335563.4169228749,
+    "finality_lag_sample_count": 7,
+    "disk_util_avg_pct": 0.7610126582278481,
+    "disk_util_max_pct": 4.8,
+    "nonce_verification": {
+      "0": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 736,
+        "verified_tps": 4.022509253793856,
+        "execution_rate": 0.948795957304182,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "1": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 1274,
+        "verified_tps": 6.96287607246382,
+        "execution_rate": 1.2274312580688673,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "2": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 1257,
+        "verified_tps": 6.8699648532865165,
+        "execution_rate": 1.2126181748022382,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "3": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 971,
+        "verified_tps": 5.30687022477423,
+        "execution_rate": 1.0931976312174911,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      }
+    },
+    "readiness_time_s": 87.37376189231873,
+    "warnings": []
+  },
+  {
+    "n_shards": 8,
+    "storage_mode": "tmpfs",
+    "timestamp": "2026-04-29T21:13:13+00:00",
+    "status": "failed",
+    "error": "Readiness timeout reached (900s)",
+    "warnings": [],
+    "wall_clock_s_total": 935.5153970718384
+  },
+  {
+    "n_shards": 8,
+    "storage_mode": "tmpfs",
+    "timestamp": "2026-04-29T22:03:29+00:00",
+    "tps_per_shard": {
+      "0": 111.15073630557016,
+      "1": 131.93528463686425,
+      "2": 141.5852535049651,
+      "3": 111.69256498991047,
+      "4": 111.59503582672922,
+      "5": 162.45107613891022,
+      "6": 151.71203161528538,
+      "7": 121.86268939497799
+    },
+    "aggregate_tps": 1043.9846724132128,
+    "avg_tps_per_shard": 130.4980840516516,
+    "counts_start": {
+      "0": 33049,
+      "1": 33126,
+      "2": 35123,
+      "3": 35881,
+      "4": 33784,
+      "5": 32325,
+      "6": 35922,
+      "7": 33103
+    },
+    "counts_end": {
+      "0": 53563,
+      "1": 57476,
+      "2": 61254,
+      "3": 56495,
+      "4": 54380,
+      "5": 62307,
+      "6": 63922,
+      "7": 55594
+    },
+    "elapsed_s": 184.56018090248108,
+    "chunk_production_balance": {
+      "active_shards": 8,
+      "zero_shards": [],
+      "per_shard_deltas": {
+        "0": 20514,
+        "1": 24350,
+        "2": 26131,
+        "3": 20614,
+        "4": 20596,
+        "5": 29982,
+        "6": 28000,
+        "7": 22491
+      },
+      "coefficient_of_variation": 0.14222663351753315
+    },
+    "block_heights_start": {
+      "0": 49,
+      "1": 49,
+      "2": 49,
+      "3": 49,
+      "4": 49,
+      "5": 49,
+      "6": 49,
+      "7": 49
+    },
+    "block_heights_end": {
+      "0": 80,
+      "1": 80,
+      "2": 80,
+      "3": 80,
+      "4": 80,
+      "5": 80,
+      "6": 80,
+      "7": 80
+    },
+    "block_time_ms_per_shard": {
+      "0": 5953.55422266068,
+      "1": 5953.55422266068,
+      "2": 5953.55422266068,
+      "3": 5953.55422266068,
+      "4": 5953.55422266068,
+      "5": 5953.55422266068,
+      "6": 5953.55422266068,
+      "7": 5953.55422266068
+    },
+    "avg_block_time_ms": 5953.55422266068,
+    "finality_lag_blocks_avg": 64.85714285714286,
+    "finality_lag_ms_avg": 386130.5167268499,
+    "finality_lag_sample_count": 7,
+    "disk_util_avg_pct": 0.8683072916666666,
+    "disk_util_max_pct": 7.0,
+    "nonce_verification": {
+      "0": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 310,
+        "verified_tps": 1.6796689214549454,
+        "execution_rate": 0.7555815540606414,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "1": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 325,
+        "verified_tps": 1.760943224105991,
+        "execution_rate": 0.6673511293634496,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "2": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 295,
+        "verified_tps": 1.5983946188038995,
+        "execution_rate": 0.5644636638475373,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "3": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 523,
+        "verified_tps": 2.833764019099795,
+        "execution_rate": 1.2685553507325118,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "4": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 256,
+        "verified_tps": 1.3870814319111806,
+        "execution_rate": 0.6214798990095163,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "5": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 572,
+        "verified_tps": 3.099260074426544,
+        "execution_rate": 0.9539056767393769,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "6": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 598,
+        "verified_tps": 3.2401355323550236,
+        "execution_rate": 1.0678571428571428,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "7": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 315,
+        "verified_tps": 1.7067603556719606,
+        "execution_rate": 0.7002801120448179,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      }
+    },
+    "readiness_time_s": 134.53975749015808,
+    "warnings": [
+      "WARNING: shard0 execution_rate=0.756 (<0.8); chunk inclusion may exceed executed txs",
+      "WARNING: shard1 execution_rate=0.667 (<0.8); chunk inclusion may exceed executed txs",
+      "WARNING: shard2 execution_rate=0.564 (<0.8); chunk inclusion may exceed executed txs",
+      "WARNING: shard4 execution_rate=0.621 (<0.8); chunk inclusion may exceed executed txs",
+      "WARNING: shard7 execution_rate=0.700 (<0.8); chunk inclusion may exceed executed txs"
+    ]
+  },
+  {
+    "n_shards": 16,
+    "storage_mode": "tmpfs",
+    "timestamp": "2026-04-29T22:14:00+00:00",
+    "tps_per_shard": {
+      "0": 68.84408236743737,
+      "1": 31.087065176742772,
+      "2": 68.16709132514934,
+      "3": 25.762008119282594,
+      "4": 68.51240219235666,
+      "5": 42.50958517883738,
+      "6": 60.04774238173523,
+      "7": 59.70697507857012,
+      "8": 42.8548960460447,
+      "9": 51.06965983434504,
+      "10": 34.14488377714439,
+      "11": 51.2559459600753,
+      "12": 51.04239845009183,
+      "13": 42.81854753370708,
+      "14": 51.19233606348448,
+      "15": 17.020190902086878
+    },
+    "aggregate_tps": 766.0358103870911,
+    "avg_tps_per_shard": 47.8772381491932,
+    "counts_start": {
+      "0": 5294,
+      "1": 5344,
+      "2": 8612,
+      "3": 8619,
+      "4": 8532,
+      "5": 8609,
+      "6": 8606,
+      "7": 8511,
+      "8": 8611,
+      "9": 10537,
+      "10": 10505,
+      "11": 10495,
+      "12": 10476,
+      "13": 10535,
+      "14": 10524,
+      "15": 10489
+    },
+    "counts_end": {
+      "0": 20446,
+      "1": 12186,
+      "2": 23615,
+      "3": 14289,
+      "4": 23611,
+      "5": 17965,
+      "6": 21822,
+      "7": 21652,
+      "8": 18043,
+      "9": 21777,
+      "10": 18020,
+      "11": 21776,
+      "12": 21710,
+      "13": 19959,
+      "14": 21791,
+      "15": 14235
+    },
+    "elapsed_s": 220.09153842926025,
+    "chunk_production_balance": {
+      "active_shards": 16,
+      "zero_shards": [],
+      "per_shard_deltas": {
+        "0": 15152,
+        "1": 6842,
+        "2": 15003,
+        "3": 5670,
+        "4": 15079,
+        "5": 9356,
+        "6": 13216,
+        "7": 13141,
+        "8": 9432,
+        "9": 11240,
+        "10": 7515,
+        "11": 11281,
+        "12": 11234,
+        "13": 9424,
+        "14": 11267,
+        "15": 3746
+      },
+      "coefficient_of_variation": 0.3132634239575633
+    },
+    "block_heights_start": {
+      "0": 98,
+      "1": 98,
+      "2": 101,
+      "3": 101,
+      "4": 101,
+      "5": 101,
+      "6": 101,
+      "7": 101,
+      "8": 101,
+      "9": 102,
+      "10": 102,
+      "11": 102,
+      "12": 102,
+      "13": 102,
+      "14": 102,
+      "15": 102
+    },
+    "block_heights_end": {
+      "0": 121,
+      "1": 121,
+      "2": 121,
+      "3": 121,
+      "4": 121,
+      "5": 121,
+      "6": 121,
+      "7": 121,
+      "8": 121,
+      "9": 121,
+      "10": 121,
+      "11": 121,
+      "12": 121,
+      "13": 121,
+      "14": 121,
+      "15": 121
+    },
+    "block_time_ms_per_shard": {
+      "0": 9569.197323011316,
+      "1": 9569.197323011316,
+      "2": 11004.576921463013,
+      "3": 11004.576921463013,
+      "4": 11004.576921463013,
+      "5": 11004.576921463013,
+      "6": 11004.576921463013,
+      "7": 11004.576921463013,
+      "8": 11004.576921463013,
+      "9": 11583.765180487382,
+      "10": 11583.765180487382,
+      "11": 11583.765180487382,
+      "12": 11583.765180487382,
+      "13": 11583.765180487382,
+      "14": 11583.765180487382,
+      "15": 11583.765180487382
+    },
+    "avg_block_time_ms": 11078.549334979713,
+    "finality_lag_blocks_avg": 80.14285714285714,
+    "finality_lag_ms_avg": 887866.5967033741,
+    "finality_lag_sample_count": 7,
+    "disk_util_avg_pct": 0.8412038834951456,
+    "disk_util_max_pct": 7.6,
+    "nonce_verification": {
+      "0": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 108,
+        "verified_tps": 0.4907049165577637,
+        "execution_rate": 0.35638859556494196,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "1": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 69,
+        "verified_tps": 0.3135059189119046,
+        "execution_rate": 0.5042385267465653,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "2": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 80,
+        "verified_tps": 0.36348512337612127,
+        "execution_rate": 0.26661334399786707,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "3": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 88,
+        "verified_tps": 0.3998336357137334,
+        "execution_rate": 0.7760141093474429,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "4": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 94,
+        "verified_tps": 0.4270950199669425,
+        "execution_rate": 0.3116917567477949,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "5": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 40,
+        "verified_tps": 0.18174256168806063,
+        "execution_rate": 0.21376656690893545,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "6": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 98,
+        "verified_tps": 0.44526927613574857,
+        "execution_rate": 0.3707627118644068,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "7": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 82,
+        "verified_tps": 0.3725722514605243,
+        "execution_rate": 0.3120006087816757,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "8": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 98,
+        "verified_tps": 0.44526927613574857,
+        "execution_rate": 0.5195080576759966,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "9": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 89,
+        "verified_tps": 0.4043771997559349,
+        "execution_rate": 0.3959074733096085,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "10": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 97,
+        "verified_tps": 0.44072571209354705,
+        "execution_rate": 0.6453759148369927,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "11": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 75,
+        "verified_tps": 0.3407673031651137,
+        "execution_rate": 0.3324173388883965,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "12": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 89,
+        "verified_tps": 0.4043771997559349,
+        "execution_rate": 0.39611892469289656,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "13": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 91,
+        "verified_tps": 0.41346432784033793,
+        "execution_rate": 0.48280984719864173,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "14": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 40,
+        "verified_tps": 0.18174256168806063,
+        "execution_rate": 0.17750954113783615,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "15": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 97,
+        "verified_tps": 0.44072571209354705,
+        "execution_rate": 1.2947143619861186,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      }
+    },
+    "readiness_time_s": 228.7284939289093,
+    "warnings": [
+      "WARNING: shard0 reached height>=10 after 125.5s",
+      "WARNING: shard1 reached height>=10 after 125.5s",
+      "WARNING: shard2 reached height>=10 after 125.5s",
+      "WARNING: shard3 reached height>=10 after 125.5s",
+      "WARNING: shard4 reached height>=10 after 125.5s",
+      "WARNING: shard5 reached height>=10 after 125.5s",
+      "WARNING: shard6 reached height>=10 after 125.5s",
+      "WARNING: shard7 reached height>=10 after 125.5s",
+      "WARNING: shard8 reached height>=10 after 125.5s",
+      "WARNING: shard9 reached height>=10 after 125.5s",
+      "WARNING: shard10 reached height>=10 after 125.5s",
+      "WARNING: shard11 reached height>=10 after 125.5s",
+      "WARNING: shard12 reached height>=10 after 125.5s",
+      "WARNING: shard13 reached height>=10 after 125.5s",
+      "WARNING: shard14 reached height>=10 after 125.5s",
+      "WARNING: shard15 reached height>=10 after 125.5s",
+      "BALANCE WARNING: high TPS variance across shards (CV=0.31 > 0.3). Per-shard TPS: [68.8, 31.1, 68.2, 25.8, 68.5, 42.5, 60.0, 59.7, 42.9, 51.1, 34.1, 51.3, 51.0, 42.8, 51.2, 17.0]. Chunk production is uneven.",
+      "WARNING: shard0 execution_rate=0.356 (<0.8); chunk inclusion may exceed executed txs",
+      "WARNING: shard1 execution_rate=0.504 (<0.8); chunk inclusion may exceed executed txs",
+      "WARNING: shard2 execution_rate=0.267 (<0.8); chunk inclusion may exceed executed txs",
+      "WARNING: shard3 execution_rate=0.776 (<0.8); chunk inclusion may exceed executed txs",
+      "WARNING: shard4 execution_rate=0.312 (<0.8); chunk inclusion may exceed executed txs",
+      "WARNING: shard5 execution_rate=0.214 (<0.8); chunk inclusion may exceed executed txs",
+      "WARNING: shard6 execution_rate=0.371 (<0.8); chunk inclusion may exceed executed txs",
+      "WARNING: shard7 execution_rate=0.312 (<0.8); chunk inclusion may exceed executed txs",
+      "WARNING: shard8 execution_rate=0.520 (<0.8); chunk inclusion may exceed executed txs",
+      "WARNING: shard9 execution_rate=0.396 (<0.8); chunk inclusion may exceed executed txs",
+      "WARNING: shard10 execution_rate=0.645 (<0.8); chunk inclusion may exceed executed txs",
+      "WARNING: shard11 execution_rate=0.332 (<0.8); chunk inclusion may exceed executed txs",
+      "WARNING: shard12 execution_rate=0.396 (<0.8); chunk inclusion may exceed executed txs",
+      "WARNING: shard13 execution_rate=0.483 (<0.8); chunk inclusion may exceed executed txs",
+      "WARNING: shard14 execution_rate=0.178 (<0.8); chunk inclusion may exceed executed txs"
+    ]
+  },
+  {
+    "n_shards": 2,
+    "storage_mode": "tmpfs",
+    "timestamp": "2026-04-29T23:02:02+00:00",
+    "tps_per_shard": {
+      "0": 0.0,
+      "1": 0.0
+    },
+    "aggregate_tps": 0.0,
+    "avg_tps_per_shard": 0.0,
+    "counts_start": {
+      "0": 44670,
+      "1": 48601
+    },
+    "counts_end": {
+      "0": 44670,
+      "1": 48601
+    },
+    "elapsed_s": 210.83859539031982,
+    "chunk_production_balance": {
+      "active_shards": 0,
+      "zero_shards": [
+        0,
+        1
+      ],
+      "per_shard_deltas": {
+        "0": 0,
+        "1": 0
+      },
+      "coefficient_of_variation": null
+    },
+    "block_heights_start": {
+      "0": 44,
+      "1": 44
+    },
+    "block_heights_end": {
+      "0": 44,
+      "1": 44
+    },
+    "block_time_ms_per_shard": {
+      "0": null,
+      "1": null
+    },
+    "avg_block_time_ms": 0.0,
+    "finality_lag_blocks_avg": null,
+    "finality_lag_ms_avg": null,
+    "finality_lag_sample_count": 0,
+    "disk_util_avg_pct": 0.8456182212581345,
+    "disk_util_max_pct": 29.6,
+    "nonce_verification": {
+      "0": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 0,
+        "verified_tps": 0.0,
+        "execution_rate": 0.0,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "1": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 0,
+        "verified_tps": 0.0,
+        "execution_rate": 0.0,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      }
+    },
+    "readiness_time_s": 78.39101433753967,
+    "warnings": [
+      "Silent measurement mode used (n_shards<=2): finality metrics not collected to avoid Doomslug stall on zero-fault-tolerance network.",
+      "BALANCE WARNING: shards [0, 1] produced ZERO chunks during measurement window. These validators may be misassigned or stalled. Their TPS=0 will drag down averages.",
+      "WARNING: shard0 execution_rate=0.000 (<0.8); chunk inclusion may exceed executed txs",
+      "WARNING: shard1 execution_rate=0.000 (<0.8); chunk inclusion may exceed executed txs"
+    ]
+  },
+  {
+    "n_shards": 2,
+    "storage_mode": "tmpfs",
+    "timestamp": "2026-04-30T04:53:35+00:00",
+    "tps_per_shard": {
+      "0": 324.9171855188439,
+      "1": 315.84826562180433
+    },
+    "aggregate_tps": 640.7654511406482,
+    "avg_tps_per_shard": 320.3827255703241,
+    "counts_start": {
+      "0": 92197,
+      "1": 95577
+    },
+    "counts_end": {
+      "0": 161380,
+      "1": 162829
+    },
+    "elapsed_s": 212.92502546310425,
+    "chunk_production_balance": {
+      "active_shards": 2,
+      "zero_shards": [],
+      "per_shard_deltas": {
+        "0": 69183,
+        "1": 67252
+      },
+      "coefficient_of_variation": 0.014153259794041131
+    },
+    "block_heights_start": {
+      "0": 77,
+      "1": 77
+    },
+    "block_heights_end": {
+      "0": 128,
+      "1": 130
+    },
+    "block_time_ms_per_shard": {
+      "0": 4175.0004992765535,
+      "1": 4017.4533106246085
+    },
+    "avg_block_time_ms": 4096.226904950581,
+    "finality_lag_blocks_avg": null,
+    "finality_lag_ms_avg": null,
+    "finality_lag_sample_count": 0,
+    "disk_util_avg_pct": 0.7211855670103093,
+    "disk_util_max_pct": 5.2,
+    "nonce_verification": {
+      "0": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 1429,
+        "verified_tps": 6.711282513138024,
+        "execution_rate": 1.0327681655898124,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "1": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 1416,
+        "verified_tps": 6.650228158574837,
+        "execution_rate": 1.0527567953369417,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      }
+    },
+    "readiness_time_s": 83.3203673362732,
+    "warnings": [
+      "Silent measurement mode used (n_shards<=2): finality metrics not collected to avoid Doomslug stall on zero-fault-tolerance network."
+    ]
+  },
+  {
+    "n_shards": 2,
+    "storage_mode": "tmpfs",
+    "timestamp": "2026-04-30T05:33:48+00:00",
+    "tps_per_shard": {
+      "0": 266.46954659182256,
+      "1": 247.98302396334887
+    },
+    "aggregate_tps": 514.4525705551714,
+    "avg_tps_per_shard": 257.2262852775857,
+    "counts_start": {
+      "0": 99716,
+      "1": 95117
+    },
+    "counts_end": {
+      "0": 156119,
+      "1": 147607
+    },
+    "elapsed_s": 211.66771483421326,
+    "chunk_production_balance": {
+      "active_shards": 2,
+      "zero_shards": [],
+      "per_shard_deltas": {
+        "0": 56403,
+        "1": 52490
+      },
+      "coefficient_of_variation": 0.03593435758037707
+    },
+    "block_heights_start": {
+      "0": 76,
+      "1": 77
+    },
+    "block_heights_end": {
+      "0": 122,
+      "1": 122
+    },
+    "block_time_ms_per_shard": {
+      "0": 4601.472061613332,
+      "1": 4703.726996315851
+    },
+    "avg_block_time_ms": 4652.599528964591,
+    "finality_lag_blocks_avg": 54.857142857142854,
+    "finality_lag_ms_avg": 255228.31701748612,
+    "finality_lag_sample_count": 7,
+    "disk_util_avg_pct": 0.7831168831168831,
+    "disk_util_max_pct": 6.8,
+    "nonce_verification": {
+      "0": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 1380,
+        "verified_tps": 6.51965275422788,
+        "execution_rate": 1.2233391840859527,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      },
+      "1": {
+        "sampled_accounts": 100,
+        "total_nonce_increments": 1480,
+        "verified_tps": 6.992091359606712,
+        "execution_rate": 1.4097923413983615,
+        "nonce_failures_before": 0,
+        "nonce_failures_after": 0
+      }
+    },
+    "readiness_time_s": 81.88731694221497,
+    "warnings": []
+  },
+  {
+    "n_shards": 4,
+    "storage_mode": "tmpfs",
+    "timestamp": "2026-05-09T17:08:59+00:00",
+    "tps_per_shard": {
+      "0": 378.19616296755873,
+      "1": 387.7730471722701,
+      "2": 365.7533645350159,
+      "3": 308.38557282281903
+    },
+    "aggregate_tps": 1440.1081474976638,
+    "avg_tps_per_shard": 360.02703687441596,
+    "counts_start": {
+      "0": 6189,
+      "1": 3924,
+      "2": 6235,
+      "3": 5853
+    },
+    "counts_end": {
+      "0": 74942,
+      "1": 74418,
+      "3": 61915,
+      "2": 72726
+    },
+    "elapsed_s": 181.79190254211426,
+    "chunk_production_balance": {
+      "active_shards": 4,
+      "zero_shards": [],
+      "per_shard_deltas": {
+        "0": 68753,
+        "1": 70494,
+        "2": 66491,
+        "3": 56062
+      },
+      "coefficient_of_variation": 0.08560581153536359
+    },
+    "block_heights_start": {
+      "0": 1129,
+      "1": 1129,
+      "2": 1129,
+      "3": 1131
+    },
+    "block_heights_end": {
+      "0": 1210,
+      "1": 1210,
+      "3": 1210,
+      "2": 1210
+    },
+    "block_time_ms_per_shard": {
+      "0": 2244.344475828571,
+      "1": 2244.344475828571,
+      "2": 2244.344475828571,
+      "3": 2301.163323317902
+    },
+    "avg_block_time_ms": 2258.5491877009035,
+    "finality_lag_blocks_avg": 30.714285714285715,
+    "finality_lag_ms_avg": 69369.72505081347,
+    "finality_lag_sample_count": 7,
+    "execution_rate_per_shard": {
+      "0": 1.0,
+      "1": 1.0,
+      "2": 1.0,
+      "3": 1.0
+    },
+    "readiness_time_s": 15.143168449401855,
+    "warnings": []
+  },
+  {
+    "n_shards": 4,
+    "storage_mode": "tmpfs",
+    "timestamp": "2026-05-09T17:49:13+00:00",
+    "tps_per_shard": {
+      "0": 339.4066746143805,
+      "1": 367.4259468461072,
+      "2": 377.51705291507903,
+      "3": 379.1349204641805
+    },
+    "aggregate_tps": 1463.4845948397474,
+    "avg_tps_per_shard": 365.87114870993685,
+    "counts_start": {
+      "0": 6086,
+      "2": 3471,
+      "3": 7254,
+      "1": 9835
+    },
+    "counts_end": {
+      "1": 76831,
+      "3": 76385,
+      "2": 72307,
+      "0": 67973
+    },
+    "elapsed_s": 182.33878302574158,
+    "chunk_production_balance": {
+      "active_shards": 4,
+      "zero_shards": [],
+      "per_shard_deltas": {
+        "0": 61887,
+        "1": 66996,
+        "2": 68836,
+        "3": 69131
+      },
+      "coefficient_of_variation": 0.04352449352084854
+    },
+    "block_heights_start": {
+      "0": 1115,
+      "2": 1115,
+      "3": 1119,
+      "1": 1119
+    },
+    "block_heights_end": {
+      "1": 1200,
+      "3": 1200,
+      "2": 1200,
+      "0": 1200
+    },
+    "block_time_ms_per_shard": {
+      "0": 2145.1621532440186,
+      "1": 2251.09608673755,
+      "2": 2145.1621532440186,
+      "3": 2251.09608673755
+    },
+    "avg_block_time_ms": 2198.1291199907846,
+    "finality_lag_blocks_avg": 30.571428571428573,
+    "finality_lag_ms_avg": 67199.94738257542,
+    "finality_lag_sample_count": 7,
+    "execution_rate_per_shard": {
+      "0": 1.0,
+      "1": 1.0,
+      "2": 1.0,
+      "3": 1.0
+    },
+    "readiness_time_s": 15.163324356079102,
+    "warnings": []
+  },
+  {
+    "n_shards": 4,
+    "storage_mode": "tmpfs",
+    "timestamp": "2026-05-09T18:23:55+00:00",
+    "tps_per_shard": {
+      "0": 328.6128280056831,
+      "1": 289.2286011160649,
+      "2": 328.9087028320659,
+      "3": 309.18919356999913
+    },
+    "aggregate_tps": 1255.939325523813,
+    "avg_tps_per_shard": 313.98483138095327,
+    "counts_start": {
+      "0": 6356,
+      "3": 6277,
+      "1": 6147,
+      "2": 6352
+    },
+    "counts_end": {
+      "1": 58934,
+      "0": 66331,
+      "2": 66381,
+      "3": 62707
+    },
+    "elapsed_s": 182.5096127986908,
+    "chunk_production_balance": {
+      "active_shards": 4,
+      "zero_shards": [],
+      "per_shard_deltas": {
+        "0": 59975,
+        "1": 52787,
+        "2": 60029,
+        "3": 56430
+      },
+      "coefficient_of_variation": 0.052152366282686026
+    },
+    "block_heights_start": {
+      "0": 351,
+      "3": 351,
+      "1": 351,
+      "2": 350
+    },
+    "block_heights_end": {
+      "1": 430,
+      "0": 430,
+      "2": 432,
+      "3": 432
+    },
+    "block_time_ms_per_shard": {
+      "0": 2310.248263274567,
+      "1": 2310.248263274567,
+      "2": 2225.726985349888,
+      "3": 2253.205096280133
+    },
+    "avg_block_time_ms": 2274.8571520447886,
+    "finality_lag_blocks_avg": 31.142857142857142,
+    "finality_lag_ms_avg": 70845.5513065377,
+    "finality_lag_sample_count": 7,
+    "execution_rate_per_shard": {
+      "0": 1.0,
+      "1": 1.0,
+      "2": 1.0,
+      "3": 1.0
+    },
+    "readiness_time_s": 25.21638584136963,
+    "warnings": []
+  },
+  {
+    "n_shards": 4,
+    "storage_mode": "tmpfs",
+    "timestamp": "2026-05-09T21:09:37+00:00",
+    "tps_per_shard": {
+      "0": 362.0627447120366,
+      "1": 337.8009219541816,
+      "2": 304.5526259647337,
+      "3": 257.08264305628853
+    },
+    "aggregate_tps": 1261.4989356872404,
+    "avg_tps_per_shard": 315.3747339218101,
+    "counts_start": {
+      "3": 4225,
+      "0": 8565,
+      "1": 8223,
+      "2": 3987
+    },
+    "counts_end": {
+      "2": 59194,
+      "1": 69457,
+      "0": 74197,
+      "3": 50827
+    },
+    "elapsed_s": 181.27244782447815,
+    "chunk_production_balance": {
+      "active_shards": 4,
+      "zero_shards": [],
+      "per_shard_deltas": {
+        "0": 65632,
+        "1": 61234,
+        "2": 55207,
+        "3": 46602
+      },
+      "coefficient_of_variation": 0.12481349390477187
+    },
+    "block_heights_start": {
+      "3": 1111,
+      "0": 1111,
+      "1": 1111,
+      "2": 1111
+    },
+    "block_heights_end": {
+      "2": 1186,
+      "1": 1179,
+      "0": 1186,
+      "3": 1179
+    },
+    "block_time_ms_per_shard": {
+      "0": 2416.965970993042,
+      "1": 2665.771291536443,
+      "2": 2416.965970993042,
+      "3": 2665.771291536443
+    },
+    "avg_block_time_ms": 2541.3686312647424,
+    "finality_lag_blocks_avg": 35.142857142857146,
+    "finality_lag_ms_avg": 89310.95475587524,
+    "finality_lag_sample_count": 7,
+    "execution_rate_per_shard": {
+      "0": 1.0,
+      "1": 1.0,
+      "2": 1.0,
+      "3": 1.0
+    },
+    "readiness_time_s": 15.20603895187378,
+    "warnings": []
+  },
+  {
+    "n_shards": 4,
+    "storage_mode": "tmpfs",
+    "timestamp": "2026-05-09T21:18:56+00:00",
+    "tps_per_shard": {
+      "0": 331.4865483342432,
+      "1": 311.50448726490157,
+      "2": 309.84298328832085,
+      "3": 341.6151205888296
+    },
+    "aggregate_tps": 1294.4491394762952,
+    "avg_tps_per_shard": 323.6122848690738,
+    "counts_start": {
+      "2": 5080,
+      "0": 4786,
+      "1": 8188,
+      "3": 6277
+    },
+    "counts_end": {
+      "2": 61398,
+      "3": 68370,
+      "0": 65038,
+      "1": 64808
+    },
+    "elapsed_s": 181.7630317211151,
+    "chunk_production_balance": {
+      "active_shards": 4,
+      "zero_shards": [],
+      "per_shard_deltas": {
+        "0": 60252,
+        "1": 56620,
+        "2": 56318,
+        "3": 62093
+      },
+      "coefficient_of_variation": 0.04152440090967894
+    },
+    "block_heights_start": {
+      "2": 1129,
+      "0": 1129,
+      "1": 1129,
+      "3": 1129
+    },
+    "block_heights_end": {
+      "2": 1208,
+      "3": 1208,
+      "0": 1208,
+      "1": 1208
+    },
+    "block_time_ms_per_shard": {
+      "0": 2300.797869887533,
+      "1": 2300.797869887533,
+      "2": 2300.797869887533,
+      "3": 2300.797869887533
+    },
+    "avg_block_time_ms": 2300.797869887533,
+    "finality_lag_blocks_avg": 29.428571428571427,
+    "finality_lag_ms_avg": 67709.19445669025,
+    "finality_lag_sample_count": 7,
+    "execution_rate_per_shard": {
+      "0": 1.0,
+      "1": 1.0,
+      "2": 1.0,
+      "3": 1.0
+    },
+    "readiness_time_s": 15.229692459106445,
+    "warnings": []
+  },
+  {
+    "n_shards": 4,
+    "storage_mode": "tmpfs",
+    "timestamp": "2026-05-09T22:50:59+00:00",
+    "tps_per_shard": {
+      "0": 254.62723027466703,
+      "1": 322.88833306342707,
+      "2": 273.6698189366922,
+      "3": 340.6639318229675
+    },
+    "aggregate_tps": 1191.849314097754,
+    "avg_tps_per_shard": 297.9623285244385,
+    "counts_start": {
+      "2": 5820,
+      "3": 3451,
+      "1": 7724,
+      "0": 7429
+    },
+    "counts_end": {
+      "1": 67613,
+      "3": 66637,
+      "0": 54657,
+      "2": 56580
+    },
+    "elapsed_s": 185.47898411750793,
+    "chunk_production_balance": {
+      "active_shards": 4,
+      "zero_shards": [],
+      "per_shard_deltas": {
+        "0": 47228,
+        "1": 59889,
+        "2": 50760,
+        "3": 63186
+      },
+      "coefficient_of_variation": 0.11761770958319887
+    },
+    "block_heights_start": {
+      "2": 1106,
+      "3": 1106,
+      "1": 1108,
+      "0": 1111
+    },
+    "block_heights_end": {
+      "1": 1184,
+      "3": 1185,
+      "0": 1184,
+      "2": 1184
+    },
+    "block_time_ms_per_shard": {
+      "0": 2540.808001609698,
+      "1": 2440.512948914578,
+      "2": 2377.935693814204,
+      "3": 2347.8352419937714
+    },
+    "avg_block_time_ms": 2426.772971583063,
+    "finality_lag_blocks_avg": 31.142857142857142,
+    "finality_lag_ms_avg": 75576.64397215824,
+    "finality_lag_sample_count": 7,
+    "execution_rate_per_shard": {
+      "0": 1.0,
+      "1": 1.0,
+      "2": 1.0,
+      "3": 1.000002621857376
+    },
+    "readiness_time_s": 15.173662424087524,
+    "warnings": []
+  },
+  {
+    "n_shards": 1,
+    "storage_mode": "tmpfs",
+    "timestamp": "2026-05-09T23:08:20+00:00",
+    "tps_per_shard": {
+      "0": 925.5009208533825
+    },
+    "aggregate_tps": 925.5009208533825,
+    "avg_tps_per_shard": 925.5009208533825,
+    "counts_start": {
+      "0": 19736
+    },
+    "counts_end": {
+      "0": 186757
+    },
+    "elapsed_s": 180.4655146598816,
+    "chunk_production_balance": {
+      "active_shards": 1,
+      "zero_shards": [],
+      "per_shard_deltas": {
+        "0": 167021
+      },
+      "coefficient_of_variation": null
+    },
+    "block_heights_start": {
+      "0": 982
+    },
+    "block_heights_end": {
+      "0": 1154
+    },
+    "block_time_ms_per_shard": {
+      "0": 1049.2181084876836
+    },
+    "avg_block_time_ms": 1049.2181084876836,
+    "finality_lag_blocks_avg": 9.714285714285714,
+    "finality_lag_ms_avg": 10192.404482451782,
+    "finality_lag_sample_count": 7,
+    "execution_rate_per_shard": {
+      "0": 1.0
+    },
+    "readiness_time_s": 15.03498649597168,
+    "warnings": []
+  },
+  {
+    "n_shards": 2,
+    "storage_mode": "tmpfs",
+    "timestamp": "2026-05-09T23:20:31+00:00",
+    "tps_per_shard": {
+      "0": 295.1829948028936,
+      "1": 354.89226501474536
+    },
+    "aggregate_tps": 650.0752598176389,
+    "avg_tps_per_shard": 325.03762990881944,
+    "counts_start": {
+      "1": 9873,
+      "0": 10409
+    },
+    "counts_end": {
+      "1": 73922,
+      "0": 63682
+    },
+    "elapsed_s": 180.4744884967804,
+    "chunk_production_balance": {
+      "active_shards": 2,
+      "zero_shards": [],
+      "per_shard_deltas": {
+        "0": 53273,
+        "1": 64049
+      },
+      "coefficient_of_variation": 0.09184978094475033
+    },
+    "block_heights_start": {
+      "1": 974,
+      "0": 974
+    },
+    "block_heights_end": {
+      "1": 1035,
+      "0": 1036
+    },
+    "block_time_ms_per_shard": {
+      "0": 2910.8788467222644,
+      "1": 2958.598172078367
+    },
+    "avg_block_time_ms": 2934.7385094003157,
+    "finality_lag_blocks_avg": 10.571428571428571,
+    "finality_lag_ms_avg": 31024.378527946195,
+    "finality_lag_sample_count": 7,
+    "execution_rate_per_shard": {
+      "0": 1.0,
+      "1": 1.0
+    },
+    "readiness_time_s": 15.070618391036987,
+    "warnings": []
+  },
+  {
+    "n_shards": 8,
+    "storage_mode": "tmpfs",
+    "timestamp": "2026-05-09T23:29:55+00:00",
+    "tps_per_shard": {
+      "0": 194.35468492942633,
+      "1": 203.24937666219182,
+      "2": 211.84703861638897,
+      "3": 201.92084347077693,
+      "4": 190.3852869794672,
+      "5": 208.86053920641973,
+      "6": 231.82364136046888,
+      "7": 213.66162053637026
+    },
+    "aggregate_tps": 1656.1030317615102,
+    "avg_tps_per_shard": 207.01287897018878,
+    "counts_start": {
+      "6": 2974,
+      "3": 2988,
+      "2": 2998,
+      "4": 3220,
+      "7": 2959,
+      "1": 5006,
+      "5": 5360,
+      "0": 5404
+    },
+    "counts_end": {
+      "6": 45900,
+      "7": 42522,
+      "1": 42641,
+      "3": 40377,
+      "5": 44034,
+      "4": 38473,
+      "2": 42225,
+      "0": 41392
+    },
+    "elapsed_s": 185.16661953926086,
+    "chunk_production_balance": {
+      "active_shards": 8,
+      "zero_shards": [],
+      "per_shard_deltas": {
+        "0": 35988,
+        "1": 37635,
+        "2": 39227,
+        "3": 37389,
+        "4": 35253,
+        "5": 38674,
+        "6": 42926,
+        "7": 39563
+      },
+      "coefficient_of_variation": 0.05825257110917988
+    },
+    "block_heights_start": {
+      "6": 299,
+      "3": 300,
+      "2": 300,
+      "4": 300,
+      "7": 300,
+      "1": 300,
+      "5": 301,
+      "0": 301
+    },
+    "block_heights_end": {
+      "6": 356,
+      "7": 356,
+      "1": 356,
+      "3": 356,
+      "5": 356,
+      "4": 356,
+      "2": 356,
+      "0": 356
+    },
+    "block_time_ms_per_shard": {
+      "0": 3366.665809804743,
+      "1": 3306.546777486801,
+      "2": 3306.546777486801,
+      "3": 3306.546777486801,
+      "4": 3306.546777486801,
+      "5": 3366.665809804743,
+      "6": 3248.5371848993136,
+      "7": 3306.546777486801
+    },
+    "avg_block_time_ms": 3314.3253364928505,
+    "finality_lag_blocks_avg": 37.714285714285715,
+    "finality_lag_ms_avg": 124997.4126905875,
+    "finality_lag_sample_count": 7,
+    "execution_rate_per_shard": {
+      "0": 1.0,
+      "1": 1.0,
+      "2": 1.0,
+      "3": 1.0,
+      "4": 1.0,
+      "5": 1.0,
+      "6": 1.0,
+      "7": 1.0
+    },
+    "readiness_time_s": 25.64931869506836,
+    "warnings": []
+  },
+  {
+    "n_shards": 16,
+    "storage_mode": "tmpfs",
+    "timestamp": "2026-05-09T23:45:10+00:00",
+    "tps_per_shard": {
+      "0": 0.0,
+      "1": 0.0,
+      "2": 0.0,
+      "3": 0.0,
+      "4": 0.0,
+      "5": 0.0,
+      "6": 0.0,
+      "7": 0.0,
+      "8": 0.0,
+      "9": 0.0,
+      "10": 0.0,
+      "11": 0.0,
+      "12": 0.0,
+      "13": 0.0,
+      "14": 0.0,
+      "15": 0.0
+    },
+    "aggregate_tps": 0.0,
+    "avg_tps_per_shard": 0.0,
+    "counts_start": {
+      "0": 2369,
+      "2": 2369,
+      "4": 2369,
+      "5": 2361,
+      "3": 2361,
+      "8": 2369,
+      "13": 2377,
+      "1": 2361,
+      "15": 2377,
+      "6": 2377,
+      "10": 2385,
+      "14": 2377,
+      "11": 2377,
+      "9": 2385,
+      "7": 2377,
+      "12": 2377
+    },
+    "counts_end": {
+      "4": 2369,
+      "2": 2369,
+      "1": 2361,
+      "3": 2361,
+      "6": 2377,
+      "7": 2377,
+      "5": 2361,
+      "0": 2369,
+      "11": 2377,
+      "14": 2377,
+      "9": 2385,
+      "13": 2377,
+      "15": 2377,
+      "12": 2377,
+      "10": 2385,
+      "8": 2369
+    },
+    "elapsed_s": 181.6133689880371,
+    "chunk_production_balance": {
+      "active_shards": 0,
+      "zero_shards": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15
+      ],
+      "per_shard_deltas": {
+        "0": 0,
+        "1": 0,
+        "2": 0,
+        "3": 0,
+        "4": 0,
+        "5": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 0,
+        "10": 0,
+        "11": 0,
+        "12": 0,
+        "13": 0,
+        "14": 0,
+        "15": 0
+      },
+      "coefficient_of_variation": null
+    },
+    "block_heights_start": {
+      "0": 233,
+      "2": 233,
+      "4": 233,
+      "5": 233,
+      "3": 233,
+      "8": 233,
+      "13": 233,
+      "1": 233,
+      "15": 233,
+      "6": 233,
+      "10": 233,
+      "14": 233,
+      "11": 233,
+      "9": 233,
+      "7": 233,
+      "12": 233
+    },
+    "block_heights_end": {
+      "4": 233,
+      "2": 233,
+      "1": 233,
+      "3": 233,
+      "6": 233,
+      "7": 233,
+      "5": 233,
+      "0": 233,
+      "11": 233,
+      "14": 233,
+      "9": 233,
+      "13": 233,
+      "15": 233,
+      "12": 233,
+      "10": 233,
+      "8": 233
+    },
+    "block_time_ms_per_shard": {
+      "0": null,
+      "1": null,
+      "2": null,
+      "3": null,
+      "4": null,
+      "5": null,
+      "6": null,
+      "7": null,
+      "8": null,
+      "9": null,
+      "10": null,
+      "11": null,
+      "12": null,
+      "13": null,
+      "14": null,
+      "15": null
+    },
+    "avg_block_time_ms": 0.0,
+    "finality_lag_blocks_avg": 15.0,
+    "finality_lag_ms_avg": null,
+    "finality_lag_sample_count": 7,
+    "execution_rate_per_shard": {
+      "0": 1.0,
+      "1": 1.0,
+      "2": 1.0,
+      "3": 1.0,
+      "4": 1.0,
+      "5": 1.0,
+      "6": 1.0,
+      "7": 1.0,
+      "8": 1.0,
+      "9": 1.0,
+      "10": 1.0,
+      "11": 1.0,
+      "12": 1.0,
+      "13": 1.0,
+      "14": 1.0,
+      "15": 1.0
+    },
+    "readiness_time_s": 66.61806750297546,
+    "warnings": [
+      "BALANCE WARNING: shards [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15] produced ZERO chunks during measurement window. These validators may be misassigned or stalled. Their TPS=0 will drag down averages."
+    ]
+  }
+]
