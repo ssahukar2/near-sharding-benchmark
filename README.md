@@ -43,7 +43,7 @@ configs use **30 Tgas** gas limit in our campaign).
 ## Clone
 
 ```bash
-git clone --recurse-submodules https://github.com/YOUR_USERNAME/near-sharding-benchmark.git
+git clone --recurse-submodules https://github.com/ssahukar2/near-sharding-benchmark.git
 cd near-sharding-benchmark
 ```
 
@@ -251,7 +251,7 @@ GitHub requires **HTTPS + Personal Access Token** (or SSH keys). Example:
 
 ```bash
 git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/near-sharding-benchmark.git
+git remote add origin https://github.com/ssahukar2/near-sharding-benchmark.git
 git push -u origin main
 ```
 

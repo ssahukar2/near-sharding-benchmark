@@ -1,6 +1,10 @@
-# Python deps for scripts/run_benchmark.py, scripts/monitor.py,
-# scripts/external_tx_submitter.py, scripts/observer_scaling.py,
-# scripts/genesis_bake.py
+# Third-party deps for scripts/ (orchestration/ is shell-only).
+#
+# Verified by scanning import statements under scripts/*.py.
+# benchmark/plot_near_benchmarks.py additionally needs matplotlib and numpy
+# (install separately if you regenerate RPS sweep plots).
+
 requests>=2.28.0
 cryptography>=41.0.0
 PyNaCl>=1.5.0
+base58>=2.1.0
